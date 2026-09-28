@@ -79,7 +79,12 @@ def load_vocab(path: Path) -> LoadResult:
     seen: set[str] = set()
 
     for offset, raw in enumerate(lines[1:], start=2):
-        if not raw or raw.lstrip().startswith("#"):
+        # A line of only whitespace is a blank line, the same copy-paste
+        # hazard the pipe fallback exists for, and should be skipped like
+        # any other blank. But "\t\t" — a genuine three-empty-column row —
+        # must still be reported as an error, so the check only fires when
+        # the delimiter itself is absent.
+        if (not raw.strip() and delimiter not in raw) or raw.lstrip().startswith("#"):
             continue
 
         cells = [cell.strip() for cell in raw.split(delimiter)]

@@ -94,6 +94,45 @@ def test_skips_blank_and_comment_lines(tmp_path):
     assert result.entries[0].line_number == 4
 
 
+def test_skips_whitespace_only_lines(tmp_path):
+    """A blank line that picked up trailing whitespace on the way out of a
+    chat window — the exact copy-paste hazard the pipe fallback exists for
+    — must be skipped like any other blank line, not reported as a bad
+    column count.
+    """
+    path = write(
+        tmp_path,
+        "german\tenglish\tphrase\n"
+        "das Buch\tthe book\tIch lese jeden Abend ein gutes Buch.\n"
+        "   \n"
+        "der Stift\tthe pen\tMein Stift ist leer.\n",
+    )
+
+    result = load_vocab(path)
+
+    assert len(result.entries) == 2
+    assert result.entries[1].line_number == 4
+
+
+def test_all_whitespace_columns_is_still_an_error(tmp_path):
+    """A line of exactly three empty columns (tabs with nothing between
+    them) is a genuine malformed row, not a blank line, and must still be
+    reported — this guards against re-loosening the whitespace-only skip
+    into swallowing this case too.
+    """
+    path = write(
+        tmp_path,
+        "german\tenglish\tphrase\n"
+        "das Buch\tthe book\tIch lese jeden Abend ein gutes Buch.\n"
+        "\t\t\n",
+    )
+
+    with pytest.raises(LoadError) as excinfo:
+        load_vocab(path)
+
+    assert any("line 3" in problem for problem in excinfo.value.problems)
+
+
 def test_rejects_wrong_column_count_with_line_number(tmp_path):
     path = write(
         tmp_path,
