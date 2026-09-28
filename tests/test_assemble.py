@@ -133,9 +133,10 @@ def test_encode_mp3_writes_a_real_mp3(tmp_path):
 
     assert path.exists()
     assert path.stat().st_size > 1000
-    # MP3 frames begin with a sync word; ID3 tags begin with "ID3".
+    # An MP3 frame sync is eleven set bits: 0xFF then the top three bits of the
+    # next byte. Checking only the first byte would also accept a JPEG (0xFFD8).
     head = path.read_bytes()[:3]
-    assert head[:2] == b"\xff\xfb" or head == b"ID3" or head[0] == 0xFF
+    assert head == b"ID3" or (head[0] == 0xFF and head[1] & 0xE0 == 0xE0)
 
 
 def test_encode_mp3_creates_the_output_directory(tmp_path):
