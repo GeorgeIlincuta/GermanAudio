@@ -1,0 +1,4 @@
+supertonic
+numpy
+lameenc
+pytest

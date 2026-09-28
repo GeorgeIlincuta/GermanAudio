@@ -1,1 +1,14 @@
 .superpowers/
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Generated and downloaded artifacts — never committed
+cache/
+out/
+assets/
+results/
+vocab.tsv
