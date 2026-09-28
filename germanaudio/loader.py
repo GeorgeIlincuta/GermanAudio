@@ -56,6 +56,8 @@ def load_vocab(path: Path) -> LoadResult:
         text = path.read_text(encoding="utf-8-sig")
     except OSError as error:
         raise LoadError([f"cannot read {path}: {error}"]) from error
+    except UnicodeDecodeError as error:
+        raise LoadError([f"{path} is not valid UTF-8"]) from error
 
     lines = text.splitlines()
     if not lines:

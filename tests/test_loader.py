@@ -189,3 +189,13 @@ def test_no_warning_when_word_appears_inflected(tmp_path):
 def test_rejects_missing_file(tmp_path):
     with pytest.raises(LoadError):
         load_vocab(tmp_path / "does-not-exist.tsv")
+
+
+def test_rejects_invalid_utf8(tmp_path):
+    path = tmp_path / "invalid.tsv"
+    path.write_bytes(b"german\tenglish\tphrase\n\xff\xfe invalid\tx\ty\n")
+
+    with pytest.raises(LoadError) as excinfo:
+        load_vocab(path)
+
+    assert any("utf-8" in problem.lower() for problem in excinfo.value.problems)
