@@ -1,3 +1,5 @@
+import wave
+
 import numpy as np
 import pytest
 
@@ -98,6 +100,31 @@ def test_synthesis_failure_aborts_before_writing_a_track(vocab_file, tmp_path, m
     assert exit_code == 1
     assert not out.exists()
     assert "model unavailable" in capsys.readouterr().err
+
+
+def test_assembly_failure_reports_cache_path_and_fails_cleanly(
+    vocab_file, tmp_path, monkeypatch, capsys
+):
+    """A corrupt cache entry (or a render/encode crash of any kind) must not
+    crash with a traceback, must not leave a partial output file, and must
+    tell the user where to look — the cache directory is not otherwise
+    discoverable from the error alone.
+    """
+    cache_dir = tmp_path / "cache"
+
+    def broken_render(*args, **kwargs):
+        raise wave.Error("file does not start with RIFF id")
+
+    monkeypatch.setattr(cli, "render", broken_render)
+    out = tmp_path / "track.mp3"
+
+    exit_code = cli.main(
+        [str(vocab_file), "-o", str(out), "--cache-dir", str(cache_dir)]
+    )
+
+    assert exit_code == 1
+    assert not out.exists()
+    assert str(cache_dir) in capsys.readouterr().err
 
 
 def test_missing_input_file_fails_cleanly(tmp_path, capsys):

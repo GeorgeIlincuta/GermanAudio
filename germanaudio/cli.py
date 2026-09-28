@@ -6,7 +6,9 @@
 """
 
 import argparse
+import re
 import sys
+import wave
 from pathlib import Path
 
 from germanaudio.assemble import build_timeline, encode_mp3, render
@@ -53,6 +55,36 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
+_WARNING_LINE = re.compile(r"^line (\d+):")
+
+
+def _warning_applies(warning: str, retained_lines: set[int]) -> bool:
+    """True unless the warning names a line that --limit dropped.
+
+    Warnings are plain strings produced by the loader against the full
+    file, before --limit narrows the entry list. A warning that doesn't
+    match the "line N: ..." shape at all is kept rather than dropped, since
+    silently swallowing an unrecognized warning is worse than showing one
+    extra line.
+    """
+    match = _WARNING_LINE.match(warning)
+    return match is None or int(match.group(1)) in retained_lines
+
+
+def _format_duration(total_seconds: float) -> str:
+    """"2h 13m 5s" past an hour, "13m 5s" otherwise.
+
+    divmod(seconds, 60) alone reads fine for a sample run but prints
+    "133m 5s" for a real ~500-entry track — technically correct, not
+    something anyone wants to read.
+    """
+    hours, remainder = divmod(int(total_seconds), 3600)
+    minutes, seconds = divmod(remainder, 60)
+    if hours:
+        return f"{hours}h {minutes}m {seconds}s"
+    return f"{minutes}m {seconds}s"
+
+
 def main(argv: list[str] | None = None) -> int:
     args = _parse_args(argv)
 
@@ -64,16 +96,22 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  {problem}", file=sys.stderr)
         return 1
 
-    for warning in result.warnings:
-        print(f"warning: {warning}", file=sys.stderr)
-
     entries = result.entries
     if args.limit is not None:
         entries = entries[: args.limit]
 
+    retained_lines = {entry.line_number for entry in entries}
+    for warning in result.warnings:
+        if _warning_applies(warning, retained_lines):
+            print(f"warning: {warning}", file=sys.stderr)
+
     print(f"loaded {len(entries)} entries from {args.vocab}")
     if args.check:
         return 0
+
+    # Checked now, not after an hour of synthesis: a bad output path should
+    # fail in a second, before stage 2 even starts.
+    args.output.parent.mkdir(parents=True, exist_ok=True)
 
     voices = VoiceConfig()
     pauses = PauseConfig()
@@ -94,15 +132,36 @@ def main(argv: list[str] | None = None) -> int:
         print("no track written — fix the above and re-run to resume", file=sys.stderr)
         return 1
 
-    print("assembling track...")
-    timeline = build_timeline(entries, voices, pauses)
-    samples = render(timeline, args.cache_dir, engine.engine_id, engine.sample_rate)
+    try:
+        print("assembling track...")
+        timeline = build_timeline(entries, voices, pauses)
+        samples = render(timeline, args.cache_dir, engine.engine_id, engine.sample_rate)
+    except (FileNotFoundError, ValueError, wave.Error) as error:
+        # These three are exactly what a missing or corrupt cache entry
+        # raises: FileNotFoundError when a clip was never synthesized,
+        # ValueError on a sample-rate mismatch, wave.Error on a truncated
+        # or non-WAV file. The recovery is the same for all three and is
+        # not discoverable from the raw error message alone.
+        print(f"failed to assemble the track: {error}", file=sys.stderr)
+        print(
+            f"this looks like a problem with a cached clip in {args.cache_dir}: "
+            "delete the offending file (or the whole cache directory) and "
+            "re-run to re-synthesize it",
+            file=sys.stderr,
+        )
+        return 1
+    except (MemoryError, OSError) as error:
+        print(f"failed to assemble the track: {error}", file=sys.stderr)
+        return 1
 
-    minutes, seconds = divmod(len(samples) / engine.sample_rate, 60)
-    print(f"  {int(minutes)}m {int(seconds)}s of audio")
+    print(f"  {_format_duration(len(samples) / engine.sample_rate)} of audio")
 
-    print(f"encoding {args.output}...")
-    encode_mp3(samples, engine.sample_rate, args.output, MP3_BITRATE)
+    try:
+        print(f"encoding {args.output}...")
+        encode_mp3(samples, engine.sample_rate, args.output, MP3_BITRATE)
+    except (MemoryError, OSError) as error:
+        print(f"failed to encode {args.output}: {error}", file=sys.stderr)
+        return 1
 
     size_mb = args.output.stat().st_size / 1_000_000
     print(f"done: {args.output} ({size_mb:.1f} MB)")

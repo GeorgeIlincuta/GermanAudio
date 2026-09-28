@@ -36,6 +36,9 @@ class VoiceConfig:
 
     Confirm these names against the installed model in the listening test —
     an unknown name fails at synthesis time, not at import time.
+
+    Only "M1" has actually been verified against the real model; these
+    defaults are otherwise unchanged from that verified listening test.
     """
 
     de: str = "M1"
