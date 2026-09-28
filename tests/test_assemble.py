@@ -146,3 +146,31 @@ def test_encode_mp3_creates_the_output_directory(tmp_path):
     encode_mp3(samples, 44100, path, bitrate=64)
 
     assert path.exists()
+
+
+def test_encode_mp3_handles_audio_longer_than_one_block(tmp_path):
+    """encode_mp3 feeds lameenc in ~30-second blocks so the whole track
+    never has to live as int16 at once. 65 seconds crosses that boundary
+    at least once — if chunking silently dropped everything after the
+    first block, the output would be far smaller than a full-length CBR
+    encode, not merely a little off.
+    """
+    sample_rate = 44100
+
+    def tone(duration_seconds):
+        t = np.arange(int(duration_seconds * sample_rate)) / sample_rate
+        return (0.3 * np.sin(2 * np.pi * 440 * t)).astype(np.float32)
+
+    short_path = tmp_path / "short.mp3"
+    long_path = tmp_path / "long.mp3"
+    short_seconds, long_seconds = 5, 65
+
+    encode_mp3(tone(short_seconds), sample_rate, short_path, bitrate=64)
+    encode_mp3(tone(long_seconds), sample_rate, long_path, bitrate=64)
+
+    head = long_path.read_bytes()[:3]
+    assert head == b"ID3" or (head[0] == 0xFF and head[1] & 0xE0 == 0xE0)
+
+    ratio = long_path.stat().st_size / short_path.stat().st_size
+    expected_ratio = long_seconds / short_seconds
+    assert expected_ratio * 0.8 <= ratio <= expected_ratio * 1.2
