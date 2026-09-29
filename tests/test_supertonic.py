@@ -10,12 +10,14 @@ class StubTTS:
     def __init__(self, payload, **kwargs):
         self.payload = payload
         self.styles_requested: list[str] = []
+        self.texts: list[str] = []
 
     def get_voice_style(self, voice_name: str):
         self.styles_requested.append(voice_name)
         return f"style::{voice_name}"
 
     def synthesize(self, text, voice_style, lang):
+        self.texts.append(text)
         return self.payload, 1.0
 
 
@@ -96,3 +98,14 @@ def test_rejects_empty_text():
 
 def test_engine_id_is_stable():
     assert SupertonicEngine(tts=StubTTS(np.array([0.1]))).engine_id == "supertonic-3"
+
+
+def test_german_quotes_the_model_rejects_are_swapped_for_accepted_ones():
+    # Measured against the real model: these four raise "unsupported
+    # character", while the “ ” ‘ ’ they are swapped for are accepted.
+    tts = StubTTS(np.zeros(2, dtype=np.float32))
+    engine = SupertonicEngine(tts=tts)
+
+    engine.synthesize("„Ja“, sagte er. ‚Nein‘ und ›vielleicht‹.", "de", "M1")
+
+    assert tts.texts == ["“Ja“, sagte er. ‘Nein‘ und ’vielleicht‘."]

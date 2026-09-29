@@ -132,3 +132,58 @@ def test_missing_input_file_fails_cleanly(tmp_path, capsys):
 
     assert exit_code == 1
     assert capsys.readouterr().err != ""
+
+
+STORY = "Es war einmal ein Fuchs. Er war sehr hungrig.\n\nAm Abend fand er Brot.\n"
+
+
+@pytest.fixture
+def story_file(tmp_path):
+    path = tmp_path / "story.txt"
+    path.write_text(STORY, encoding="utf-8")
+    return path
+
+
+def test_text_mode_reads_each_sentence_in_german(story_file, tmp_path, stub_engine):
+    out = tmp_path / "story.mp3"
+
+    exit_code = cli.main(
+        [str(story_file), "--text", "-o", str(out), "--cache-dir", str(tmp_path / "c")]
+    )
+
+    assert exit_code == 0
+    assert out.stat().st_size > 1000
+    assert [(text, lang) for text, lang, _ in stub_engine.calls] == [
+        ("Es war einmal ein Fuchs.", "de"),
+        ("Er war sehr hungrig.", "de"),
+        ("Am Abend fand er Brot.", "de"),
+    ]
+
+
+def test_text_check_mode_counts_without_synthesizing(story_file, capsys, stub_engine):
+    exit_code = cli.main([str(story_file), "--text", "--check"])
+
+    assert exit_code == 0
+    assert stub_engine.calls == []
+    assert "3 sentences in 2 paragraphs" in capsys.readouterr().out
+
+
+def test_text_limit_reads_only_the_first_sentences(story_file, tmp_path, stub_engine):
+    cli.main(
+        [
+            str(story_file), "--text", "--limit", "2",
+            "-o", str(tmp_path / "s.mp3"), "--cache-dir", str(tmp_path / "c"),
+        ]
+    )
+
+    assert len(stub_engine.calls) == 2
+
+
+def test_text_mode_rejects_an_empty_file(tmp_path, capsys, stub_engine):
+    path = tmp_path / "empty.txt"
+    path.write_text("   \n", encoding="utf-8")
+
+    exit_code = cli.main([str(path), "--text", "--check"])
+
+    assert exit_code == 1
+    assert "no text" in capsys.readouterr().err

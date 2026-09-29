@@ -13,6 +13,11 @@ from germanaudio.config import SAMPLE_RATE
 
 _INT16_SCALE = 32768.0
 
+# German low quotes and single guillemets are rejected by the model with
+# "unsupported character", while these replacements are accepted (probed
+# against the real model). A quote is not spoken, so the swap is inaudible.
+_UNSUPPORTED_QUOTES = str.maketrans({"„": "“", "‚": "‘", "›": "’", "‹": "‘"})
+
 
 class SupertonicEngine:
     engine_id = "supertonic-3"
@@ -36,7 +41,7 @@ class SupertonicEngine:
             raise ValueError("cannot synthesize empty text")
 
         wav, _duration = self._tts.synthesize(
-            text, voice_style=self._style(voice), lang=language
+            text.translate(_UNSUPPORTED_QUOTES), voice_style=self._style(voice), lang=language
         )
         return _to_mono_float32(wav)
 

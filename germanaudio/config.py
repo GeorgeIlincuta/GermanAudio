@@ -31,6 +31,14 @@ class PauseConfig:
 
 
 @dataclass(frozen=True)
+class TextPauseConfig:
+    """Silence in read-aloud (--text) mode, in seconds."""
+
+    after_sentence: float = 0.6
+    after_paragraph: float = 1.5
+
+
+@dataclass(frozen=True)
 class VoiceConfig:
     """Supertonic preset voice name per language.
 

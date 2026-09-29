@@ -3,6 +3,7 @@
     python -m germanaudio vocab.tsv -o out/german.mp3
     python -m germanaudio vocab.tsv --check
     python -m germanaudio vocab.tsv --limit 8 -o out/sample.mp3
+    python -m germanaudio story.txt --text -o out/story.mp3
 """
 
 import argparse
@@ -11,16 +12,18 @@ import sys
 import wave
 from pathlib import Path
 
-from germanaudio.assemble import build_timeline, encode_mp3, render
+from germanaudio.assemble import TimelineItem, build_timeline, encode_mp3, render
 from germanaudio.config import (
     CACHE_DIR,
     MP3_BITRATE,
     OUT_DIR,
     PauseConfig,
+    TextPauseConfig,
     VoiceConfig,
 )
 from germanaudio.loader import LoadError, load_vocab
-from germanaudio.synth import synthesize_all
+from germanaudio.reader import limit_sentences, load_text, text_timeline
+from germanaudio.synth import ClipSpec, synthesize_clips
 
 
 def build_engine():
@@ -33,9 +36,19 @@ def build_engine():
 def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         prog="germanaudio",
-        description="Build a German vocabulary listening track from a TSV file.",
+        description=(
+            "Build a German vocabulary listening track from a TSV file, "
+            "or read a German text file aloud with --text."
+        ),
     )
-    parser.add_argument("vocab", type=Path, help="input file (tab- or pipe-separated)")
+    parser.add_argument(
+        "input", type=Path,
+        help="vocabulary file (tab- or pipe-separated), or a .txt file with --text",
+    )
+    parser.add_argument(
+        "--text", action="store_true",
+        help="read the input aloud as plain German text instead of a vocab list",
+    )
     parser.add_argument(
         "-o", "--output", type=Path, default=OUT_DIR / "german.mp3",
         help="output MP3 path (default: out/german.mp3)",
@@ -50,7 +63,7 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     )
     parser.add_argument(
         "--limit", type=int, default=None,
-        help="only process the first N entries, useful for previewing settings",
+        help="only process the first N entries (sentences with --text), for previews",
     )
     return parser.parse_args(argv)
 
@@ -85,15 +98,18 @@ def _format_duration(total_seconds: float) -> str:
     return f"{minutes}m {seconds}s"
 
 
-def main(argv: list[str] | None = None) -> int:
-    args = _parse_args(argv)
+def _report_load_error(path: Path, error: LoadError) -> None:
+    print(f"{path}: input file has problems:", file=sys.stderr)
+    for problem in error.problems:
+        print(f"  {problem}", file=sys.stderr)
 
+
+def _vocab_timeline(args: argparse.Namespace, voices: VoiceConfig) -> list[TimelineItem] | int:
+    """The vocab drill timeline, or an exit code if the run stops here."""
     try:
-        result = load_vocab(args.vocab)
+        result = load_vocab(args.input)
     except LoadError as error:
-        print(f"{args.vocab}: input file has problems:", file=sys.stderr)
-        for problem in error.problems:
-            print(f"  {problem}", file=sys.stderr)
+        _report_load_error(args.input, error)
         return 1
 
     entries = result.entries
@@ -105,23 +121,50 @@ def main(argv: list[str] | None = None) -> int:
         if _warning_applies(warning, retained_lines):
             print(f"warning: {warning}", file=sys.stderr)
 
-    print(f"loaded {len(entries)} entries from {args.vocab}")
+    print(f"loaded {len(entries)} entries from {args.input}")
     if args.check:
         return 0
+    return build_timeline(entries, voices, PauseConfig())
+
+
+def _text_timeline(args: argparse.Namespace, voices: VoiceConfig) -> list[TimelineItem] | int:
+    """The read-aloud timeline, or an exit code if the run stops here."""
+    try:
+        paragraphs = load_text(args.input)
+    except LoadError as error:
+        _report_load_error(args.input, error)
+        return 1
+
+    if args.limit is not None:
+        paragraphs = limit_sentences(paragraphs, args.limit)
+
+    sentences = sum(len(sentences) for sentences in paragraphs)
+    print(f"loaded {sentences} sentences in {len(paragraphs)} paragraphs from {args.input}")
+    if args.check:
+        return 0
+    return text_timeline(paragraphs, voices.de, TextPauseConfig())
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = _parse_args(argv)
+    voices = VoiceConfig()
+
+    timeline = _text_timeline(args, voices) if args.text else _vocab_timeline(args, voices)
+    if isinstance(timeline, int):
+        return timeline
 
     # Checked now, not after an hour of synthesis: a bad output path should
     # fail in a second, before stage 2 even starts.
     args.output.parent.mkdir(parents=True, exist_ok=True)
 
-    voices = VoiceConfig()
-    pauses = PauseConfig()
     engine = build_engine()
 
     def progress(index: int, total: int, spec) -> None:
         print(f"\r  synthesizing {index}/{total}", end="", flush=True)
 
     print("synthesizing clips (cached clips are reused)...")
-    report = synthesize_all(entries, engine, args.cache_dir, voices, progress=progress)
+    clips = [item for item in timeline if isinstance(item, ClipSpec)]
+    report = synthesize_clips(clips, engine, args.cache_dir, progress=progress)
     print()
     print(f"  {report.synthesized} new, {report.reused} reused from cache")
 
@@ -134,7 +177,6 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         print("assembling track...")
-        timeline = build_timeline(entries, voices, pauses)
         samples = render(timeline, args.cache_dir, engine.engine_id, engine.sample_rate)
     except (FileNotFoundError, ValueError, wave.Error) as error:
         # These three are exactly what a missing or corrupt cache entry

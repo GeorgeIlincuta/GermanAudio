@@ -67,10 +67,20 @@ def synthesize_all(
     voices: VoiceConfig,
     progress: Callable[[int, int, ClipSpec], None] | None = None,
 ) -> SynthesisReport:
+    return synthesize_clips(required_clips(entries, voices), engine, cache_dir, progress)
+
+
+def synthesize_clips(
+    specs: list[ClipSpec],
+    engine: SynthesisEngine,
+    cache_dir: Path,
+    progress: Callable[[int, int, ClipSpec], None] | None = None,
+) -> SynthesisReport:
+    """Synthesize any clip not already cached. Duplicate specs cost nothing."""
     cache_dir = Path(cache_dir)
     cache_dir.mkdir(parents=True, exist_ok=True)
 
-    specs = required_clips(entries, voices)
+    specs = list(dict.fromkeys(specs))
     synthesized = 0
     reused = 0
     failures: list[tuple[ClipSpec, str]] = []

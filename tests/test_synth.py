@@ -9,6 +9,7 @@ from germanaudio.synth import (
     entry_clips,
     required_clips,
     synthesize_all,
+    synthesize_clips,
 )
 
 VOICES = VoiceConfig(de="M1", en="F1")
@@ -157,3 +158,18 @@ def test_clip_path_lives_under_the_cache_directory(tmp_path):
     assert path.parent == tmp_path
     assert path.suffix == ".wav"
     assert path.stem == spec.key("supertonic-3")
+
+
+def test_synthesize_clips_works_on_bare_specs_without_entries(tmp_path, fake_engine):
+    specs = [
+        ClipSpec("Erster Satz.", "de", "M1"),
+        ClipSpec("Zweiter Satz.", "de", "M1"),
+        ClipSpec("Erster Satz.", "de", "M1"),
+    ]
+
+    report = synthesize_clips(specs, fake_engine, tmp_path)
+
+    assert report.synthesized == 2
+    assert [call[0] for call in fake_engine.calls] == ["Erster Satz.", "Zweiter Satz."]
+    for spec in specs:
+        assert clip_path(tmp_path, spec, fake_engine.engine_id).exists()
