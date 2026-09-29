@@ -50,7 +50,7 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     )
     parser.add_argument(
         "--limit", type=int, default=None,
-        help="only process the first N entries — useful for previewing settings",
+        help="only process the first N entries, useful for previewing settings",
     )
     return parser.parse_args(argv)
 
@@ -129,7 +129,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"{len(report.failures)} clips failed to synthesize:", file=sys.stderr)
         for spec, message in report.failures:
             print(f"  [{spec.language}] {spec.text!r}: {message}", file=sys.stderr)
-        print("no track written — fix the above and re-run to resume", file=sys.stderr)
+        print("no track written; fix the above and re-run to resume", file=sys.stderr)
         return 1
 
     try:
