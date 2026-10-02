@@ -118,6 +118,48 @@ def test_render_total_duration_equals_sum_of_parts(tmp_path, fake_engine):
     assert len(samples) == expected
 
 
+def test_render_normalizes_every_clip_to_the_target_peak(tmp_path, fake_engine):
+    """FakeEngine clips peak at 0.5; each must come out at the target peak."""
+    from germanaudio.synth import ClipSpec
+
+    entries = [entry()]
+    synthesize_all(entries, fake_engine, tmp_path, VOICES)
+    timeline = build_timeline(entries, VOICES, PAUSES)
+
+    samples = render(
+        timeline, tmp_path, fake_engine.engine_id, fake_engine.sample_rate, target_peak=0.9
+    )
+
+    position = 0
+    for item in timeline:
+        if isinstance(item, Silence):
+            length = int(round(item.seconds * fake_engine.sample_rate))
+            assert not samples[position : position + length].any()
+        else:
+            assert isinstance(item, ClipSpec)
+            length = len(fake_engine.synthesize(item.text, item.language, item.voice))
+            peak = np.abs(samples[position : position + length]).max()
+            assert peak == pytest.approx(0.9, abs=1e-3)
+        position += length
+
+
+def test_render_leaves_a_silent_clip_silent(tmp_path, fake_engine):
+    from germanaudio.audio import write_wav
+    from germanaudio.synth import clip_path
+
+    timeline = build_timeline([entry()], VOICES, PAUSES)
+    for item in timeline:
+        if not isinstance(item, Silence):
+            path = clip_path(tmp_path, item, fake_engine.engine_id)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            write_wav(path, np.zeros(100, dtype=np.float32), fake_engine.sample_rate)
+
+    samples = render(timeline, tmp_path, fake_engine.engine_id, fake_engine.sample_rate)
+
+    assert np.isfinite(samples).all()
+    assert not samples.any()
+
+
 def test_render_reports_a_missing_clip_by_text(tmp_path, fake_engine):
     timeline = build_timeline([entry()], VOICES, PAUSES)
 

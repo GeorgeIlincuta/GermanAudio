@@ -10,6 +10,10 @@ from pathlib import Path
 # Audio format, fixed across the pipeline. Supertonic emits 44.1 kHz.
 SAMPLE_RATE = 44100
 MP3_BITRATE = 64  # kbps, mono — ~60 MB for two hours
+# Every clip is scaled so its loudest sample hits this level (1.0 is full
+# scale). Supertonic clips peak around 0.45 on their own, which plays back
+# noticeably quiet; 0.95 leaves a little headroom for the MP3 encoder.
+TARGET_PEAK = 0.95
 
 CACHE_DIR = Path("cache/audio")
 OUT_DIR = Path("out")

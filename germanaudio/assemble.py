@@ -12,7 +12,7 @@ from pathlib import Path
 import numpy as np
 
 from germanaudio.audio import read_wav, silence
-from germanaudio.config import PauseConfig, VoiceConfig
+from germanaudio.config import TARGET_PEAK, PauseConfig, VoiceConfig
 from germanaudio.models import Entry
 from germanaudio.synth import ClipSpec, clip_path, entry_clips
 
@@ -71,8 +71,14 @@ def render(
     cache_dir: Path,
     engine_id: str,
     sample_rate: int,
+    target_peak: float = TARGET_PEAK,
 ) -> np.ndarray:
     """Concatenate the timeline into one waveform.
+
+    Each clip is scaled so its peak sits at `target_peak`. That lifts the
+    whole track and evens out clips the engine rendered quieter than the
+    rest. Gain is applied here rather than at synthesis, so the cache keeps
+    the engine's raw output and changing the level never re-synthesizes.
 
     Clips are read once each and reused, so the doubled drill costs memory
     for one copy rather than two. Silence gets the identical treatment: only
@@ -106,7 +112,7 @@ def render(
                 raise ValueError(
                     f"{path} is {rate} Hz but the track is {sample_rate} Hz"
                 )
-            cache[key] = samples
+            cache[key] = _normalize_peak(samples, target_peak)
         pieces.append(cache[key])
 
     if not pieces:
@@ -116,6 +122,13 @@ def render(
     # safe, but `.astype` copies unconditionally — at 500-entry scale that
     # redundant copy alone was measured at 1.4 GB.
     return np.concatenate(pieces, dtype=np.float32)
+
+
+def _normalize_peak(samples: np.ndarray, target_peak: float) -> np.ndarray:
+    peak = float(np.abs(samples).max()) if len(samples) else 0.0
+    if peak == 0.0:
+        return samples
+    return samples * np.float32(target_peak / peak)
 
 
 def encode_mp3(samples: np.ndarray, sample_rate: int, path: Path, bitrate: int) -> None:
