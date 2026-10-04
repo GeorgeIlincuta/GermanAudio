@@ -1,0 +1,113 @@
+=====================================================================
+PROMPT 1: VOCABULARY FILE FOR THE GERMAN AUDIO APP
+Copy everything between the two lines of dashes into a new Claude chat.
+Fill in the three [BRACKETS] first.
+=====================================================================
+----------------------------------------------------------------------
+I'm preparing for the Ausbildung zur Medizinischen
+Technologin für Laboratoriumsanalytik. I need a German vocabulary file for
+a local app that turns it into an MP3 listening track I play while walking.
+
+The topic is:
+
+[PASTE THE TOPIC OR SYLLABUS SECTION HERE]
+
+Give me the [500] most useful words for this topic, as a
+tab-separated file in the exact format below. Mix nouns, verbs and
+adjectives, and prefer the words that come up in exams and in daily
+professional work over rare textbook terms.
+
+HOW THE APP USES THE FILE
+
+For every entry, the track plays: the German word, a 1.5 s pause for
+recall, the English translation, the German word again, the English again,
+then the example phrase, then a 2 s pause. The German word and the phrase
+are spoken by a German voice, and the English by an English voice. One
+entry takes about 17.5 seconds, so 500 entries give roughly 2.5 hours of
+audio.
+
+FILE FORMAT (the app rejects the file if any of these are broken)
+
+- Plain UTF-8 text. The first line is exactly this header, tab-separated:
+  german	english	phrase
+- Then one line per entry with exactly three columns separated by TAB
+  characters. Never use commas as separators, because the phrases contain
+  commas. No trailing tab, and no empty cells.
+- No numbering, no markdown and no quotation marks around fields. Lines
+  that start with # are ignored, so don't start a line with #.
+- No duplicate entries in the german column.
+
+COLUMN RULES
+
+1. german: nouns with their definite article ("das Atom", not "Atom").
+   Verbs in the infinitive. Short multi-word terms are fine ("die molare
+   Masse").
+2. english: a short translation, two or three words at most. No slashes,
+   no alternatives, no brackets.
+3. phrase: one German sentence of 8 to 15 words, at B1 level, set in a
+   realistic situation for this topic (for example the classroom or the
+   lab). No English translation.
+
+THE PHRASE MUST CONTAIN THE WORD
+
+The app checks this and prints a warning otherwise. The check strips
+der/die/das from the german column, ignores upper and lower case, and then
+looks for the rest as an exact piece of text inside the phrase. Endings
+added to the end are fine ("Atom" is found in "Atome" and "Atoms"). These
+cases fail, so rephrase them:
+
+- Umlaut plurals: "das Glas" is not found in "Gläser". Use the singular.
+- Separable verbs: "auflösen" is not found in "löst sich auf". Use the
+  infinitive with a modal verb: "... kann sich auflösen".
+- Participles: "verbrauchen" is not found in "verbraucht". Use the
+  infinitive.
+- Stem changes in adjectives: "sauer" is not found in "saure"; "edel" is
+  not found in "edle". Use them after "ist": "Die Lösung ist sauer."
+- Multi-word terms whose adjective changes its ending: "die molare Masse"
+  is not found in "der molaren Masse". Keep that exact form.
+
+LIMITS OF THE VOICE GENERATOR (Supertonic text-to-speech)
+
+The text is read aloud exactly as written. A character the voice model
+doesn't know makes that clip fail. So:
+
+- Write numbers as words: "sieben komma vier", not "7,4";
+  "hundertvierzig", not "140".
+- No chemical formulas, subscripts or superscripts (not H₂O, not Na⁺).
+  Write the name instead: "Wasser", "das Natriumion".
+- No unit abbreviations or symbols (not mg/L, mmol/l, °C, µl or ‰). Write
+  them out: "Milligramm pro Liter", "Grad Celsius", "Mikroliter",
+  "Promille".
+- No abbreviations: "zum Beispiel", not "z. B."; "Doktor", not "Dr.". No
+  "usw.", "bzw.", "ca." or "Nr.".
+- No arrows, Greek letters, ±, ×, ≈, brackets, bullet characters or
+  emoji.
+- No German low quotation marks („ ‚ › ‹). The model rejects them. Best to
+  use no quotation marks at all.
+- Characters tested and accepted: letters, ä ö ü Ä Ö Ü ß, and
+  , . : ; - – — … ! ? ' " “ ” ‘ ’ » « € % &
+
+OUTPUT
+
+Output one code block and nothing else: no commentary before or after it.
+If [NUMBER] is more than 100, work in batches of 100. After each batch I'll
+say "continue". Don't repeat the header or any earlier word in later
+batches.
+
+Example of correct output:
+
+german	english	phrase
+das Atom	the atom	Ein Atom besteht aus einem Kern und einer Hülle aus Elektronen.
+verdünnen	to dilute	Die Probe muss man vor der Messung mit Wasser verdünnen.
+sauer	acidic	Eine Lösung ist sauer, wenn ihr pH-Wert unter sieben liegt.
+----------------------------------------------------------------------
+
+AFTER THE CHAT (for you, not for Claude)
+
+1. Save everything as one file, e.g. topic.tsv, in the project folder,
+   with only the header from the first batch.
+2. Check it:           python -m germanaudio topic.tsv --check
+3. Preview 10 words:   python -m germanaudio topic.tsv --limit 10 -o out/preview.mp3
+4. Build it:           python -m germanaudio topic.tsv -o out/topic.mp3
+If the tabs turn into spaces when you copy, ask Claude for " | " (space,
+pipe, space) between columns instead. The app accepts that too.

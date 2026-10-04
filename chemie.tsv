@@ -1,0 +1,501 @@
+german	english	phrase
+das Atom	the atom	Ein Atom besteht aus einem Kern und einer Hülle aus Elektronen.
+der Atomkern	the atomic nucleus	Der Atomkern enthält fast die gesamte Masse des Atoms.
+das Proton	the proton	Ein Proton trägt eine positive Ladung und sitzt im Atomkern.
+das Neutron	the neutron	Das Neutron ist elektrisch neutral und liegt ebenfalls im Kern.
+das Elektron	the electron	Jedes Elektron trägt eine negative Ladung und bewegt sich in der Hülle.
+die Ladung	the charge	Die Ladung eines Protons ist genauso groß wie die eines Elektrons.
+positiv	positive	Ein Kation ist positiv geladen, weil ihm Elektronen fehlen.
+negativ	negative	Ein Anion ist negativ geladen, weil es zusätzliche Elektronen besitzt.
+neutral	neutral	Ein Atom ist nach außen neutral, wenn es gleich viele Protonen und Elektronen hat.
+die Ordnungszahl	the atomic number	Die Ordnungszahl gibt die Anzahl der Protonen im Atomkern an.
+die Kernladungszahl	the nuclear charge number	Die Kernladungszahl ist bei jedem Atom gleich der Ordnungszahl.
+die Massenzahl	the mass number	Die Massenzahl ist die Summe aus Protonen und Neutronen im Kern.
+die Atommasse	the atomic mass	Die Atommasse von Kohlenstoff beträgt ungefähr zwölf Einheiten.
+die atomare Masseneinheit	the atomic mass unit	Die atomare Masseneinheit ist ein Zwölftel der Masse eines Kohlenstoffatoms.
+die Elektronenhülle	the electron shell	Die Elektronenhülle bestimmt, wie ein Atom mit anderen Atomen reagiert.
+die Schale	the shell	Auf die erste Schale passen höchstens zwei Elektronen.
+die Außenschale	the outer shell	Die Elektronen auf der Außenschale sind für chemische Reaktionen wichtig.
+das Valenzelektron	the valence electron	Natrium besitzt nur ein Valenzelektron, das es leicht abgibt.
+die Elektronenkonfiguration	the electron configuration	Die Elektronenkonfiguration zeigt, wie die Elektronen auf die Schalen verteilt sind.
+das Orbital	the orbital	Ein Orbital kann höchstens zwei Elektronen mit entgegengesetztem Spin aufnehmen.
+das Energieniveau	the energy level	Elektronen auf einem höheren Energieniveau sind weiter vom Kern entfernt.
+der Grundzustand	the ground state	Im Grundzustand besetzen die Elektronen die niedrigsten möglichen Energieniveaus.
+angeregt	excited	Ein angeregtes Elektron springt auf eine höhere Schale und sendet später Licht aus.
+das Isotop	the isotope	Ein Isotop hat die gleiche Protonenzahl, aber eine andere Neutronenzahl.
+radioaktiv	radioactive	Manche Isotope sind radioaktiv und zerfallen mit der Zeit von selbst.
+die Radioaktivität	the radioactivity	Die Radioaktivität einer Probe wird im Labor mit speziellen Geräten gemessen.
+die Halbwertszeit	the half-life	Nach einer Halbwertszeit ist nur noch die Hälfte der Atome vorhanden.
+zerfallen	to decay	Instabile Atomkerne zerfallen und senden dabei Strahlung aus.
+die Strahlung	the radiation	Die Strahlung radioaktiver Stoffe kann für den Körper gefährlich sein.
+das Element	the element	Ein Element besteht nur aus Atomen mit derselben Ordnungszahl.
+das Elementsymbol	the element symbol	Das Elementsymbol für Eisen ist Fe, vom lateinischen Wort ferrum.
+das Teilchen	the particle	Alle Stoffe bestehen aus winzigen Teilchen, die man nicht sehen kann.
+das Ion	the ion	Ein Ion entsteht, wenn ein Atom Elektronen abgibt oder aufnimmt.
+das Kation	the cation	Im Kochsalz liegt Natrium als einfach positiv geladenes Kation vor.
+das Anion	the anion	Chlor nimmt ein Elektron auf und wird dadurch zu einem Anion.
+das Molekül	the molecule	Ein Wassermolekül besteht aus zwei Wasserstoffatomen und einem Sauerstoffatom.
+die Oktettregel	the octet rule	Nach der Oktettregel streben Atome acht Elektronen auf der Außenschale an.
+die Edelgaskonfiguration	the noble gas configuration	Durch die Abgabe eines Elektrons erreicht Natrium die Edelgaskonfiguration.
+das Atommodell	the atomic model	Das Atommodell von Bohr beschreibt Elektronen auf festen Bahnen um den Kern.
+das Schalenmodell	the shell model	Im Schalenmodell sind die Elektronen auf mehrere Schalen um den Kern verteilt.
+die Masse	the mass	Die Masse einer Probe bestimmen wir mit der Analysenwaage.
+die Neutronenzahl	the neutron number	Isotope eines Elements unterscheiden sich nur in ihrer Neutronenzahl.
+die Ionenladung	the ionic charge	Die Ionenladung eines Magnesiumions ist zweifach positiv, weil es zwei Elektronen abgibt.
+einwertig	monovalent	Natrium bildet einwertige Ionen, weil es nur ein Elektron abgibt.
+zweiwertig	divalent	Calcium bildet zweiwertige Ionen mit einer doppelt positiven Ladung.
+der Wasserstoff	the hydrogen	Wasserstoff ist das leichteste Element und steht ganz oben im Periodensystem.
+der Sauerstoff	the oxygen	Ohne Sauerstoff kann eine Verbrennung im Labor nicht stattfinden.
+der Stickstoff	the nitrogen	Die Luft besteht zu etwa achtundsiebzig Prozent aus Stickstoff.
+der Kohlenstoff	the carbon	Kohlenstoff ist das wichtigste Element in allen organischen Verbindungen.
+das Natrium	the sodium	Natrium reagiert sehr heftig mit Wasser und muss unter Öl gelagert werden.
+das Kalium	the potassium	Der Kaliumwert im Serum wird bei vielen Patienten täglich gemessen.
+das Chlor	the chlorine	Chlor ist ein giftiges, gelbgrünes Gas mit einem stechenden Geruch.
+das Calcium	the calcium	Calcium ist wichtig für die Knochen und wird im Blut regelmäßig bestimmt.
+das Magnesium	the magnesium	Magnesium verbrennt mit einer sehr hellen, weißen Flamme.
+das Eisen	the iron	Eisen ist ein wichtiger Bestandteil des roten Blutfarbstoffs Hämoglobin.
+das Kupfer	the copper	Kupfer leitet den elektrischen Strom sehr gut und hat eine rötliche Farbe.
+der Schwefel	the sulfur	Schwefel ist ein gelber Feststoff, der mit blauer Flamme brennt.
+der Phosphor	the phosphorus	Phosphor kommt im Körper vor allem in den Knochen und Zähnen vor.
+das Helium	the helium	Helium ist ein Edelgas und reagiert fast mit keinem anderen Stoff.
+das Fluor	the fluorine	Fluor ist das Element mit der höchsten Elektronegativität im Periodensystem.
+das Iod	the iodine	Iod färbt Stärke dunkelblau und wird deshalb als Nachweis genutzt.
+das Zink	the zinc	Zink reagiert mit Salzsäure, und dabei entsteht Wasserstoffgas.
+das Silber	the silver	Silber ist ein Edelmetall und reagiert nur schwer mit Sauerstoff.
+das Blei	the lead	Blei ist ein giftiges Schwermetall, das man im Blut nachweisen kann.
+das Quecksilber	the mercury	Quecksilber ist das einzige Metall, das bei Raumtemperatur flüssig ist.
+das Aluminium	the aluminium	Aluminium ist ein leichtes Metall, das an der Luft schnell eine Oxidschicht bildet.
+das Spurenelement	the trace element	Eisen und Zink sind wichtige Spurenelemente für den menschlichen Körper.
+das Schwermetall	the heavy metal	Blei und Quecksilber sind giftige Schwermetalle, die sich im Körper anreichern.
+das Periodensystem	the periodic table	Im Periodensystem sind die Elemente nach steigender Ordnungszahl angeordnet.
+die Periode	the period	Alle Elemente einer Periode haben die gleiche Anzahl von Schalen.
+die Gruppe	the group	Elemente in derselben Gruppe haben ähnliche chemische Eigenschaften.
+die Hauptgruppe	the main group	Die Nummer der Hauptgruppe zeigt die Zahl der Valenzelektronen an.
+die Nebengruppe	the subgroup	In den Nebengruppen stehen vor allem Metalle wie Eisen und Kupfer.
+das Metall	the metal	Ein Metall leitet Wärme und Strom und glänzt an der Oberfläche.
+das Nichtmetall	the nonmetal	Schwefel ist ein Nichtmetall und leitet den Strom kaum.
+das Halbmetall	the semimetal	Silicium ist ein Halbmetall und wird für Computerchips verwendet.
+das Alkalimetall	the alkali metal	Jedes Alkalimetall reagiert heftig mit Wasser und bildet eine Lauge.
+das Erdalkalimetall	the alkaline earth metal	Calcium ist ein Erdalkalimetall und steht in der zweiten Hauptgruppe.
+das Halogen	the halogen	Chlor ist ein Halogen und bildet mit Natrium ein Salz.
+das Edelgas	the noble gas	Ein Edelgas hat eine volle Außenschale und ist deshalb sehr reaktionsträge.
+das Übergangsmetall	the transition metal	Eisen ist ein Übergangsmetall und kann verschiedene Oxidationszahlen haben.
+die Elektronegativität	the electronegativity	Die Elektronegativität beschreibt, wie stark ein Atom Bindungselektronen anzieht.
+der Atomradius	the atomic radius	Innerhalb einer Gruppe wird der Atomradius von oben nach unten größer.
+die Ionisierungsenergie	the ionisation energy	Die Ionisierungsenergie ist die Energie, die man zum Entfernen eines Elektrons braucht.
+reaktionsfreudig	highly reactive	Die Alkalimetalle sind sehr reaktionsfreudig und werden deshalb unter Öl gelagert.
+reaktionsträge	unreactive	Edelgase sind reaktionsträge, weil ihre Außenschale voll besetzt ist.
+edel	noble	Gold gilt als edel, weil es kaum mit anderen Stoffen reagiert.
+unedel	ignoble	Zink ist unedel und löst sich deshalb in verdünnter Säure auf.
+metallisch	metallic	Frisch geschnittenes Natrium hat einen metallischen Glanz, der schnell verschwindet.
+die Eigenschaft	the property	Eine wichtige Eigenschaft von Metallen ist ihre gute Leitfähigkeit.
+die Leitfähigkeit	the conductivity	Die Leitfähigkeit einer Salzlösung steigt mit der Konzentration der Ionen.
+zunehmen	to increase	Innerhalb einer Periode sieht man die Elektronegativität von links nach rechts zunehmen.
+abnehmen	to decrease	Innerhalb einer Gruppe sieht man die Ionisierungsenergie von oben nach unten abnehmen.
+die chemische Bindung	the chemical bond	Eine chemische Bindung hält die Atome in einem Molekül zusammen.
+die Bindung	the bond	Um eine Bindung zu spalten, muss man Energie zuführen.
+die Ionenbindung	the ionic bond	Die Ionenbindung entsteht zwischen einem Metall und einem Nichtmetall.
+die Atombindung	the covalent bond	Bei der Atombindung teilen sich zwei Atome ein gemeinsames Elektronenpaar.
+kovalent	covalent	Im Wassermolekül sind die Atome durch Elektronenpaare kovalent miteinander verbunden.
+die Metallbindung	the metallic bond	Die Metallbindung erklärt, warum Metalle den Strom so gut leiten.
+die Wasserstoffbrückenbindung	the hydrogen bond	Die Wasserstoffbrückenbindung erklärt den hohen Siedepunkt von Wasser.
+die Einfachbindung	the single bond	Zwischen den beiden Kohlenstoffatomen im Ethan liegt eine Einfachbindung.
+die Doppelbindung	the double bond	Im Sauerstoffmolekül sind die beiden Atome durch eine Doppelbindung verbunden.
+die Dreifachbindung	the triple bond	Im Stickstoffmolekül gibt es eine sehr stabile Dreifachbindung.
+das Elektronenpaar	the electron pair	Ein bindendes Elektronenpaar gehört bei der Atombindung beiden Atomen gleichzeitig.
+das freie Elektronenpaar	the lone pair	Das Sauerstoffatom im Wasser besitzt zwei freie Elektronenpaare.
+polar	polar	Die Bindung zwischen Sauerstoff und Wasserstoff ist stark polar.
+unpolar	nonpolar	Öl ist unpolar und mischt sich deshalb nicht mit Wasser.
+die Polarität	the polarity	Die Polarität eines Moleküls beeinflusst seine Löslichkeit in Wasser.
+der Dipol	the dipole	Das Wassermolekül ist ein Dipol mit einem positiven und einem negativen Ende.
+die Teilladung	the partial charge	Das Sauerstoffatom trägt im Wasser eine negative Teilladung.
+das Ionengitter	the ionic lattice	Im Ionengitter von Kochsalz wechseln sich Natrium- und Chloridionen regelmäßig ab.
+das Kristallgitter	the crystal lattice	Die Teilchen in einem Kristallgitter sind regelmäßig angeordnet.
+der Kristall	the crystal	Beim langsamen Abkühlen der Lösung bildet sich ein großer Kristall.
+die Anziehung	the attraction	Zwischen positiven und negativen Ionen herrscht eine starke Anziehung.
+die Abstoßung	the repulsion	Gleich geladene Teilchen zeigen eine Abstoßung, entgegengesetzt geladene ziehen sich an.
+anziehen	to attract	Positive und negative Ladungen können sich gegenseitig stark anziehen.
+abstoßen	to repel	Zwei Elektronen werden sich wegen ihrer gleichen Ladung immer abstoßen.
+abgeben	to give off	Metallatome können ihre Valenzelektronen leicht an andere Atome abgeben.
+aufnehmen	to take up	Nichtmetallatome wollen Elektronen aufnehmen, um eine volle Außenschale zu haben.
+die Van-der-Waals-Kraft	van der Waals force	Zwischen unpolaren Molekülen wirkt nur die schwache Van-der-Waals-Kraft.
+die zwischenmolekulare Kraft	the intermolecular force	Jede zwischenmolekulare Kraft ist viel schwächer als eine echte chemische Bindung.
+die Bindungsenergie	the bond energy	Die Bindungsenergie gibt an, wie viel Energie zum Spalten nötig ist.
+die Strukturformel	the structural formula	Die Strukturformel zeigt, welche Atome im Molekül miteinander verbunden sind.
+die Summenformel	the molecular formula	Die Summenformel von Wasser zeigt zwei Wasserstoffatome und ein Sauerstoffatom.
+die Valenzstrichformel	the Lewis structure	In der Valenzstrichformel steht jeder Strich für ein Elektronenpaar.
+die Formel	the formula	Die Formel eines Stoffes zeigt, welche Elemente in welchem Verhältnis enthalten sind.
+die Wertigkeit	the valency	Die Wertigkeit gibt an, wie viele Bindungen ein Atom eingehen kann.
+die Verbindung	the compound	Wasser ist eine Verbindung aus den Elementen Wasserstoff und Sauerstoff.
+das Salz	the salt	Ein Salz besteht aus positiv und negativ geladenen Ionen.
+stabil	stable	Die Edelgaskonfiguration ist besonders stabil und energetisch günstig.
+instabil	unstable	Diese Verbindung ist instabil und zerfällt schon bei Raumtemperatur.
+der Bindungswinkel	the bond angle	Der Bindungswinkel im Wassermolekül beträgt etwa hundertfünf Grad.
+gewinkelt	bent	Das Wassermolekül ist gewinkelt gebaut und deshalb ein Dipol.
+linear	linear	Das Kohlendioxidmolekül ist linear gebaut und deshalb insgesamt unpolar.
+tetraedrisch	tetrahedral	Im Methanmolekül sind die vier Wasserstoffatome tetraedrisch um den Kohlenstoff angeordnet.
+symmetrisch	symmetrical	Weil das Molekül symmetrisch ist, heben sich die Teilladungen gegenseitig auf.
+der Strom	the current	Eine Salzlösung leitet den Strom, weil sie frei bewegliche Ionen enthält.
+leiten	to conduct	Metalle leiten Wärme und Strom besser als die meisten anderen Stoffe.
+das Mol	the mole	Ein Mol eines Stoffes enthält etwa sechs mal zehn hoch dreiundzwanzig Teilchen.
+die Stoffmenge	the amount of substance	Die Stoffmenge wird in der Einheit Mol angegeben.
+die molare Masse	the molar mass	Die molare Masse von Wasser beträgt ungefähr achtzehn Gramm pro Mol.
+die Avogadro-Konstante	the Avogadro constant	Die Avogadro-Konstante gibt die Zahl der Teilchen in einem Mol an.
+die Teilchenzahl	the number of particles	Die Teilchenzahl berechnet man aus der Stoffmenge und der Avogadro-Konstante.
+das Gramm	the gram	Wir wiegen genau fünf Gramm Natriumchlorid auf der Waage ab.
+das Milligramm	the milligram	Die Probe enthält nur wenige Milligramm des gesuchten Stoffes.
+das Mikrogramm	the microgram	Manche Hormone liegen im Blut nur in Mikrogramm pro Liter vor.
+das Millimol	the millimole	Natrium im Serum liegt bei etwa hundertvierzig Millimol pro Liter.
+die Einheit	the unit	Bei jeder Rechnung muss man die Einheit sorgfältig mitschreiben.
+berechnen	to calculate	Aus der Masse und der molaren Masse kann man die Stoffmenge berechnen.
+die Berechnung	the calculation	Die Berechnung der Konzentration sollte man immer noch einmal überprüfen.
+umrechnen	to convert	Vor der Rechnung muss man Milliliter in Liter umrechnen.
+das molare Volumen	the molar volume	Das molare Volumen eines Gases beträgt bei Normbedingungen etwa zweiundzwanzig Liter.
+die Normbedingungen	the standard conditions	Die Normbedingungen gelten bei null Grad Celsius und normalem Luftdruck.
+die Formelmasse	the formula mass	Die Formelmasse eines Salzes berechnet man aus den Atommassen aller Ionen.
+das Ergebnis	the result	Das Ergebnis der Messung tragen wir sofort ins Protokoll ein.
+die Größenordnung	the order of magnitude	Die Konzentrationen im Blut liegen oft in der Größenordnung von Millimol pro Liter.
+das Verhältnis	the ratio	Wasserstoff und Sauerstoff reagieren im Verhältnis zwei zu eins.
+proportional	proportional	Die Extinktion ist proportional zur Konzentration des Farbstoffs.
+die Menge	the amount	Die Menge des gebildeten Produkts hängt vom limitierenden Reaktanten ab.
+die Reaktionsgleichung	the chemical equation	Die Reaktionsgleichung zeigt die Ausgangsstoffe links und die Produkte rechts.
+die Gleichung	the equation	Diese Gleichung ist noch nicht ausgeglichen, links fehlen zwei Sauerstoffatome.
+ausgleichen	to balance	Eine Reaktionsgleichung muss man so ausgleichen, dass auf beiden Seiten gleich viele Atome stehen.
+der Koeffizient	the coefficient	Der Koeffizient vor der Formel gibt die Anzahl der Teilchen an.
+der Index	the subscript	Der Index hinter dem Elementsymbol zeigt, wie viele Atome im Molekül sind.
+das Edukt	the reactant	Jedes Edukt steht in der Reaktionsgleichung auf der linken Seite.
+das Produkt	the product	Das Produkt dieser Reaktion ist ein weißer, schwer löslicher Feststoff.
+der Ausgangsstoff	the starting material	Der Ausgangsstoff wird während der Reaktion vollständig verbraucht.
+der Reaktionspfeil	the reaction arrow	Der Reaktionspfeil zeigt die Richtung an, in der die Reaktion abläuft.
+der Überschuss	the excess	Wir geben die Säure im Überschuss zu, damit alles reagiert.
+der limitierende Reaktant	the limiting reagent	Der limitierende Reaktant bestimmt, wie viel Produkt maximal entstehen kann.
+die Stöchiometrie	the stoichiometry	Die Stöchiometrie beschreibt die Mengenverhältnisse bei chemischen Reaktionen.
+stöchiometrisch	stoichiometric	Die Stoffe wurden genau im stöchiometrischen Verhältnis gemischt.
+das Stoffmengenverhältnis	the mole ratio	Das Stoffmengenverhältnis liest man direkt an den Koeffizienten der Gleichung ab.
+die Ausbeute	the yield	Die Ausbeute war niedriger als erwartet, weil etwas Produkt verloren ging.
+der Umsatz	the conversion	Der Umsatz der Reaktion lässt sich durch Erwärmen deutlich erhöhen.
+vollständig	complete	Die Reaktion läuft erst nach etwa zehn Minuten vollständig ab.
+unvollständig	incomplete	Bei Sauerstoffmangel ist die Verbrennung unvollständig und es entsteht Ruß.
+das chemische Gleichgewicht	the chemical equilibrium	Das chemische Gleichgewicht stellt sich ein, wenn Hin- und Rückreaktion gleich schnell ablaufen.
+die Hinreaktion	the forward reaction	Bei der Hinreaktion entstehen aus den Edukten die Produkte.
+die Rückreaktion	the reverse reaction	Bei der Rückreaktion zerfallen die Produkte wieder in die Ausgangsstoffe.
+umkehrbar	reversible	Viele chemische Reaktionen sind umkehrbar und können in beide Richtungen ablaufen.
+das Gesetz der Massenerhaltung	the mass conservation law	Nach dem Gesetz der Massenerhaltung geht bei einer Reaktion keine Masse verloren.
+exotherm	exothermic	Die Neutralisation ist exotherm, deshalb wird die Lösung dabei warm.
+endotherm	endothermic	Das Auflösen dieses Salzes ist endotherm, und das Becherglas fühlt sich kalt an.
+die Aktivierungsenergie	the activation energy	Ein Streichholz liefert die Aktivierungsenergie, die für den Start der Verbrennung nötig ist.
+der Katalysator	the catalyst	Ein Katalysator beschleunigt die Reaktion, ohne selbst verbraucht zu werden.
+die Reaktionsgeschwindigkeit	the reaction rate	Die Reaktionsgeschwindigkeit steigt meistens, wenn man die Temperatur erhöht.
+beschleunigen	to accelerate	Höhere Temperatur und feines Pulver können eine Reaktion deutlich beschleunigen.
+verlangsamen	to slow down	Im Kühlschrank kann man viele unerwünschte Reaktionen in Proben verlangsamen.
+reagieren	to react	Natrium und Chlor reagieren heftig miteinander zu Natriumchlorid.
+die Reaktion	the reaction	Die Reaktion beginnt sofort, sobald wir die beiden Lösungen mischen.
+entstehen	to form	Bei der Reaktion von Säure und Lauge entstehen Salz und Wasser.
+verbrauchen	to consume	Eine Kerze kann in einem geschlossenen Glas den gesamten Sauerstoff verbrauchen.
+freisetzen	to release	Exotherme Reaktionen können große Mengen Energie in Form von Wärme freisetzen.
+die Wärme	the heat	Bei der Reaktion wird Wärme frei, und das Reagenzglas wird heiß.
+die Energie	the energy	Um Wasser zu verdampfen, muss man ihm viel Energie zuführen.
+die Temperatur	the temperature	Die Temperatur im Brutschrank beträgt genau siebenunddreißig Grad Celsius.
+erhitzen	to heat	Die Probe darf man nur vorsichtig im Wasserbad erhitzen.
+abkühlen	to cool down	Die heiße Lösung muss erst auf Raumtemperatur abkühlen, bevor wir weiterarbeiten.
+die Enthalpie	the enthalpy	Die Enthalpie einer exothermen Reaktion ist negativ, weil Energie abgegeben wird.
+der Stoff	the substance	Jeder reine Stoff hat einen festen Schmelzpunkt und Siedepunkt.
+die Chemikalie	the chemical	Jede Chemikalie muss mit Namen und Gefahrensymbol beschriftet sein.
+die Zusammensetzung	the composition	Die Zusammensetzung einer Legierung kann man im Labor genau bestimmen.
+chemisch	chemical	Beim Rosten verändert sich das Eisen chemisch und wird zu einem neuen Stoff.
+physikalisch	physical	Das Schmelzen von Eis ist ein physikalischer Vorgang, kein chemischer.
+bestehen aus	to consist of	Salze bestehen aus positiv und negativ geladenen Ionen.
+der Aggregatzustand	the state of matter	Wasser kann den Aggregatzustand fest, flüssig oder gasförmig haben.
+fest	solid	Bei null Grad Celsius wird Wasser fest und bildet Eis.
+flüssig	liquid	Quecksilber ist bei Raumtemperatur flüssig, obwohl es ein Metall ist.
+gasförmig	gaseous	Kohlendioxid ist bei Raumtemperatur gasförmig und schwerer als Luft.
+der Feststoff	the solid	Nach dem Eindampfen bleibt ein weißer Feststoff im Tiegel zurück.
+die Flüssigkeit	the liquid	Die Flüssigkeit im Reagenzglas färbt sich nach kurzer Zeit blau.
+das Gas	the gas	Bei der Reaktion entsteht ein farbloses Gas, das nach Ammoniak riecht.
+der Zustand	the state	Im festen Zustand sind die Teilchen dicht gepackt und bewegen sich kaum.
+die Zustandsänderung	the change of state	Jede Zustandsänderung ist mit der Aufnahme oder Abgabe von Energie verbunden.
+schmelzen	to melt	Eis beginnt bei null Grad Celsius zu schmelzen.
+erstarren	to solidify	Flüssiges Wachs beginnt beim Abkühlen an der Luft schnell zu erstarren.
+verdampfen	to vaporise	Beim Erhitzen beginnt das Lösungsmittel zu verdampfen, und das Salz bleibt zurück.
+verdunsten	to evaporate	Offene Lösungen können bei Raumtemperatur langsam verdunsten und dadurch konzentrierter werden.
+kondensieren	to condense	Wasserdampf beginnt an der kalten Glaswand zu kondensieren.
+sublimieren	to sublime	Iod kann beim Erwärmen direkt vom festen in den gasförmigen Zustand sublimieren.
+gefrieren	to freeze	Wasser beginnt bei null Grad Celsius zu gefrieren und dehnt sich dabei aus.
+sieden	to boil	Ethanol beginnt schon bei etwa achtundsiebzig Grad Celsius zu sieden.
+der Schmelzpunkt	the melting point	Der Schmelzpunkt eines Stoffes hilft uns, seine Reinheit zu überprüfen.
+der Siedepunkt	the boiling point	Der Siedepunkt von Wasser liegt bei normalem Luftdruck bei hundert Grad.
+der Gefrierpunkt	the freezing point	Salz senkt den Gefrierpunkt von Wasser, deshalb streut man es im Winter.
+der Druck	the pressure	Wenn man den Druck erhöht, sinkt das Volumen eines Gases.
+das Volumen	the volume	Das Volumen der Lösung lesen wir am unteren Rand des Meniskus ab.
+die Dichte	the density	Die Dichte von Wasser beträgt ungefähr ein Gramm pro Milliliter.
+das Teilchenmodell	the particle model	Mit dem Teilchenmodell kann man die Aggregatzustände anschaulich erklären.
+die Diffusion	the diffusion	Durch Diffusion verteilt sich ein Tropfen Tinte langsam im ganzen Wasser.
+die Osmose	the osmosis	Durch Osmose platzen rote Blutkörperchen in destilliertem Wasser.
+der osmotische Druck	the osmotic pressure	Der osmotische Druck hängt von der Zahl der gelösten Teilchen ab.
+isotonisch	isotonic	Eine isotonische Kochsalzlösung hat den gleichen osmotischen Druck wie das Blut.
+die physiologische Kochsalzlösung	the saline solution	Die physiologische Kochsalzlösung enthält neun Gramm Natriumchlorid pro Liter.
+die Kristallisation	the crystallisation	Die Kristallisation beginnt, wenn die Lösung langsam abkühlt.
+eindampfen	to evaporate down	Die Salzlösung kann man eindampfen, bis nur noch das Salz übrig bleibt.
+die Lösung	the solution	Die Lösung muss vor der Messung gut gemischt werden.
+das Lösungsmittel	the solvent	Wasser ist das wichtigste Lösungsmittel im Labor und im Körper.
+der gelöste Stoff	the solute	Der gelöste Stoff verteilt sich gleichmäßig im ganzen Lösungsmittel.
+lösen	to dissolve	Zucker kann man in warmem Wasser schneller lösen als in kaltem.
+auflösen	to dissolve completely	Das Salz sollte sich vollständig auflösen, bevor wir die Lösung auffüllen.
+wässrig	aqueous	In wässriger Lösung zerfallen Salze in ihre Ionen.
+löslich	soluble	Kochsalz ist in Wasser gut löslich, in Öl dagegen kaum.
+unlöslich	insoluble	Sand ist in Wasser unlöslich und setzt sich am Boden ab.
+schwer löslich	poorly soluble	Silberchlorid ist in Wasser schwer löslich und fällt als weißer Niederschlag aus.
+die Löslichkeit	the solubility	Die Löslichkeit der meisten Salze steigt mit der Temperatur.
+gesättigt	saturated	Eine Lösung ist gesättigt, wenn sich kein weiteres Salz mehr darin löst.
+ungesättigt	unsaturated	In einer ungesättigten Lösung kann sich noch mehr Salz auflösen.
+übersättigt	supersaturated	Eine übersättigte Lösung ist instabil, und schon ein kleiner Kristall löst die Kristallisation aus.
+die Sättigung	the saturation	Bei zwanzig Grad liegt die Sättigung von Kochsalz bei etwa dreihundertsechzig Gramm pro Liter.
+der Bodensatz	the sediment	In einer gesättigten Lösung bleibt ungelöstes Salz als Bodensatz zurück.
+die Hydrathülle	the hydration shell	Beim Lösen umgibt sich jedes Ion mit einer Hydrathülle aus Wassermolekülen.
+das Gemisch	the mixture	Luft ist ein Gemisch aus Stickstoff, Sauerstoff und anderen Gasen.
+homogen	homogeneous	Salzwasser ist ein homogenes Gemisch, weil man keine einzelnen Bestandteile sieht.
+heterogen	heterogeneous	Sand in Wasser ist ein heterogenes Gemisch, das man leicht trennen kann.
+die Suspension	the suspension	Eine Suspension besteht aus festen Teilchen, die in einer Flüssigkeit schweben.
+die Emulsion	the emulsion	Milch ist eine Emulsion aus kleinen Fetttröpfchen in Wasser.
+das Kolloid	the colloid	Ein Kolloid enthält sehr kleine Teilchen, die sich nicht absetzen.
+der Reinstoff	the pure substance	Destilliertes Wasser ist ein Reinstoff, Leitungswasser dagegen ein Gemisch.
+die Reinheit	the purity	Die Reinheit der Chemikalie steht auf dem Etikett der Flasche.
+verunreinigt	contaminated	Die Probe ist verunreinigt und muss neu abgenommen werden.
+hydrophil	hydrophilic	Hydrophile Stoffe wie Zucker lösen sich gut in Wasser.
+hydrophob	hydrophobic	Fette sind hydrophob und lösen sich deshalb nicht in Wasser.
+mischbar	miscible	Ethanol und Wasser sind in jedem Verhältnis miteinander mischbar.
+trennen	to separate	Ein Gemisch aus Salz und Sand kann man mit Wasser gut trennen.
+das Trennverfahren	the separation method	Die Destillation ist ein Trennverfahren, das unterschiedliche Siedepunkte ausnutzt.
+filtrieren	to filter	Den Niederschlag müssen wir filtrieren und danach gründlich trocknen.
+das Filterpapier	the filter paper	Das Filterpapier wird gefaltet und in den Trichter gelegt.
+das Filtrat	the filtrate	Das klare Filtrat wird in einem sauberen Becherglas aufgefangen.
+der Rückstand	the residue	Der Rückstand auf dem Filterpapier wird anschließend gewogen.
+die Destillation	the distillation	Bei der Destillation trennt man Flüssigkeiten mit unterschiedlichen Siedepunkten.
+destillieren	to distil	Um reines Ethanol zu erhalten, muss man das Gemisch mehrmals destillieren.
+das destillierte Wasser	the distilled water	Das destillierte Wasser für die Lösungen steht im Kanister neben der Spüle.
+zentrifugieren	to centrifuge	Die Blutprobe müssen wir zehn Minuten zentrifugieren, um das Serum zu gewinnen.
+die Zentrifuge	the centrifuge	Die Röhrchen in der Zentrifuge müssen immer gegenüber ausbalanciert werden.
+das Wasser	the water	Wasser ist ein polares Molekül und löst viele Salze sehr gut.
+der Elektrolyt	the electrolyte	Natrium und Kalium sind wichtige Elektrolyte, die im Serum gemessen werden.
+das Serum	the serum	Das Serum ist der flüssige Teil des Blutes ohne Gerinnungsfaktoren.
+das Plasma	the plasma	Plasma gewinnt man aus Blut, dem ein Gerinnungshemmer zugesetzt wurde.
+die Probe	the sample	Jede Probe wird mit dem Namen des Patienten und dem Datum beschriftet.
+die Konzentration	the concentration	Die Konzentration gibt an, wie viel Stoff in einem bestimmten Volumen gelöst ist.
+die Stoffmengenkonzentration	the molar concentration	Die Stoffmengenkonzentration wird in Mol pro Liter angegeben.
+die Massenkonzentration	the mass concentration	Die Massenkonzentration gibt man meistens in Gramm pro Liter an.
+der Massenanteil	the mass fraction	Der Massenanteil von Salz in dieser Lösung beträgt zehn Prozent.
+der Volumenanteil	the volume fraction	Der Volumenanteil von Ethanol im Desinfektionsmittel liegt bei siebzig Prozent.
+der Gehalt	the content	Der Gehalt an Alkohol wird in Volumenprozent angegeben.
+das Prozent	the percent	Ein Prozent bedeutet ein Teil von hundert Teilen.
+das Promille	the per mille	Ein Promille entspricht einem Teil von tausend Teilen.
+ppm	parts per million	Die Angabe ppm bedeutet ein Teil pro eine Million Teile.
+der Liter	the litre	Für diese Stammlösung brauchen wir genau einen Liter destilliertes Wasser.
+der Milliliter	the millilitre	Mit der Vollpipette geben wir genau zehn Milliliter der Probe ins Gefäß.
+der Mikroliter	the microlitre	Für diesen Test braucht man nur fünfzig Mikroliter Serum.
+molar	molar	Für die Titration verwenden wir eine null komma eins molare Natronlauge.
+millimolar	millimolar	Die Lösung ist fünf millimolar, also enthält sie fünf Millimol pro Liter.
+konzentriert	concentrated	Konzentrierte Schwefelsäure ist stark ätzend und muss vorsichtig verdünnt werden.
+verdünnt	diluted	Für den Versuch benutzen wir nur verdünnte Salzsäure.
+verdünnen	to dilute	Beim Verdünnen gilt immer: erst das Wasser, dann die Säure.
+die Verdünnung	the dilution	Für die Messung stellen wir eine Verdünnung von eins zu zehn her.
+die Verdünnungsreihe	the dilution series	Mit einer Verdünnungsreihe erstellen wir die Kalibrierkurve für das Photometer.
+der Verdünnungsfaktor	the dilution factor	Das Ergebnis muss man am Ende mit dem Verdünnungsfaktor multiplizieren.
+das Mischungskreuz	the mixing cross	Mit dem Mischungskreuz berechnet man, wie man zwei Lösungen mischen muss.
+die Stammlösung	the stock solution	Aus der Stammlösung stellen wir alle weiteren Verdünnungen her.
+die Maßlösung	the standard solution	Die Maßlösung für die Titration hat eine genau bekannte Konzentration.
+die Kalibrierkurve	the calibration curve	Die Kalibrierkurve zeigt den Zusammenhang zwischen Konzentration und Messwert.
+ansetzen	to make up	Heute müssen wir eine neue Pufferlösung für die Messungen ansetzen.
+herstellen	to prepare	Aus dem Pulver kann man eine Lösung mit genauer Konzentration herstellen.
+einwiegen	to weigh in	Für die Lösung müssen wir genau zwei Gramm Natriumhydroxid einwiegen.
+die Einwaage	the weighed amount	Die Einwaage notieren wir sofort mit allen Nachkommastellen im Protokoll.
+abmessen	to measure out	Mit dem Messzylinder kann man größere Flüssigkeitsmengen schnell abmessen.
+pipettieren	to pipette	Beim Pipettieren darf man niemals mit dem Mund ansaugen.
+die Pipette	the pipette	Die Pipette muss vor dem Gebrauch sauber und trocken sein.
+die Vollpipette	the volumetric pipette	Mit der Vollpipette kann man ein festes Volumen sehr genau abmessen.
+die Messpipette	the graduated pipette	Mit der Messpipette kann man verschiedene Volumina abmessen.
+die Kolbenhubpipette	the piston pipette	Die Kolbenhubpipette wird im Labor täglich für kleine Volumina benutzt.
+die Pipettenspitze	the pipette tip	Nach jeder Probe wechseln wir die Pipettenspitze, um Verschleppung zu vermeiden.
+die Bürette	the burette	Aus der Bürette tropfen wir die Maßlösung langsam in den Kolben.
+der Messkolben	the volumetric flask	Den Messkolben füllen wir genau bis zur Eichmarke mit Wasser auf.
+der Messzylinder	the measuring cylinder	Der Messzylinder ist weniger genau als eine Pipette oder ein Messkolben.
+das Becherglas	the beaker	Im Becherglas lösen wir das Salz unter Rühren vollständig auf.
+der Erlenmeyerkolben	the Erlenmeyer flask	Für die Titration geben wir die Probe in einen Erlenmeyerkolben.
+auffüllen	to fill up	Nach dem Lösen müssen wir den Messkolben bis zur Eichmarke auffüllen.
+die Eichmarke	the calibration mark	Der Meniskus muss genau auf der Eichmarke des Messkolbens liegen.
+der Meniskus	the meniscus	Beim Ablesen schaut man immer auf den tiefsten Punkt des Meniskus.
+die Waage	the balance	Vor dem Wiegen muss die Waage auf null gestellt werden.
+die Analysenwaage	the analytical balance	Die Analysenwaage misst bis auf ein Zehntel Milligramm genau.
+tarieren	to tare	Vor dem Einwiegen müssen wir das leere Wägeschälchen auf der Waage tarieren.
+das Reagenzglas	the test tube	Das Reagenzglas halten wir beim Erhitzen immer schräg und vom Körper weg.
+der Bunsenbrenner	the Bunsen burner	Den Bunsenbrenner darf man nie unbeaufsichtigt brennen lassen.
+der Magnetrührer	the magnetic stirrer	Der Magnetrührer mischt die Lösung gleichmäßig, während wir titrieren.
+rühren	to stir	Die Lösung muss man während der Zugabe ständig rühren.
+schütteln	to shake	Vor der Messung muss man das Röhrchen vorsichtig schütteln.
+mischen	to mix	Säure und Wasser darf man nur in der richtigen Reihenfolge mischen.
+das Röhrchen	the tube	Das Röhrchen wird nach dem Zentrifugieren vorsichtig aus der Zentrifuge genommen.
+der Tropfen	the drop	Wir geben einen Tropfen Indikator in die farblose Lösung.
+tropfenweise	dropwise	Die Lauge geben wir tropfenweise zu, bis sich die Farbe ändert.
+zugeben	to add	Zum Schluss müssen wir noch zwei Tropfen Indikator zugeben.
+die Zugabe	the addition	Nach der Zugabe von Säure steigt die Temperatur der Lösung an.
+erwärmen	to warm	Die Lösung sollte man im Wasserbad leicht erwärmen.
+das Wasserbad	the water bath	Im Wasserbad erwärmen wir die Probe gleichmäßig auf siebenunddreißig Grad.
+trocknen	to dry	Den Niederschlag lassen wir über Nacht im Trockenschrank trocknen.
+der Trockenschrank	the drying oven	Im Trockenschrank werden die Glasgeräte bei hundertzwanzig Grad getrocknet.
+der Exsikkator	the desiccator	Im Exsikkator kühlen die Proben ab, ohne Feuchtigkeit aufzunehmen.
+hygroskopisch	hygroscopic	Natriumhydroxid ist hygroskopisch und muss deshalb gut verschlossen aufbewahrt werden.
+das Glasgerät	the glassware	Jedes Glasgerät muss nach dem Versuch gründlich gespült werden.
+die Raumtemperatur	the room temperature	Die Reagenzien müssen vor dem Test auf Raumtemperatur kommen.
+lagern	to store	Diese Reagenzien muss man dunkel und bei vier Grad Celsius lagern.
+beschriften	to label	Jedes Röhrchen müssen wir sofort nach der Abnahme deutlich beschriften.
+der Abzug	the fume hood	Mit giftigen oder stark riechenden Stoffen arbeiten wir nur unter dem Abzug.
+die Schutzbrille	the safety goggles	Im Labor trägt man immer eine Schutzbrille, auch bei kleinen Versuchen.
+der Laborkittel	the lab coat	Der Laborkittel schützt die Kleidung und die Haut vor Chemikalien.
+der Schutzhandschuh	the protective glove	Beim Umgang mit Blutproben tragen wir immer einen Schutzhandschuh.
+das Gefahrensymbol	the hazard symbol	Das Gefahrensymbol auf der Flasche zeigt, dass der Stoff ätzend ist.
+das Sicherheitsdatenblatt	the safety data sheet	Im Sicherheitsdatenblatt steht, wie man mit der Chemikalie sicher umgeht.
+ätzend	corrosive	Natronlauge ist stark ätzend und kann schwere Verletzungen an den Augen verursachen.
+giftig	toxic	Quecksilberdämpfe sind sehr giftig und dürfen nicht eingeatmet werden.
+entzündlich	flammable	Ethanol ist leicht entzündlich und darf nicht in die Nähe einer Flamme.
+das Labor	the laboratory	Im Labor darf man weder essen noch trinken, auch nicht in Pausen.
+der Versuch	the experiment	Vor jedem Versuch lesen wir die Anleitung sorgfältig durch.
+beobachten	to observe	Während der Reaktion sollen wir genau beobachten, was im Glas passiert.
+die Beobachtung	the observation	Jede Beobachtung schreiben wir sofort in das Versuchsprotokoll.
+das Protokoll	the lab report	Im Protokoll stehen Material, Durchführung, Beobachtung und Auswertung.
+auswerten	to evaluate	Nach dem Versuch müssen wir die Messwerte sorgfältig auswerten.
+bestimmen	to determine	Im Labor bestimmen wir die Konzentration von Glucose im Serum.
+messen	to measure	Mit dem Photometer messen wir, wie viel Licht die Probe absorbiert.
+die Messung	the measurement	Die Messung wiederholen wir dreimal, um Fehler zu erkennen.
+der Messwert	the measured value	Ein auffälliger Messwert muss immer noch einmal überprüft werden.
+die Fehlerquelle	the source of error	Eine häufige Fehlerquelle ist das falsche Ablesen am Meniskus.
+der Mittelwert	the mean value	Aus den drei Messungen berechnen wir am Ende den Mittelwert.
+die Genauigkeit	the accuracy	Die Genauigkeit einer Vollpipette ist höher als die eines Messzylinders.
+die Präzision	the precision	Eine hohe Präzision bedeutet, dass wiederholte Messungen eng beieinander liegen.
+wiederholen	to repeat	Wenn das Ergebnis unklar ist, müssen wir die Messung wiederholen.
+vergleichen	to compare	Wir vergleichen den Messwert der Probe mit dem Referenzbereich.
+der Referenzbereich	the reference range	Der Referenzbereich zeigt, welche Werte bei gesunden Menschen normal sind.
+die Qualitätskontrolle	the quality control	Vor den Patientenproben läuft jeden Morgen eine Qualitätskontrolle.
+das Photometer	the photometer	Das Photometer misst, wie stark eine farbige Lösung das Licht schwächt.
+die Extinktion	the absorbance	Die Extinktion ist nach Lambert-Beer proportional zur Konzentration der Lösung.
+die Wellenlänge	the wavelength	Die Messung erfolgt bei einer Wellenlänge von fünfhundertvierzig Nanometern.
+die Küvette	the cuvette	Die Küvette fasst man nur an den geriffelten Seiten an, nie an den klaren.
+der Blindwert	the blank value	Der Blindwert enthält alle Reagenzien, aber keine Probe.
+die Flammenfärbung	the flame test	Bei der Flammenfärbung zeigt Natrium eine leuchtend gelbe Farbe.
+die Glucose	the glucose	Glucose ist der wichtigste Energielieferant für die Zellen im Körper.
+organisch	organic	Organische Verbindungen enthalten immer Kohlenstoff und meistens Wasserstoff.
+anorganisch	inorganic	Kochsalz und Salzsäure gehören zu den anorganischen Verbindungen.
+die Fällungsreaktion	the precipitation reaction	Bei einer Fällungsreaktion entsteht aus zwei klaren Lösungen ein fester Niederschlag.
+die Fällung	the precipitation	Die Fällung von Silberchlorid dient als Nachweis für Chloridionen.
+der Niederschlag	the precipitate	Nach dem Zusammengeben bildet sich sofort ein weißer Niederschlag.
+ausfallen	to precipitate	Wird das Löslichkeitsprodukt überschritten, kann das Salz als Feststoff ausfallen.
+das Löslichkeitsprodukt	the solubility product	Das Löslichkeitsprodukt zeigt, wie gut sich ein Salz in Wasser löst.
+die Trübung	the turbidity	Eine leichte Trübung in der Lösung zeigt, dass sich ein Niederschlag bildet.
+trüb	cloudy	Nach Zugabe von Silbernitrat wird die klare Probe sofort trüb.
+klar	clear	Die Lösung muss vor der Messung klar und frei von Partikeln sein.
+farblos	colourless	Salzsäure ist eine farblose Flüssigkeit mit einem stechenden Geruch.
+der Farbumschlag	the colour change	Der Farbumschlag des Indikators zeigt das Ende der Titration an.
+der Nachweis	the detection	Der Nachweis von Glucose im Urin erfolgt oft mit einem Teststreifen.
+nachweisen	to detect	Mit Silbernitrat kann man Chloridionen in einer Lösung nachweisen.
+die Nachweisreaktion	the detection reaction	Eine Nachweisreaktion zeigt, ob ein bestimmter Stoff in der Probe enthalten ist.
+das Reagenz	the reagent	Das Reagenz muss man im Kühlschrank lagern und vor Licht schützen.
+das Silbernitrat	the silver nitrate	Silbernitrat hinterlässt auf der Haut schwarze Flecken, die lange bleiben.
+das Silberchlorid	the silver chloride	Silberchlorid ist ein weißer Niederschlag, der sich am Licht dunkel färbt.
+das Bariumsulfat	the barium sulfate	Bariumsulfat ist so schwer löslich, dass man es als Nachweis für Sulfat nutzt.
+die Redoxreaktion	the redox reaction	Bei einer Redoxreaktion werden Elektronen von einem Teilchen auf ein anderes übertragen.
+die Oxidation	the oxidation	Die Oxidation ist eine Abgabe von Elektronen, dabei steigt die Oxidationszahl.
+die Reduktion	the reduction	Die Reduktion ist eine Aufnahme von Elektronen, dabei sinkt die Oxidationszahl.
+oxidieren	to oxidise	Eisen kann an feuchter Luft langsam oxidieren und dabei rosten.
+reduzieren	to reduce	Mit Wasserstoff kann man Kupferoxid wieder zu reinem Kupfer reduzieren.
+das Oxidationsmittel	the oxidising agent	Ein Oxidationsmittel nimmt Elektronen auf und wird dabei selbst reduziert.
+das Reduktionsmittel	the reducing agent	Ein Reduktionsmittel gibt Elektronen ab und wird dabei selbst oxidiert.
+die Oxidationszahl	the oxidation number	Die Oxidationszahl von Sauerstoff ist in den meisten Verbindungen minus zwei.
+die Oxidationsstufe	the oxidation state	Eisen kommt in den Oxidationsstufen plus zwei und plus drei vor.
+die Elektronenübertragung	the electron transfer	Jede Redoxreaktion beruht auf einer Elektronenübertragung zwischen zwei Teilchen.
+die Elektronenabgabe	the electron loss	Die Elektronenabgabe nennt man Oxidation, die Elektronenaufnahme dagegen Reduktion.
+die Elektronenaufnahme	the electron gain	Bei der Elektronenaufnahme sinkt die Oxidationszahl des Teilchens.
+der Elektronendonator	the electron donor	Das Reduktionsmittel ist der Elektronendonator in einer Redoxreaktion.
+der Elektronenakzeptor	the electron acceptor	Sauerstoff ist in vielen Reaktionen ein starker Elektronenakzeptor.
+übertragen	to transfer	Bei einer Redoxreaktion werden Elektronen von einem Stoff auf einen anderen übertragen.
+die Teilgleichung	the half-equation	Für die Oxidation und die Reduktion schreibt man je eine Teilgleichung.
+aufstellen	to set up	Zuerst müssen wir die Teilgleichungen für Oxidation und Reduktion aufstellen.
+das Redoxpaar	the redox pair	Ein Redoxpaar besteht aus der oxidierten und der reduzierten Form eines Stoffes.
+die Korrosion	the corrosion	Die Korrosion von Eisen kann man durch einen Schutzanstrich verhindern.
+rosten	to rust	Ein Nagel beginnt im Wasser schon nach wenigen Tagen zu rosten.
+der Rost	the rust	Rost entsteht, wenn Eisen mit Sauerstoff und Wasser reagiert.
+die Oxidschicht	the oxide layer	Die dünne Oxidschicht schützt Aluminium vor weiterer Korrosion.
+die Verbrennung	the combustion	Eine Verbrennung ist eine schnelle Oxidation, bei der Wärme und Licht entstehen.
+verbrennen	to burn	Magnesium kann an der Luft mit einer grellen weißen Flamme verbrennen.
+das Oxid	the oxide	Beim Verbrennen von Magnesium entsteht ein weißes Oxid.
+das Metalloxid	the metal oxide	Ein Metalloxid wie Calciumoxid bildet mit Wasser eine Lauge.
+das Nichtmetalloxid	the nonmetal oxide	Ein Nichtmetalloxid wie Kohlendioxid bildet mit Wasser eine Säure.
+die Elektrolyse	the electrolysis	Bei der Elektrolyse wird eine chemische Reaktion durch elektrischen Strom erzwungen.
+die Elektrode	the electrode	Die Elektrode taucht in die Lösung und leitet den Strom hinein.
+die Anode	the anode	An der Anode findet bei jeder Elektrolyse die Oxidation statt.
+die Kathode	the cathode	An der Kathode werden Elektronen aufgenommen, also findet dort eine Reduktion statt.
+die Spannungsreihe	the electrochemical series	In der Spannungsreihe stehen die edlen Metalle rechts von den unedlen.
+die galvanische Zelle	the galvanic cell	Eine galvanische Zelle wandelt chemische Energie in elektrische Energie um.
+die ionenselektive Elektrode	the ion-selective electrode	Die ionenselektive Elektrode misst Natrium und Kalium direkt im Serum der Patienten.
+die Säure	the acid	Eine Säure gibt in wässriger Lösung Protonen an Wassermoleküle ab.
+die Base	the base	Eine Base nimmt Protonen auf und erhöht dadurch den pH-Wert.
+die Lauge	the lye	Eine Lauge ist die wässrige Lösung einer Base.
+sauer	acidic	Eine Lösung ist sauer, wenn ihr pH-Wert unter sieben liegt.
+basisch	basic	Eine Lösung mit einem pH-Wert über sieben nennt man basisch.
+alkalisch	alkaline	Seifenlauge ist alkalisch und färbt das Universalindikatorpapier deutlich blau.
+der pH-Wert	the pH value	Der pH-Wert des Blutes liegt normalerweise bei etwa sieben komma vier.
+die pH-Skala	the pH scale	Die pH-Skala reicht im Labor meistens von null bis vierzehn.
+das pH-Meter	the pH meter	Das pH-Meter muss vor jeder Messreihe mit Pufferlösungen kalibriert werden.
+der Protonendonator	the proton donor	Nach der Theorie von Brönsted ist eine Säure ein Protonendonator.
+der Protonenakzeptor	the proton acceptor	Eine Base ist ein Protonenakzeptor, weil sie Protonen aufnehmen kann.
+die Protonenübertragung	the proton transfer	Bei jeder Säure-Base-Reaktion findet eine Protonenübertragung zwischen zwei Teilchen statt.
+die Säure-Base-Reaktion	the acid-base reaction	Bei einer Säure-Base-Reaktion wird ein Proton von der Säure auf die Base übertragen.
+die Neutralisation	the neutralisation	Bei der Neutralisation reagieren Säure und Lauge zu Salz und Wasser.
+neutralisieren	to neutralise	Verschüttete Säure muss man sofort mit einer schwachen Base neutralisieren.
+die Titration	the titration	Mit einer Titration bestimmt man die unbekannte Konzentration einer Säure.
+titrieren	to titrate	Wir titrieren die Probe langsam, bis der Indikator die Farbe wechselt.
+der Äquivalenzpunkt	the equivalence point	Am Äquivalenzpunkt hat die gesamte Säure mit der Lauge reagiert.
+die Titrationskurve	the titration curve	An der Titrationskurve erkennt man den Äquivalenzpunkt als steilen Sprung.
+der Verbrauch	the consumption	Aus dem Verbrauch an Maßlösung berechnen wir die Konzentration der Probe.
+der Indikator	the indicator	Der Indikator Phenolphthalein wird im basischen Bereich pink.
+der Umschlagsbereich	the transition range	Der Umschlagsbereich des Indikators muss zum Äquivalenzpunkt der Titration passen.
+das Lackmuspapier	the litmus paper	Lackmuspapier färbt sich in sauren Lösungen rot und in basischen blau.
+das Indikatorpapier	the indicator paper	Mit dem Indikatorpapier kann man den pH-Wert schnell grob abschätzen.
+der Puffer	the buffer	Ein Puffer hält den pH-Wert auch bei Zugabe von Säure fast konstant.
+die Pufferlösung	the buffer solution	Die Pufferlösung besteht aus einer schwachen Säure und ihrer korrespondierenden Base.
+die Pufferkapazität	the buffer capacity	Wenn die Pufferkapazität erschöpft ist, ändert sich der pH-Wert plötzlich stark.
+der Kohlensäure-Bicarbonat-Puffer	the bicarbonate buffer	Der Kohlensäure-Bicarbonat-Puffer ist das wichtigste Puffersystem im Blut.
+die Azidose	the acidosis	Bei einer Azidose ist der pH-Wert des Blutes zu niedrig.
+die Alkalose	the alkalosis	Bei einer Alkalose ist der pH-Wert des Blutes zu hoch.
+die Blutgasanalyse	the blood gas analysis	Mit der Blutgasanalyse misst man den pH-Wert und die Gase im Blut.
+ansäuern	to acidify	Vor der Messung muss man die Urinprobe mit etwas Säure ansäuern.
+das Hydroxidion	the hydroxide ion	Jedes Hydroxidion trägt eine negative Ladung und macht eine Lösung basisch.
+das Oxoniumion	the oxonium ion	Das Oxoniumion entsteht, wenn ein Wassermolekül ein Proton aufnimmt.
+das Wasserstoffion	the hydrogen ion	Ein Wasserstoffion ist eigentlich nur ein einzelnes Proton ohne Elektron.
+die Salzsäure	the hydrochloric acid	Salzsäure kommt auch im menschlichen Magen vor und hilft bei der Verdauung.
+die Schwefelsäure	the sulfuric acid	Beim Verdünnen von Schwefelsäure wird so viel Wärme frei, dass es spritzen kann.
+die Salpetersäure	the nitric acid	Salpetersäure ist eine starke Säure und greift viele Metalle an.
+die Phosphorsäure	the phosphoric acid	Phosphorsäure ist eine mittelstarke Säure und kommt sogar in Cola vor.
+die Essigsäure	the acetic acid	Essigsäure ist eine schwache Säure und steckt im Haushaltsessig.
+die Kohlensäure	the carbonic acid	Kohlensäure entsteht, wenn sich Kohlendioxid in Wasser löst.
+die Natronlauge	the caustic soda	Natronlauge verwenden wir als Maßlösung, um Säuren zu titrieren.
+das Natriumhydroxid	the sodium hydroxide	Festes Natriumhydroxid zieht Wasser aus der Luft an und wird feucht.
+das Natriumchlorid	the sodium chloride	Natriumchlorid ist der chemische Name für das normale Kochsalz.
+das Kochsalz	the table salt	Kochsalz löst sich gut in Wasser und leitet dann den Strom.
+das Ammoniak	the ammonia	Ammoniak ist ein stechend riechendes Gas, das in Wasser basisch reagiert.
+das Ammonium	the ammonium	Das Ammonium-Ion entsteht, wenn Ammoniak ein Proton aufnimmt.
+das Kohlendioxid	the carbon dioxide	Kohlendioxid entsteht bei der Atmung und wird mit dem Blut transportiert.
+das Chlorid	the chloride	Chlorid ist das wichtigste negativ geladene Ion im Blutplasma.
+das Sulfat	the sulfate	Sulfat weist man mit einer Bariumchloridlösung als weißen Niederschlag nach.
+das Nitrat	the nitrate	Zu viel Nitrat im Trinkwasser kann für Säuglinge gefährlich sein.
+das Carbonat	the carbonate	Beim Zugeben von Säure zu einem Carbonat entsteht Kohlendioxid, das sprudelt.
+das Hydrogencarbonat	the hydrogen carbonate	Hydrogencarbonat ist ein wichtiger Teil des Puffersystems im Blut.
+das Phosphat	the phosphate	Phosphat wird im Serum bestimmt, um den Knochenstoffwechsel zu beurteilen.
+die Autoprotolyse	the autoprotolysis	Durch die Autoprotolyse enthält auch reines Wasser einige Oxoniumionen und Hydroxidionen.
+die Dissoziation	the dissociation	Bei der Dissoziation zerfällt ein Salz in Wasser in seine Ionen.
+dissoziieren	to dissociate	Starke Säuren dissoziieren in Wasser fast vollständig in Ionen.
+die Säurekonstante	the acid constant	Die Säurekonstante zeigt, wie stark eine Säure in Wasser dissoziiert.
+der pKs-Wert	the pKa value	Je kleiner der pKs-Wert ist, desto stärker ist die Säure.
+stark	strong	Salzsäure ist eine starke Säure und gibt ihre Protonen fast vollständig ab.
+schwach	weak	Essigsäure ist eine schwache Säure und dissoziiert nur zu einem kleinen Teil.
+korrespondierend	conjugate	Das Acetat-Ion ist die korrespondierende Base der Essigsäure.
+das Säure-Base-Paar	the acid-base pair	Ein Säure-Base-Paar unterscheidet sich immer nur um ein einzelnes Proton.
+der Ampholyt	the ampholyte	Wasser ist ein Ampholyt, weil es als Säure und als Base reagieren kann.
+die Hydrolyse	the hydrolysis	Bei der Hydrolyse wird eine Verbindung durch die Reaktion mit Wasser gespalten.

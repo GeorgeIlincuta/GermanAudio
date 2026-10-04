@@ -1,0 +1,102 @@
+=====================================================================
+PROMPT 2: READ-ALOUD STORY BUILT FROM A VOCABULARY FILE
+Copy everything between the two lines of dashes into a new Claude chat.
+Fill in the [BRACKETS] and attach or paste your vocabulary file.
+=====================================================================
+----------------------------------------------------------------------
+I'm preparing for [the Ausbildung zur Medizinischen
+Technologin für Laboratoriumsanalytik]. Attached is my vocabulary file
+(tab-separated: german, english, phrase). Write a German story that uses
+these words, so I can listen to it as an audio book while walking. A local
+app reads the text aloud with a German voice.
+
+WHAT THE STORY SHOULD BE
+
+- Length: about [60] minutes of audio. Measured on a
+  previous story, 10,000 words came out as 92 minutes including all
+  pauses, so allow about 110 words per minute: 60 minutes is about 6,500
+  words, 90 minutes about 10,000. Stay within 10% of the target.
+- Use every word from the german column at least once, in exactly that
+  form. For nouns, the part after der/die/das must appear as written (see
+  the rules below). Where it fits naturally, reuse the example sentences
+  from the phrase column word for word. Then the audio for those sentences
+  matches the vocabulary track I've already practised.
+- A real story with characters and a thread, not a list of definitions.
+  For example, a trainee in their first year, alternating between school
+  and the workplace. Each chapter covers one topic from the vocabulary, and
+  the ideas are explained in dialogue, in the order they build on each
+  other.
+- German at B1 level: short, clear sentences, mostly 8 to 18 words. Use
+  the present tense wherever possible.
+
+HOW THE APP READS THE TEXT (this decides the format)
+
+- Plain UTF-8 text, no markdown: no #, *, bullet points or numbered lists.
+- An empty line starts a new paragraph, which gets a 1.5 s pause. Every
+  sentence gets a 0.6 s pause after it. A line break without an empty
+  line is ignored.
+- Sentences are split at . ! ? or … followed by a space. So every
+  sentence must end with one of those.
+- A chapter heading goes in its own paragraph and ends with a period, so
+  it gets a pause:
+  Kapitel eins. Der erste Tag.
+- Write chapter numbers as words ("Kapitel zwölf", not "Kapitel 12").
+
+THE WORD MUST APPEAR IN THE TEXT
+
+I check coverage by looking for each german entry, minus der/die/das, as
+an exact piece of text, ignoring upper and lower case. Endings added to
+the end are fine ("Atom" is found in "Atome"). These cases fail, so avoid
+them:
+
+- Umlaut plurals: "Glas" is not found in "Gläser".
+- Separable verbs: "auflösen" is not found in "löst sich auf". Use the
+  infinitive: "kann sich auflösen".
+- Participles: "verbrauchen" is not found in "verbraucht".
+- Adjective stem changes: "sauer" is not found in "saure"; use "ist
+  sauer".
+- Multi-word terms with changed endings: "die molare Masse" is not found
+  in "der molaren Masse".
+
+LIMITS OF THE VOICE GENERATOR (Supertonic text-to-speech)
+
+The text is read aloud exactly as written. An unknown character makes that
+sentence fail. An abbreviation also puts a false pause in the middle of a
+sentence. So:
+
+- No digits at all. Write numbers as words: "sieben komma vier",
+  "hundertvierzig Millimol pro Liter", "am dritten Mai".
+- No abbreviations: "zum Beispiel", not "z. B."; "Frau Doktor Brandt",
+  not "Dr. Brandt". No "usw.", "bzw.", "ca.", "Nr." or "d. h.". A period
+  followed by a capital letter always ends a sentence.
+- No chemical formulas, subscripts or superscripts (not H₂O, not CO₂).
+  Write names: "Wasser", "Kohlendioxid".
+- No unit symbols (not mg/L, °C, µl or %). Write them out: "Milligramm pro
+  Liter", "Grad Celsius", "Mikroliter", "Prozent".
+- No arrows, Greek letters, ±, ×, ≈, brackets, slashes or emoji.
+- Dialogue: best without quotation marks ("Willkommen, sagt er, ..."). If
+  you use them, never use „ ‚ › ‹, which the model rejects.
+- Don't write "..." in the middle of a sentence; it ends the sentence
+  there.
+- Characters tested and accepted: letters, ä ö ü Ä Ö Ü ß, and
+  , . : ; - – — … ! ? ' " “ ” ‘ ’ » « € % &
+
+OUTPUT
+
+Plain text only, no code block and no commentary. The first line is the
+title, ending with a period. Because the text is long, write it in parts
+of about [4] chapters each. After each part I'll say "continue". At the
+end, list any vocabulary words you couldn't use, so I can check them.
+----------------------------------------------------------------------
+
+AFTER THE CHAT (for you, not for Claude)
+
+1. Paste all parts into one file, e.g. story.txt, saved as UTF-8 (Notepad
+   does this by default). Keep the empty lines between paragraphs.
+2. Check it:           python -m germanaudio story.txt --text --check
+   (It prints the number of sentences and paragraphs.)
+3. Preview:            python -m germanaudio story.txt --text --limit 20 -o out/preview.mp3
+4. Build it:           python -m germanaudio story.txt --text -o out/story.mp3
+   Always give -o its own name, otherwise it overwrites out/german.mp3.
+Build the vocabulary track first. Story sentences that match your vocab
+phrases are then reused from the cache, which makes the story build faster.

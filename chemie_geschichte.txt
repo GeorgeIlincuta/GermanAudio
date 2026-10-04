@@ -1,0 +1,543 @@
+Lenas Jahr im Labor. Eine Geschichte über Chemie, Mut und viele kleine Fehler.
+
+Kapitel eins. Der erste Tag.
+
+Lena Berger ist neunzehn Jahre alt, und heute beginnt ihre Ausbildung zur Medizinischen Technologin für Laboratoriumsanalytik. Sie steht früh am Morgen vor dem großen Krankenhaus und hält ihre Tasche fest. In der Nacht hat sie kaum geschlafen. Sie hat sich immer wieder gefragt, ob sie gut genug in Chemie ist.
+
+Am Eingang wartet schon Herr Wagner auf sie. Er arbeitet seit über zwanzig Jahren im Labor und wird im ersten Jahr ihr Praxisanleiter sein. Er hat graue Haare, eine ruhige Stimme und ein freundliches Lächeln. Willkommen, sagt er, heute zeige ich dir zuerst die wichtigsten Regeln.
+
+Die erste Regel lernt Lena schon an der Tür. Im Labor trägt man immer einen Laborkittel, und zwar geschlossen. Der Laborkittel schützt die Kleidung und die Haut vor Chemikalien. Herr Wagner gibt ihr außerdem eine Schutzbrille. Im Labor trägt man immer eine Schutzbrille, auch bei kleinen Versuchen, erklärt er. Die Augen bekommt man nicht zurück.
+
+Dann zeigt er ihr die Schutzhandschuhe. Beim Umgang mit Blutproben tragen wir immer einen Schutzhandschuh, sagt er. Jede Probe kann Krankheitserreger enthalten, auch wenn sie ganz harmlos aussieht. Lena nickt und zieht die dünnen blauen Handschuhe an.
+
+In der Ecke des Raumes steht ein großer Schrank mit einer Glasscheibe. Das ist der Abzug, erklärt Herr Wagner. Mit giftigen oder stark riechenden Stoffen arbeiten wir nur unter dem Abzug. Ein Ventilator saugt die Dämpfe ab, bevor wir sie einatmen können.
+
+Auf dem Regal stehen viele braune und weiße Flaschen. Auf jeder Flasche klebt ein Etikett. Jede Chemikalie muss mit Namen und Gefahrensymbol beschriftet sein, sagt Herr Wagner. Er nimmt eine Flasche mit Natronlauge in die Hand. Das Gefahrensymbol auf der Flasche zeigt, dass der Stoff ätzend ist. Natronlauge ist stark ätzend und kann schwere Verletzungen an den Augen verursachen.
+
+Daneben steht eine Flasche mit Ethanol. Ethanol ist leicht entzündlich und darf nicht in die Nähe einer Flamme, sagt er. Und hier, in diesem verschlossenen Schrank, stehen die Stoffe, die giftig sind. Quecksilberdämpfe sind sehr giftig und dürfen nicht eingeatmet werden. Deshalb haben wir hier fast keine Geräte mehr mit Quecksilber.
+
+Zu jeder Chemikalie gibt es ein Sicherheitsdatenblatt. Im Sicherheitsdatenblatt steht, wie man mit der Chemikalie sicher umgeht, erklärt Herr Wagner. Wenn du unsicher bist, liest du zuerst dort nach und fragst dann mich. Niemals rätst du einfach.
+
+Danach gehen sie in den großen Raum, in dem die Blutproben ankommen. Überall summen Maschinen, und auf den Tischen stehen Ständer mit bunten Röhrchen. Jede Probe wird mit dem Namen des Patienten und dem Datum beschriftet, sagt Herr Wagner. Eine Probe ohne Namen ist wertlos, egal wie gut wir messen.
+
+Lena sieht eine Maschine, die sich sehr schnell dreht. Das ist die Zentrifuge, sagt Herr Wagner. Die Blutprobe müssen wir zehn Minuten zentrifugieren, um das Serum zu gewinnen. Die schweren Blutzellen sinken nach unten, und oben bleibt eine gelbliche Flüssigkeit übrig.
+
+Das Serum ist der flüssige Teil des Blutes ohne Gerinnungsfaktoren, erklärt er weiter. Plasma gewinnt man aus Blut, dem ein Gerinnungshemmer zugesetzt wurde. Für viele Tests brauchen wir Serum, für andere Plasma. Das erkennst du an der Farbe des Deckels auf dem Röhrchen.
+
+Die Röhrchen in der Zentrifuge müssen immer gegenüber ausbalanciert werden, sagt er noch. Sonst wackelt die Zentrifuge und kann kaputtgehen. Das Röhrchen wird nach dem Zentrifugieren vorsichtig aus der Zentrifuge genommen, damit sich Serum und Zellen nicht wieder mischen.
+
+Am Ende des Tages zeigt Herr Wagner ihr den Kühlraum. Diese Reagenzien muss man dunkel und bei vier Grad Celsius lagern, erklärt er. Aber vor dem Test müssen die Reagenzien auf Raumtemperatur kommen. Ein kaltes Reagenz liefert falsche Ergebnisse.
+
+Als Lena am Abend nach Hause fährt, ist sie müde, aber glücklich. Sie hat so viele neue Wörter gehört, dass ihr der Kopf brummt. Aber sie weiß jetzt eins sicher: Sie will in diesem Labor arbeiten.
+
+Kapitel zwei. Die kleinsten Teilchen.
+
+Zwei Tage in der Woche geht Lena in die Berufsfachschule. Dort unterrichtet Frau Doktor Brandt das Fach Chemie. Sie ist klein, spricht schnell und malt beim Erklären ständig Kreise an die Tafel.
+
+Alles beginnt mit dem Atom, sagt sie in der ersten Stunde. Alle Stoffe bestehen aus winzigen Teilchen, die man nicht sehen kann. Ein Atom besteht aus einem Kern und einer Hülle aus Elektronen.
+
+Sie malt einen kleinen Punkt in die Mitte der Tafel. Das ist der Atomkern, sagt sie. Der Atomkern enthält fast die gesamte Masse des Atoms. Im Kern gibt es zwei Arten von Teilchen. Ein Proton trägt eine positive Ladung und sitzt im Atomkern. Das Neutron ist elektrisch neutral und liegt ebenfalls im Kern.
+
+Dann malt sie große Kreise um den Punkt. Hier bewegen sich die Elektronen, erklärt sie. Jedes Elektron trägt eine negative Ladung und bewegt sich in der Hülle. Die Ladung eines Protons ist genauso groß wie die eines Elektrons, nur mit umgekehrtem Vorzeichen.
+
+Neben Lena sitzt Jonas, ein anderer Auszubildender. Er flüstert: Und warum fliegt das Atom dann nicht auseinander? Frau Doktor Brandt hat es gehört und lächelt. Gute Frage, sagt sie. Ein Atom ist nach außen neutral, wenn es gleich viele Protonen und Elektronen hat. Die positiven und negativen Ladungen halten sich gegenseitig fest.
+
+Dann schreibt sie drei Begriffe an die Tafel. Die Ordnungszahl gibt die Anzahl der Protonen im Atomkern an. Die Kernladungszahl ist bei jedem Atom gleich der Ordnungszahl. Die Massenzahl ist die Summe aus Protonen und Neutronen im Kern.
+
+Lena schreibt alles mit. Sie merkt sich einen einfachen Satz: Die Ordnungszahl sagt, welches Element es ist. Denn ein Element besteht nur aus Atomen mit derselben Ordnungszahl. Jedes Element hat außerdem ein Kürzel. Das Elementsymbol für Eisen ist Fe, vom lateinischen Wort ferrum.
+
+Wie schwer ist so ein Atom, fragt Jonas. Sehr leicht, sagt Frau Doktor Brandt. Deshalb benutzt man eine eigene Einheit. Die atomare Masseneinheit ist ein Zwölftel der Masse eines Kohlenstoffatoms. Die Atommasse von Kohlenstoff beträgt ungefähr zwölf Einheiten. Ein Elektron ist dagegen so leicht, dass man es bei der Masse fast vergessen kann.
+
+In der zweiten Stunde geht es um die Hülle. Die Elektronenhülle bestimmt, wie ein Atom mit anderen Atomen reagiert, sagt Frau Doktor Brandt. Deshalb ist sie für uns Chemiker viel wichtiger als der Kern.
+
+Sie erklärt das Schalenmodell. Im Schalenmodell sind die Elektronen auf mehrere Schalen um den Kern verteilt. Auf die erste Schale passen höchstens zwei Elektronen. Auf die zweite Schale passen schon acht. Das Atommodell von Bohr beschreibt Elektronen auf festen Bahnen um den Kern, fügt sie hinzu. Heute wissen wir, dass es etwas komplizierter ist, aber für den Anfang reicht dieses Bild.
+
+Besonders wichtig ist die äußerste Schale. Die Elektronen auf der Außenschale sind für chemische Reaktionen wichtig, sagt sie. Man nennt sie Valenzelektronen. Natrium besitzt nur ein Valenzelektron, das es leicht abgibt. Die Elektronenkonfiguration zeigt, wie die Elektronen auf die Schalen verteilt sind.
+
+Später im Unterricht spricht sie auch über Orbitale. Ein Orbital kann höchstens zwei Elektronen mit entgegengesetztem Spin aufnehmen. Elektronen auf einem höheren Energieniveau sind weiter vom Kern entfernt. Im Grundzustand besetzen die Elektronen die niedrigsten möglichen Energieniveaus.
+
+Und was passiert, wenn man einem Atom Energie gibt, fragt Lena. Frau Doktor Brandt freut sich über die Frage. Ein angeregtes Elektron springt auf eine höhere Schale und sendet später Licht aus, antwortet sie. Das sehen wir bald bei der Flammenfärbung. Bei der Flammenfärbung zeigt Natrium eine leuchtend gelbe Farbe.
+
+Am Ende der Stunde fasst Lena für sich zusammen. Kern mit Protonen und Neutronen, Hülle mit Elektronen, Außenschale entscheidet über die Chemie. Sie malt ein kleines Atom an den Rand ihres Hefts und fühlt sich zum ersten Mal ein bisschen wie eine richtige Chemikerin.
+
+Kapitel drei. Gleiche Elemente, andere Kerne.
+
+In der nächsten Woche bringt Frau Doktor Brandt ein altes Messgerät mit in die Klasse. Es sieht aus wie ein kleines Radio mit einem Metallstab. Heute sprechen wir über Isotope, sagt sie.
+
+Ein Isotop hat die gleiche Protonenzahl, aber eine andere Neutronenzahl, erklärt sie. Isotope eines Elements unterscheiden sich nur in ihrer Neutronenzahl. Chemisch verhalten sie sich fast gleich, aber ihre Masse ist verschieden.
+
+Manche Isotope sind radioaktiv und zerfallen mit der Zeit von selbst, erzählt sie weiter. Ihr Kern ist instabil. Instabile Atomkerne zerfallen und senden dabei Strahlung aus. Die Strahlung radioaktiver Stoffe kann für den Körper gefährlich sein.
+
+Jonas zeigt auf das Messgerät. Kann man damit die Strahlung hören? Frau Doktor Brandt schaltet das Gerät ein, und es knackt leise. Die Radioaktivität einer Probe wird im Labor mit speziellen Geräten gemessen, sagt sie. Dieses hier ist schon sehr alt, aber es funktioniert noch.
+
+Dann schreibt sie ein neues Wort an die Tafel: Halbwertszeit. Nach einer Halbwertszeit ist nur noch die Hälfte der Atome vorhanden, erklärt sie. Nach zwei Halbwertszeiten ist es noch ein Viertel, nach drei ein Achtel. Manche Isotope haben eine Halbwertszeit von wenigen Sekunden, andere von vielen tausend Jahren.
+
+Lena denkt an die Klinik. In der Nuklearmedizin benutzt man radioaktive Stoffe mit kurzer Halbwertszeit, sagt Frau Doktor Brandt, als hätte sie Lenas Gedanken gelesen. So kann man Organe untersuchen, und die Strahlung ist nach kurzer Zeit wieder verschwunden.
+
+Und welche Kerne sind stabil, fragt Lena. Die meisten Atomkerne in unserer Umgebung sind stabil, antwortet Frau Doktor Brandt. Das ist auch gut so. Ohne stabile Kerne gäbe es kein Leben, keine Steine und kein Wasser.
+
+Kapitel vier. Die große Tabelle.
+
+An der Wand des Klassenzimmers hängt ein riesiges Plakat mit vielen bunten Kästchen. Das ist das Periodensystem, sagt Frau Doktor Brandt. Im Periodensystem sind die Elemente nach steigender Ordnungszahl angeordnet. Für einen Chemiker ist es wie eine Landkarte.
+
+Sie zeigt auf die waagerechten Zeilen. Jede Zeile nennt man eine Periode. Alle Elemente einer Periode haben die gleiche Anzahl von Schalen. Dann zeigt sie auf die senkrechten Spalten. Das sind die Gruppen, sagt sie. Elemente in derselben Gruppe haben ähnliche chemische Eigenschaften.
+
+Die hohen Spalten links und rechts heißen Hauptgruppen. Die Nummer der Hauptgruppe zeigt die Zahl der Valenzelektronen an, erklärt sie. In den Nebengruppen stehen vor allem Metalle wie Eisen und Kupfer. Eisen ist ein Übergangsmetall und kann verschiedene Oxidationszahlen haben.
+
+Lena sieht, dass die Kästchen verschiedene Farben haben. Die meisten Elemente sind Metalle, sagt Frau Doktor Brandt. Ein Metall leitet Wärme und Strom und glänzt an der Oberfläche. Eine wichtige Eigenschaft von Metallen ist ihre gute Leitfähigkeit. Rechts oben stehen die Nichtmetalle. Schwefel ist ein Nichtmetall und leitet den Strom kaum. Dazwischen gibt es eine schmale Treppe von Halbmetallen. Silicium ist ein Halbmetall und wird für Computerchips verwendet.
+
+Ganz links oben steht der Wasserstoff. Wasserstoff ist das leichteste Element und steht ganz oben im Periodensystem, sagt sie. Darunter beginnt die erste Hauptgruppe. Jedes Alkalimetall reagiert heftig mit Wasser und bildet eine Lauge.
+
+Um das zu zeigen, macht Frau Doktor Brandt einen Versuch. Sie nimmt mit einer Pinzette ein kleines Stück Natrium aus einer Flasche mit Öl. Natrium reagiert sehr heftig mit Wasser und muss unter Öl gelagert werden, erklärt sie. Frisch geschnittenes Natrium hat einen metallischen Glanz, der schnell verschwindet.
+
+Sie wirft das Stück in eine große Schale mit Wasser. Das Natrium zischt, rennt über die Oberfläche und wird zu einer kleinen Kugel. Die ganze Klasse ist still. Die Alkalimetalle sind sehr reaktionsfreudig und werden deshalb unter Öl gelagert, sagt Frau Doktor Brandt ruhig.
+
+In der zweiten Hauptgruppe stehen die Erdalkalimetalle. Calcium ist ein Erdalkalimetall und steht in der zweiten Hauptgruppe, erklärt sie. Calcium ist wichtig für die Knochen und wird im Blut regelmäßig bestimmt. Auch Magnesium gehört hierher. Magnesium verbrennt mit einer sehr hellen, weißen Flamme.
+
+Dann springt sie ganz nach rechts. In der siebten Hauptgruppe stehen die Halogene. Chlor ist ein Halogen und bildet mit Natrium ein Salz. Chlor ist ein giftiges, gelbgrünes Gas mit einem stechenden Geruch. Fluor ist das Element mit der höchsten Elektronegativität im Periodensystem. Auch Iod gehört zu dieser Gruppe. Iod färbt Stärke dunkelblau und wird deshalb als Nachweis genutzt.
+
+Die letzte Spalte gehört den Edelgasen. Ein Edelgas hat eine volle Außenschale und ist deshalb sehr reaktionsträge, sagt Frau Doktor Brandt. Helium ist ein Edelgas und reagiert fast mit keinem anderen Stoff. Edelgase sind reaktionsträge, weil ihre Außenschale voll besetzt ist.
+
+Jonas hebt die Hand. Warum wollen die anderen Atome überhaupt reagieren? Frau Doktor Brandt schreibt ein neues Wort an die Tafel: Oktettregel. Nach der Oktettregel streben Atome acht Elektronen auf der Außenschale an, erklärt sie. So erreichen sie denselben Zustand wie ein Edelgas. Durch die Abgabe eines Elektrons erreicht Natrium die Edelgaskonfiguration.
+
+Wenn ein Atom Elektronen abgibt oder aufnimmt, ist es nicht mehr neutral. Ein Ion entsteht, wenn ein Atom Elektronen abgibt oder aufnimmt, sagt sie. Im Kochsalz liegt Natrium als einfach positiv geladenes Kation vor. Chlor nimmt ein Elektron auf und wird dadurch zu einem Anion.
+
+Lena schreibt eine kleine Tabelle in ihr Heft. Natrium bildet einwertige Ionen, weil es nur ein Elektron abgibt. Calcium bildet zweiwertige Ionen mit einer doppelt positiven Ladung. Die Ionenladung eines Magnesiumions ist zweifach positiv, weil es zwei Elektronen abgibt.
+
+Danach geht es um Trends im Periodensystem. Die Elektronegativität beschreibt, wie stark ein Atom Bindungselektronen anzieht, sagt Frau Doktor Brandt. Innerhalb einer Periode sieht man die Elektronegativität von links nach rechts zunehmen. Innerhalb einer Gruppe wird der Atomradius von oben nach unten größer.
+
+Und die Ionisierungsenergie, fragt sie in die Runde. Die Ionisierungsenergie ist die Energie, die man zum Entfernen eines Elektrons braucht, antwortet Lena. Genau, sagt Frau Doktor Brandt. Innerhalb einer Gruppe sieht man die Ionisierungsenergie von oben nach unten abnehmen, weil das äußere Elektron weiter vom Kern entfernt ist.
+
+Am Ende der Stunde spricht sie über edle und unedle Metalle. Gold gilt als edel, weil es kaum mit anderen Stoffen reagiert. Silber ist ein Edelmetall und reagiert nur schwer mit Sauerstoff. Zink ist unedel und löst sich deshalb in verdünnter Säure auf. Zink reagiert mit Salzsäure, und dabei entsteht Wasserstoffgas.
+
+Kapitel fünf. Elemente im Körper.
+
+Am nächsten Praxistag im Krankenhaus fragt Herr Wagner, was Lena in der Schule gelernt hat. Sie erzählt vom Periodensystem. Sehr gut, sagt er. Dann zeige ich dir jetzt, wo diese Elemente in unserer Arbeit vorkommen.
+
+Er öffnet am Computer die Liste der Messwerte eines Patienten. Hier siehst du Natrium, Kalium, Calcium und Chlorid, sagt er. Der Kaliumwert im Serum wird bei vielen Patienten täglich gemessen. Wenn Kalium zu hoch oder zu niedrig ist, kann das Herz aus dem Takt geraten.
+
+Natrium und Kalium sind wichtige Elektrolyte, die im Serum gemessen werden, erklärt er. Natrium im Serum liegt bei etwa hundertvierzig Millimol pro Liter. Chlorid ist das wichtigste negativ geladene Ion im Blutplasma. Phosphat wird im Serum bestimmt, um den Knochenstoffwechsel zu beurteilen.
+
+Und Eisen, fragt Lena. Eisen ist ein wichtiger Bestandteil des roten Blutfarbstoffs Hämoglobin, antwortet Herr Wagner. Ohne Eisen kann das Blut nicht genug Sauerstoff transportieren. Eisen und Zink sind wichtige Spurenelemente für den menschlichen Körper. Man braucht nur sehr wenig davon, aber ohne sie geht es nicht.
+
+Auch Phosphor findet man im Körper. Phosphor kommt im Körper vor allem in den Knochen und Zähnen vor, sagt Herr Wagner. Und Kohlenstoff ist sowieso überall. Kohlenstoff ist das wichtigste Element in allen organischen Verbindungen. Kochsalz und Salzsäure gehören dagegen zu den anorganischen Verbindungen.
+
+Dann zeigt er Lena eine besondere Anforderung. Hier möchte ein Arzt wissen, ob ein Kind vergiftet ist. Blei ist ein giftiges Schwermetall, das man im Blut nachweisen kann, erklärt er. Blei und Quecksilber sind giftige Schwermetalle, die sich im Körper anreichern. Solche Proben schicken wir an ein Speziallabor.
+
+Lena ist überrascht, wie viel Chemie in einer einfachen Blutprobe steckt. Kupfer leitet den elektrischen Strom sehr gut und hat eine rötliche Farbe, denkt sie, aber im Körper ist es ein wichtiger Helfer für Enzyme. Sie nimmt sich vor, zu jedem Element auch eine Bedeutung für den Menschen zu lernen.
+
+Kapitel sechs. Wie Atome zusammenhalten.
+
+In der Schule beginnt ein neues Thema. Eine chemische Bindung hält die Atome in einem Molekül zusammen, sagt Frau Doktor Brandt. Es gibt drei große Arten von Bindungen: die Ionenbindung, die Atombindung und die Metallbindung.
+
+Die Ionenbindung entsteht zwischen einem Metall und einem Nichtmetall, erklärt sie. Metallatome können ihre Valenzelektronen leicht an andere Atome abgeben. Nichtmetallatome wollen Elektronen aufnehmen, um eine volle Außenschale zu haben. So entstehen positive und negative Ionen.
+
+Zwischen positiven und negativen Ionen herrscht eine starke Anziehung, sagt sie. Positive und negative Ladungen können sich gegenseitig stark anziehen. Gleich geladene Teilchen zeigen eine Abstoßung, entgegengesetzt geladene ziehen sich an. Zwei Elektronen werden sich wegen ihrer gleichen Ladung immer abstoßen.
+
+Sie zeigt ein Modell aus weißen und grünen Kugeln. Im Ionengitter von Kochsalz wechseln sich Natrium- und Chloridionen regelmäßig ab. Die Teilchen in einem Kristallgitter sind regelmäßig angeordnet. Ein Salz besteht aus positiv und negativ geladenen Ionen.
+
+Warum leitet Salz dann keinen Strom, fragt Jonas. In der Schmelze sind die Ionen nicht mehr fest im Gitter gebunden, antwortet Frau Doktor Brandt. In einer Schmelze sind die Ionen frei beweglich und leiten den Strom. Auch in Wasser gelöst leitet Salz. Eine Salzlösung leitet den Strom, weil sie frei bewegliche Ionen enthält.
+
+Dann kommt die Atombindung. Bei der Atombindung teilen sich zwei Atome ein gemeinsames Elektronenpaar, sagt Frau Doktor Brandt. Ein bindendes Elektronenpaar gehört bei der Atombindung beiden Atomen gleichzeitig. Man nennt diese Bindung auch kovalent. Im Wassermolekül sind die Atome durch Elektronenpaare kovalent miteinander verbunden.
+
+Manchmal teilen Atome mehr als ein Elektronenpaar. Zwischen den beiden Kohlenstoffatomen im Ethan liegt eine Einfachbindung. Im Sauerstoffmolekül sind die beiden Atome durch eine Doppelbindung verbunden. Im Stickstoffmolekül gibt es eine sehr stabile Dreifachbindung. Um eine Bindung zu spalten, muss man Energie zuführen. Die Bindungsenergie gibt an, wie viel Energie zum Spalten nötig ist.
+
+Nicht alle Elektronen nehmen an Bindungen teil. Das Sauerstoffatom im Wasser besitzt zwei freie Elektronenpaare, erklärt sie. In der Valenzstrichformel steht jeder Strich für ein Elektronenpaar. Die Strukturformel zeigt, welche Atome im Molekül miteinander verbunden sind.
+
+Lena fragt nach dem Unterschied zur Summenformel. Die Summenformel von Wasser zeigt zwei Wasserstoffatome und ein Sauerstoffatom, sagt Frau Doktor Brandt. Sie sagt nur, wie viele Atome es gibt, aber nicht, wie sie verbunden sind. Die Formel eines Stoffes zeigt, welche Elemente in welchem Verhältnis enthalten sind. Die Wertigkeit gibt an, wie viele Bindungen ein Atom eingehen kann.
+
+Am Ende erwähnt sie noch die Metallbindung. Die Metallbindung erklärt, warum Metalle den Strom so gut leiten, sagt sie. Die Elektronen bewegen sich frei zwischen den Metallatomen, wie ein Gas aus Elektronen. Metalle leiten Wärme und Strom besser als die meisten anderen Stoffe.
+
+Kapitel sieben. Das besondere Wasser.
+
+In der nächsten Stunde stellt Frau Doktor Brandt ein Glas Wasser auf den Tisch. Dieses Molekül ist das wichtigste in eurem Beruf, sagt sie. Wasser ist eine Verbindung aus den Elementen Wasserstoff und Sauerstoff. Ein Wassermolekül besteht aus zwei Wasserstoffatomen und einem Sauerstoffatom.
+
+Die Bindung zwischen Sauerstoff und Wasserstoff ist stark polar, erklärt sie. Sauerstoff zieht die Elektronen stärker zu sich. Das Sauerstoffatom trägt im Wasser eine negative Teilladung. Die Wasserstoffatome tragen positive Teilladungen.
+
+Außerdem ist das Molekül nicht gerade. Das Wassermolekül ist gewinkelt gebaut und deshalb ein Dipol. Der Bindungswinkel im Wassermolekül beträgt etwa hundertfünf Grad. Das Wassermolekül ist ein Dipol mit einem positiven und einem negativen Ende.
+
+Beim Kohlendioxid ist das anders. Das Kohlendioxidmolekül ist linear gebaut und deshalb insgesamt unpolar, sagt Frau Doktor Brandt. Weil das Molekül symmetrisch ist, heben sich die Teilladungen gegenseitig auf. Auch Methan ist unpolar. Im Methanmolekül sind die vier Wasserstoffatome tetraedrisch um den Kohlenstoff angeordnet.
+
+Die Polarität eines Moleküls beeinflusst seine Löslichkeit in Wasser, erklärt sie weiter. Öl ist unpolar und mischt sich deshalb nicht mit Wasser. Sie gießt etwas Öl in das Glas, und es bleibt als gelbe Schicht oben schwimmen.
+
+Zwischen den Molekülen wirken ebenfalls Kräfte. Jede zwischenmolekulare Kraft ist viel schwächer als eine echte chemische Bindung, sagt sie. Zwischen unpolaren Molekülen wirkt nur die schwache Van-der-Waals-Kraft. Beim Wasser gibt es aber etwas Besonderes. Die Wasserstoffbrückenbindung erklärt den hohen Siedepunkt von Wasser.
+
+Ohne Wasserstoffbrücken würde Wasser schon weit unter null Grad sieden, erzählt Frau Doktor Brandt. Dann gäbe es auf der Erde kein flüssiges Wasser und kein Leben. Lena schaut auf das Glas und findet, dass Wasser auf einmal gar nicht mehr langweilig aussieht.
+
+Kapitel acht. Rechnen mit dem Mol.
+
+Vor dem Thema Mol haben viele in der Klasse Angst. Auch Lena. Sie war in Mathe nie besonders gut. Frau Doktor Brandt merkt das sofort. Keine Panik, sagt sie. Das Mol ist nur eine Zahl, genau wie ein Dutzend.
+
+Ein Mol eines Stoffes enthält etwa sechs mal zehn hoch dreiundzwanzig Teilchen, erklärt sie. Die Avogadro-Konstante gibt die Zahl der Teilchen in einem Mol an. Es ist eine unvorstellbar große Zahl, weil Atome so unvorstellbar klein sind.
+
+Die Stoffmenge wird in der Einheit Mol angegeben, sagt sie weiter. Und jetzt kommt der Trick. Die molare Masse von Wasser beträgt ungefähr achtzehn Gramm pro Mol. Wenn ich also achtzehn Gramm Wasser abwiege, habe ich genau ein Mol Wassermoleküle.
+
+Wie kommt man auf achtzehn, fragt Jonas. Man addiert die Atommassen, antwortet Lena, bevor die Lehrerin etwas sagen kann. Zweimal Wasserstoff mit je eins, einmal Sauerstoff mit sechzehn. Frau Doktor Brandt nickt zufrieden. Die Formelmasse eines Salzes berechnet man aus den Atommassen aller Ionen, ergänzt sie. Das Prinzip ist dasselbe.
+
+Dann schreibt sie eine Aufgabe an die Tafel. Aus der Masse und der molaren Masse kann man die Stoffmenge berechnen, sagt sie. Um die Stoffmenge zu erhalten, muss man die Masse durch die molare Masse dividieren. Und umgekehrt muss man die Stoffmenge mit der molaren Masse multiplizieren, um die Masse zu erhalten.
+
+Die Teilchenzahl berechnet man aus der Stoffmenge und der Avogadro-Konstante. Bei Gasen gibt es noch eine Abkürzung. Das molare Volumen eines Gases beträgt bei Normbedingungen etwa zweiundzwanzig Liter. Die Normbedingungen gelten bei null Grad Celsius und normalem Luftdruck.
+
+Frau Doktor Brandt gibt ihnen einen wichtigen Rat. Bei jeder Rechnung muss man die Einheit sorgfältig mitschreiben, sagt sie. Vor der Rechnung muss man Milliliter in Liter umrechnen. Viele Fehler in Prüfungen entstehen nur, weil jemand Gramm und Milligramm verwechselt.
+
+Lena schreibt sich die Einheiten in ihr Heft. Ein Gramm hat tausend Milligramm. Ein Milligramm hat tausend Mikrogramm. Die Probe enthält nur wenige Milligramm des gesuchten Stoffes, liest sie in einer Übungsaufgabe. Manche Hormone liegen im Blut nur in Mikrogramm pro Liter vor. Die Konzentrationen im Blut liegen oft in der Größenordnung von Millimol pro Liter.
+
+Viele Aufgaben zur Konzentration kann man einfach mit dem Dreisatz lösen, sagt Frau Doktor Brandt am Ende. Und Zwischenergebnisse sollte man nicht zu früh runden, sonst wird das Ergebnis ungenau. Die Berechnung der Konzentration sollte man immer noch einmal überprüfen.
+
+Am Abend übt Lena mit Jonas in der Bibliothek. Nach der zehnten Aufgabe lacht Jonas plötzlich. Das ist ja gar nicht so schwer, sagt er. Man muss nur wissen, was man sucht und was man hat. Lena nickt. Das Ergebnis der Messung tragen wir sofort ins Protokoll ein, denkt sie, und das Ergebnis der Rechnung mit Einheit ins Heft.
+
+Kapitel neun. Gleichungen im Gleichgewicht.
+
+In der nächsten Woche lernen sie, Reaktionen aufzuschreiben. Die Reaktionsgleichung zeigt die Ausgangsstoffe links und die Produkte rechts, sagt Frau Doktor Brandt. Der Reaktionspfeil zeigt die Richtung an, in der die Reaktion abläuft.
+
+Jedes Edukt steht in der Reaktionsgleichung auf der linken Seite, erklärt sie. Edukt ist nur ein anderes Wort für Ausgangsstoff. Der Ausgangsstoff wird während der Reaktion vollständig verbraucht, wenn alles gut läuft.
+
+Dann schreibt sie die Reaktion von Wasserstoff mit Sauerstoff an die Tafel. Diese Gleichung ist noch nicht ausgeglichen, links fehlen zwei Sauerstoffatome, sagt sie und schaut in die Klasse. Wer weiß, was man tun muss?
+
+Eine Reaktionsgleichung muss man so ausgleichen, dass auf beiden Seiten gleich viele Atome stehen, antwortet Lena. Nach dem Gesetz der Massenerhaltung geht bei einer Reaktion keine Masse verloren. Sehr gut, sagt Frau Doktor Brandt.
+
+Beim Ausgleichen darf man nur die Zahlen vor den Formeln ändern. Der Koeffizient vor der Formel gibt die Anzahl der Teilchen an, erklärt sie. Der Index hinter dem Elementsymbol zeigt, wie viele Atome im Molekül sind. Den Index darf man niemals ändern, sonst hat man einen ganz anderen Stoff. Die Zusammensetzung einer Verbindung ist nämlich immer gleich.
+
+Wasserstoff und Sauerstoff reagieren im Verhältnis zwei zu eins, sagt sie. Die Stöchiometrie beschreibt die Mengenverhältnisse bei chemischen Reaktionen. Das Stoffmengenverhältnis liest man direkt an den Koeffizienten der Gleichung ab.
+
+Dann erzählt sie eine kleine Geschichte. Stellt euch vor, ihr backt Pfannkuchen, sagt sie. Ihr habt zehn Eier, aber nur ein Kilogramm Mehl. Irgendwann ist das Mehl leer, auch wenn noch Eier übrig sind. Das Mehl ist dann der limitierende Reaktant. Der limitierende Reaktant bestimmt, wie viel Produkt maximal entstehen kann.
+
+Die Menge des gebildeten Produkts hängt vom limitierenden Reaktanten ab, fasst sie zusammen. Die Eier sind im Überschuss. Im Labor machen wir das oft absichtlich. Wir geben die Säure im Überschuss zu, damit alles reagiert.
+
+Nicht immer bekommt man so viel Produkt, wie man berechnet hat. Die Ausbeute war niedriger als erwartet, weil etwas Produkt verloren ging, liest Lena in einem Übungsprotokoll. Der Umsatz der Reaktion lässt sich durch Erwärmen deutlich erhöhen, steht als Tipp darunter. Das Produkt dieser Reaktion ist ein weißer, schwer löslicher Feststoff, steht dort weiter. Die Stoffe wurden genau im stöchiometrischen Verhältnis gemischt.
+
+Frau Doktor Brandt spricht auch über das Gleichgewicht. Viele chemische Reaktionen sind umkehrbar und können in beide Richtungen ablaufen, sagt sie. Bei der Hinreaktion entstehen aus den Edukten die Produkte. Bei der Rückreaktion zerfallen die Produkte wieder in die Ausgangsstoffe.
+
+Das chemische Gleichgewicht stellt sich ein, wenn Hin- und Rückreaktion gleich schnell ablaufen, erklärt sie. Von außen sieht es dann so aus, als ob nichts mehr passiert. In Wirklichkeit reagieren die Teilchen ständig weiter, nur eben in beide Richtungen gleich viel.
+
+Kapitel zehn. Energie und Geschwindigkeit.
+
+Heute ist Laborunterricht in der Schule. Die Klasse steht an langen Tischen, und auf jedem Tisch steht ein Bunsenbrenner. Den Bunsenbrenner darf man nie unbeaufsichtigt brennen lassen, sagt Frau Doktor Brandt, bevor jemand ein Streichholz anzündet.
+
+Ein Streichholz liefert die Aktivierungsenergie, die für den Start der Verbrennung nötig ist, erklärt sie. Jede Reaktion braucht am Anfang einen kleinen Schubs. Danach läuft die Verbrennung von selbst weiter.
+
+Der erste Versuch ist eine Neutralisation. Lena gibt vorsichtig Salzsäure zu Natronlauge. Das Reagenzglas wird warm. Die Neutralisation ist exotherm, deshalb wird die Lösung dabei warm, sagt Frau Doktor Brandt. Bei der Reaktion wird Wärme frei, und das Reagenzglas wird heiß.
+
+Exotherme Reaktionen können große Mengen Energie in Form von Wärme freisetzen, erklärt sie. Die Enthalpie einer exothermen Reaktion ist negativ, weil Energie abgegeben wird. Bei anderen Reaktionen ist es umgekehrt.
+
+Im zweiten Versuch löst Jonas ein weißes Salz in Wasser. Er hält das Becherglas in der Hand und zieht die Finger erschrocken zurück. Es ist eiskalt! Das Auflösen dieses Salzes ist endotherm, und das Becherglas fühlt sich kalt an, sagt Frau Doktor Brandt lachend.
+
+Dann geht es um die Geschwindigkeit. Die Reaktionsgeschwindigkeit steigt meistens, wenn man die Temperatur erhöht, erklärt sie. Höhere Temperatur und feines Pulver können eine Reaktion deutlich beschleunigen. Ein feines Pulver hat eine große Oberfläche und reagiert schneller.
+
+Und wie kann man eine Reaktion bremsen, fragt Lena. Im Kühlschrank kann man viele unerwünschte Reaktionen in Proben verlangsamen, antwortet Frau Doktor Brandt. Genau deshalb kommen eure Blutproben in die Kühlung, wenn sie nicht sofort gemessen werden.
+
+Es gibt noch einen besonderen Helfer. Ein Katalysator beschleunigt die Reaktion, ohne selbst verbraucht zu werden, sagt sie. Ein Enzym wirkt im Körper wie ein biologischer Katalysator. Viele Tests in eurem Labor funktionieren nur mit Enzymen.
+
+Zum Schluss erklärt sie den Unterschied zwischen chemischen und physikalischen Vorgängen. Beim Rosten verändert sich das Eisen chemisch und wird zu einem neuen Stoff. Das Schmelzen von Eis ist ein physikalischer Vorgang, kein chemischer. Jeder reine Stoff hat einen festen Schmelzpunkt und Siedepunkt.
+
+Lena schreibt in ihr Protokoll: Bei einer chemischen Reaktion entstehen neue Stoffe. Bei der Reaktion von Säure und Lauge entstehen Salz und Wasser. Natrium und Chlor reagieren heftig miteinander zu Natriumchlorid. Eine Kerze kann in einem geschlossenen Glas den gesamten Sauerstoff verbrauchen.
+
+Kapitel elf. Fest, flüssig, gasförmig.
+
+Im Winter ist es in der Stadt sehr kalt. Auf dem Weg zur Schule sieht Lena, wie Arbeiter Salz auf die Straße streuen. Salz senkt den Gefrierpunkt von Wasser, deshalb streut man es im Winter, denkt sie. Sie lächelt, weil sie jetzt die Chemie hinter den Dingen erkennt.
+
+In der Schule geht es um die Aggregatzustände. Wasser kann den Aggregatzustand fest, flüssig oder gasförmig haben, sagt Frau Doktor Brandt. Bei null Grad Celsius wird Wasser fest und bildet Eis. Eis schwimmt auf Wasser, weil es eine geringere Dichte hat.
+
+Mit dem Teilchenmodell kann man die Aggregatzustände anschaulich erklären, sagt sie. Im festen Zustand sind die Teilchen dicht gepackt und bewegen sich kaum. In einer Flüssigkeit können sie aneinander vorbeigleiten. In einem Gas fliegen sie frei durch den Raum. Bei höherer Temperatur wird die Teilchenbewegung schneller und heftiger.
+
+Nicht alle Stoffe verhalten sich wie Wasser. Quecksilber ist bei Raumtemperatur flüssig, obwohl es ein Metall ist, erklärt sie. Brom ist eines der wenigen Elemente, die bei Raumtemperatur flüssig sind. Kohlendioxid ist bei Raumtemperatur gasförmig und schwerer als Luft.
+
+Dann schreibt sie viele Verben an die Tafel. Eis beginnt bei null Grad Celsius zu schmelzen. Flüssiges Wachs beginnt beim Abkühlen an der Luft schnell zu erstarren. Wasser beginnt bei null Grad Celsius zu gefrieren und dehnt sich dabei aus.
+
+Jede Zustandsänderung ist mit der Aufnahme oder Abgabe von Energie verbunden, sagt sie. Um Wasser zu verdampfen, muss man ihm viel Energie zuführen. Beim Erhitzen beginnt das Lösungsmittel zu verdampfen, und das Salz bleibt zurück. Wasserdampf beginnt an der kalten Glaswand zu kondensieren.
+
+Jonas fragt nach dem Unterschied zwischen verdampfen und verdunsten. Verdunsten passiert langsam und unter dem Siedepunkt, antwortet Frau Doktor Brandt. Offene Lösungen können bei Raumtemperatur langsam verdunsten und dadurch konzentrierter werden. Deshalb lassen wir im Labor keine Flasche offen stehen.
+
+Der Siedepunkt von Wasser liegt bei normalem Luftdruck bei hundert Grad, erklärt sie weiter. Ethanol beginnt schon bei etwa achtundsiebzig Grad Celsius zu sieden. Manche Stoffe überspringen sogar den flüssigen Zustand. Iod kann beim Erwärmen direkt vom festen in den gasförmigen Zustand sublimieren.
+
+Der Schmelzpunkt eines Stoffes hilft uns, seine Reinheit zu überprüfen, sagt sie. Ein verunreinigter Stoff schmilzt früher und über einen größeren Bereich. Das ist ein alter, aber sehr nützlicher Trick.
+
+Dann spricht sie über Gase. Wenn man den Druck erhöht, sinkt das Volumen eines Gases. Der Dampfdruck einer Flüssigkeit steigt, wenn man sie erwärmt. Die Dichte von Wasser beträgt ungefähr ein Gramm pro Milliliter.
+
+Kapitel zwölf. Warum Zellen platzen.
+
+Frau Doktor Brandt zeigt der Klasse einen Tropfen Tinte in einem Glas Wasser. Durch Diffusion verteilt sich ein Tropfen Tinte langsam im ganzen Wasser, sagt sie. Niemand muss rühren. Die Teilchen bewegen sich ganz von selbst.
+
+Dann erzählt sie von einem Versuch mit Blut. Durch Osmose platzen rote Blutkörperchen in destilliertem Wasser, erklärt sie. Das Wasser strömt in die Zellen, weil innen mehr gelöste Teilchen sind als außen. Irgendwann hält die Zellmembran den Druck nicht mehr aus.
+
+Der osmotische Druck hängt von der Zahl der gelösten Teilchen ab, sagt sie. Deshalb dürfen wir Blutzellen niemals mit reinem Wasser verdünnen. Eine isotonische Kochsalzlösung hat den gleichen osmotischen Druck wie das Blut.
+
+Lena kennt diese Lösung aus dem Krankenhaus. Die physiologische Kochsalzlösung enthält neun Gramm Natriumchlorid pro Liter, sagt sie. Genau, antwortet Frau Doktor Brandt. Jeder Patient mit einem Tropf bekommt diese Lösung.
+
+Kapitel dreizehn. Alles über Lösungen.
+
+In ihrem Beruf wird Lena fast nur mit Lösungen arbeiten. Deshalb nimmt sich Frau Doktor Brandt für dieses Thema viel Zeit. Wasser ist das wichtigste Lösungsmittel im Labor und im Körper, sagt sie.
+
+Eine Lösung hat immer zwei Teile, erklärt sie. Das Lösungsmittel und den gelösten Stoff. Der gelöste Stoff verteilt sich gleichmäßig im ganzen Lösungsmittel. Zucker kann man in warmem Wasser schneller lösen als in kaltem.
+
+Wasser ist ein polares Molekül und löst viele Salze sehr gut, sagt sie. In wässriger Lösung zerfallen Salze in ihre Ionen. Beim Lösen umgibt sich jedes Ion mit einer Hydrathülle aus Wassermolekülen. Bei der Dissoziation zerfällt ein Salz in Wasser in seine Ionen.
+
+Nicht jeder Stoff löst sich gleich gut. Kochsalz ist in Wasser gut löslich, in Öl dagegen kaum, sagt sie. Sand ist in Wasser unlöslich und setzt sich am Boden ab. Silberchlorid ist in Wasser schwer löslich und fällt als weißer Niederschlag aus.
+
+Hydrophile Stoffe wie Zucker lösen sich gut in Wasser, erklärt sie. Fette sind hydrophob und lösen sich deshalb nicht in Wasser. Lipophile Stoffe lösen sich gut in Fetten und unpolaren Lösungsmitteln. Ethanol und Wasser sind in jedem Verhältnis miteinander mischbar.
+
+Dann geht es um die Grenze des Lösens. Die Löslichkeit der meisten Salze steigt mit der Temperatur, sagt Frau Doktor Brandt. Eine Lösung ist gesättigt, wenn sich kein weiteres Salz mehr darin löst. In einer ungesättigten Lösung kann sich noch mehr Salz auflösen. In einer gesättigten Lösung bleibt ungelöstes Salz als Bodensatz zurück.
+
+Bei zwanzig Grad liegt die Sättigung von Kochsalz bei etwa dreihundertsechzig Gramm pro Liter, erklärt sie. Und dann gibt es noch einen merkwürdigen Zustand. Eine übersättigte Lösung ist instabil, und schon ein kleiner Kristall löst die Kristallisation aus.
+
+Sie zeigt es mit einer vorbereiteten Lösung. Sie wirft einen winzigen Kristall hinein, und innerhalb von Sekunden wird die ganze Flüssigkeit fest. Die Klasse klatscht. Die Kristallisation beginnt, wenn die Lösung langsam abkühlt, sagt sie, oder eben, wenn man ein bisschen nachhilft.
+
+Danach unterscheidet sie Lösungen von anderen Gemischen. Luft ist ein Gemisch aus Stickstoff, Sauerstoff und anderen Gasen. Salzwasser ist ein homogenes Gemisch, weil man keine einzelnen Bestandteile sieht. Sand in Wasser ist ein heterogenes Gemisch, das man leicht trennen kann.
+
+Eine Suspension besteht aus festen Teilchen, die in einer Flüssigkeit schweben, erklärt sie. Milch ist eine Emulsion aus kleinen Fetttröpfchen in Wasser. Ein Kolloid enthält sehr kleine Teilchen, die sich nicht absetzen. Und Blut ist eigentlich alles auf einmal, fügt sie lächelnd hinzu.
+
+Das Gegenteil eines Gemischs ist ein Reinstoff. Destilliertes Wasser ist ein Reinstoff, Leitungswasser dagegen ein Gemisch, sagt sie. Die Reinheit der Chemikalie steht auf dem Etikett der Flasche. Das destillierte Wasser für die Lösungen steht im Kanister neben der Spüle.
+
+Kapitel vierzehn. Trennen, was zusammen ist.
+
+Im Laborunterricht sollen Lena und Jonas ein Gemisch aus Salz und Sand trennen. Ein Gemisch aus Salz und Sand kann man mit Wasser gut trennen, sagt Frau Doktor Brandt. Überlegt euch selbst, wie.
+
+Lena gibt Wasser dazu und rührt. Das Salz löst sich, der Sand nicht. Jetzt müssen wir filtrieren, sagt sie. Den Niederschlag müssen wir filtrieren und danach gründlich trocknen, steht in der Anleitung für einen anderen Versuch. Hier ist es der Sand, der zurückbleibt.
+
+Das Filterpapier wird gefaltet und in den Trichter gelegt. Jonas gießt die Mischung langsam hinein. Das klare Filtrat wird in einem sauberen Becherglas aufgefangen. Der Rückstand auf dem Filterpapier wird anschließend gewogen.
+
+Und jetzt das Salz zurückholen, sagt Jonas. Die Salzlösung kann man eindampfen, bis nur noch das Salz übrig bleibt. Nach dem Eindampfen bleibt ein weißer Feststoff im Tiegel zurück. Beide freuen sich, als sie am Ende fast genauso viel Salz haben wie am Anfang.
+
+Frau Doktor Brandt erklärt noch weitere Trennverfahren. Die Destillation ist ein Trennverfahren, das unterschiedliche Siedepunkte ausnutzt. Bei der Destillation trennt man Flüssigkeiten mit unterschiedlichen Siedepunkten. Um reines Ethanol zu erhalten, muss man das Gemisch mehrmals destillieren.
+
+Nach dem Absetzen kann man die klare Flüssigkeit vorsichtig dekantieren, sagt sie. Mit der Chromatographie kann man die Farbstoffe einer Tinte trennen. Bei der Extraktion löst man einen Stoff mit einem geeigneten Lösungsmittel heraus. Und das Trennverfahren, das ihr am häufigsten benutzen werdet, kennt ihr schon: das Zentrifugieren.
+
+Kapitel fünfzehn. Wie viel ist drin?
+
+Zurück im Krankenhaus bekommt Lena ihre erste richtige Aufgabe. Heute müssen wir eine neue Pufferlösung für die Messungen ansetzen, sagt Herr Wagner. Und du machst das, ich schaue nur zu.
+
+Zuerst erklärt er noch einmal die Konzentration. Die Konzentration gibt an, wie viel Stoff in einem bestimmten Volumen gelöst ist, sagt er. Die Stoffmengenkonzentration wird in Mol pro Liter angegeben. Die Massenkonzentration gibt man meistens in Gramm pro Liter an.
+
+Es gibt aber noch andere Angaben, fährt er fort. Der Massenanteil von Salz in dieser Lösung beträgt zehn Prozent. Der Volumenanteil von Ethanol im Desinfektionsmittel liegt bei siebzig Prozent. Der Gehalt an Alkohol wird in Volumenprozent angegeben.
+
+Ein Prozent bedeutet ein Teil von hundert Teilen, sagt er. Ein Promille entspricht einem Teil von tausend Teilen. Und für sehr kleine Mengen gibt es noch ppm. Die Angabe ppm bedeutet ein Teil pro eine Million Teile. Das brauchen wir zum Beispiel bei Schadstoffen im Wasser.
+
+Lena liest die Arbeitsanweisung. Für die Lösung müssen wir genau zwei Gramm Natriumhydroxid einwiegen, steht dort. Sie geht zur Analysenwaage. Die Analysenwaage misst bis auf ein Zehntel Milligramm genau, sagt Herr Wagner. Deshalb steht sie in einem Glaskasten, damit kein Luftzug stört.
+
+Vor dem Wiegen muss die Waage auf null gestellt werden, erklärt er. Vor dem Einwiegen müssen wir das leere Wägeschälchen auf der Waage tarieren. Lena drückt auf die Taste, und die Anzeige springt auf null.
+
+Sie nimmt Natriumhydroxid mit einem kleinen Löffel aus der Dose. Beeil dich ein bisschen, sagt Herr Wagner. Natriumhydroxid ist hygroskopisch und muss deshalb gut verschlossen aufbewahrt werden. Festes Natriumhydroxid zieht Wasser aus der Luft an und wird feucht. Dann stimmt die Einwaage nicht mehr.
+
+Die Einwaage notieren wir sofort mit allen Nachkommastellen im Protokoll, sagt er. Lena schreibt die Zahl sorgfältig auf. Dann gibt sie das Pulver in ein Becherglas. Im Becherglas lösen wir das Salz unter Rühren vollständig auf.
+
+Sie stellt das Becherglas auf den Magnetrührer. Der Magnetrührer mischt die Lösung gleichmäßig, während wir titrieren, erklärt Herr Wagner, aber auch beim Lösen hilft er. Das Salz sollte sich vollständig auflösen, bevor wir die Lösung auffüllen.
+
+Dann gießt sie die Lösung in einen Messkolben. Nach dem Lösen müssen wir den Messkolben bis zur Eichmarke auffüllen, sagt Herr Wagner. Den Messkolben füllen wir genau bis zur Eichmarke mit Wasser auf. Die letzten Milliliter gibt Lena tropfenweise mit einer Pipette zu.
+
+Wie weiß ich, wann es genau stimmt, fragt sie. Der Meniskus muss genau auf der Eichmarke des Messkolbens liegen, antwortet Herr Wagner. Beim Ablesen schaut man immer auf den tiefsten Punkt des Meniskus. Und die Augen müssen auf gleicher Höhe sein. Eine häufige Fehlerquelle ist das falsche Ablesen am Meniskus.
+
+Zum Schluss verschließt Lena den Kolben und dreht ihn mehrmals um. Vor der Messung muss man das Röhrchen vorsichtig schütteln, hat Herr Wagner ihr einmal erklärt, und beim Messkolben ist es genauso. Die Lösung muss vor der Messung gut gemischt werden, sagt Herr Wagner. Er nickt zufrieden. Du hast gerade deine erste Stammlösung hergestellt. Aus dem Pulver kann man eine Lösung mit genauer Konzentration herstellen, wenn man sauber arbeitet.
+
+Kapitel sechzehn. Die Kunst des Pipettierens.
+
+In der nächsten Woche übt Lena das Pipettieren. Herr Wagner legt verschiedene Pipetten vor sie auf den Tisch. Beim Pipettieren darf man niemals mit dem Mund ansaugen, sagt er als Erstes. Früher haben das manche gemacht. Heute ist es streng verboten.
+
+Die Pipette muss vor dem Gebrauch sauber und trocken sein, erklärt er. Die Pipette sollte man vor dem Gebrauch mit der Lösung spülen. So verdünnt man die Lösung nicht mit Wasserresten.
+
+Er zeigt ihr die Unterschiede. Mit der Vollpipette kann man ein festes Volumen sehr genau abmessen. Mit der Messpipette kann man verschiedene Volumina abmessen. Mit dem Messzylinder kann man größere Flüssigkeitsmengen schnell abmessen. Der Messzylinder ist weniger genau als eine Pipette oder ein Messkolben.
+
+Am häufigsten wirst du aber diese hier benutzen, sagt er und gibt ihr eine Pipette aus Kunststoff mit einem Knopf oben. Die Kolbenhubpipette wird im Labor täglich für kleine Volumina benutzt. Für diesen Test braucht man nur fünfzig Mikroliter Serum.
+
+Lena übt, bis ihr der Daumen wehtut. Nach jeder Probe wechseln wir die Pipettenspitze, um Verschleppung zu vermeiden, erinnert sie Herr Wagner jedes Mal. Wenn Reste einer Probe in die nächste kommen, stimmt das Ergebnis nicht mehr.
+
+Dann bekommt sie eine Aufgabe mit Verdünnungen. Für die Messung stellen wir eine Verdünnung von eins zu zehn her, sagt Herr Wagner. Mit der Vollpipette geben wir genau zehn Milliliter der Probe ins Gefäß. Dann füllt sie mit Wasser bis hundert Milliliter auf.
+
+Das Ergebnis muss man am Ende mit dem Verdünnungsfaktor multiplizieren, erklärt er. Bei einer Verdünnung eins zu hundert beträgt der Faktor hundert. Viele Anfänger vergessen das und wundern sich über viel zu kleine Werte.
+
+Aus der Stammlösung stellen wir alle weiteren Verdünnungen her, sagt er. Mit einer Verdünnungsreihe erstellen wir die Kalibrierkurve für das Photometer. Die Kalibrierkurve zeigt den Zusammenhang zwischen Konzentration und Messwert.
+
+Manchmal muss man zwei Lösungen mischen, um eine dritte Konzentration zu bekommen. Mit dem Mischungskreuz berechnet man, wie man zwei Lösungen mischen muss, erklärt Herr Wagner. Er malt ein großes Kreuz auf einen Zettel und rechnet es ihr vor. Lena staunt, wie einfach es auf einmal aussieht.
+
+Zum Schluss erzählt er ihr die wichtigste Sicherheitsregel beim Verdünnen. Beim Verdünnen gilt immer: erst das Wasser, dann die Säure. Beim Verdünnen von Schwefelsäure wird so viel Wärme frei, dass es spritzen kann. Konzentrierte Schwefelsäure ist stark ätzend und muss vorsichtig verdünnt werden. Für den Versuch benutzen wir nur verdünnte Salzsäure.
+
+Säure und Wasser darf man nur in der richtigen Reihenfolge mischen, wiederholt Lena leise. Herr Wagner lacht. Den Satz vergisst du nie wieder, sagt er. Jeder Chemiker hat ihn irgendwann im Kopf wie ein Lied.
+
+Kapitel siebzehn. Licht und Farbe.
+
+Eines Morgens nimmt Herr Wagner Lena mit an ein großes Gerät. Das Photometer misst, wie stark eine farbige Lösung das Licht schwächt, erklärt er. Mit dem Photometer messen wir, wie viel Licht die Probe absorbiert.
+
+Die Extinktion ist nach Lambert-Beer proportional zur Konzentration der Lösung, sagt er. Je dunkler die Farbe, desto mehr Stoff ist gelöst. Die Messung erfolgt bei einer Wellenlänge von fünfhundertvierzig Nanometern.
+
+Er gibt ihr eine kleine, eckige Plastikküvette. Die Küvette fasst man nur an den geriffelten Seiten an, nie an den klaren. Fingerabdrücke schwächen das Licht, und dann ist die Messung falsch.
+
+Zuerst misst Lena den Blindwert. Der Blindwert enthält alle Reagenzien, aber keine Probe, erklärt Herr Wagner. So wissen wir, wie viel Farbe die Reagenzien schon ohne Probe haben. Das ziehen wir später ab.
+
+Im Labor bestimmen wir die Konzentration von Glucose im Serum, sagt er. Glucose ist der wichtigste Energielieferant für die Zellen im Körper. Bei Diabetes ist sie zu hoch. Die Glucosekonzentration im Blut liegt normalerweise bei etwa fünf Millimol pro Liter.
+
+Die Lösung ist fünf millimolar, also enthält sie fünf Millimol pro Liter, liest Lena auf dem Etikett einer Standardlösung. Mit einer Standardlösung überprüfen wir, ob das Messgerät richtig misst, sagt Herr Wagner. Für die Titration verwenden wir dagegen eine null komma eins molare Natronlauge, aber das kommt später.
+
+Manche Messungen brauchen Wärme. Die Lösung sollte man im Wasserbad leicht erwärmen, sagt Herr Wagner. Im Wasserbad erwärmen wir die Probe gleichmäßig auf siebenunddreißig Grad. Die Temperatur im Brutschrank beträgt genau siebenunddreißig Grad Celsius, wie im menschlichen Körper.
+
+Lena schaut zu, wie die Zahlen auf dem Bildschirm erscheinen. Sie denkt an die vielen Patienten, deren Blut hier gemessen wird. Hinter jeder Zahl steht ein Mensch, sagt Herr Wagner leise, als hätte er ihre Gedanken gelesen.
+
+Kapitel achtzehn. Wenn etwas ausfällt.
+
+In der Schule mischt Frau Doktor Brandt zwei klare Flüssigkeiten. Nach dem Zusammengeben bildet sich sofort ein weißer Niederschlag. Die Klasse beugt sich neugierig nach vorne. Während der Reaktion sollen wir genau beobachten, was im Glas passiert, sagt Frau Doktor Brandt.
+
+Bei einer Fällungsreaktion entsteht aus zwei klaren Lösungen ein fester Niederschlag, erklärt sie. Das Löslichkeitsprodukt zeigt, wie gut sich ein Salz in Wasser löst. Wird das Löslichkeitsprodukt überschritten, kann das Salz als Feststoff ausfallen.
+
+Sie zeigt auf die Flasche in ihrer Hand. Das ist Silbernitrat, sagt sie. Silbernitrat hinterlässt auf der Haut schwarze Flecken, die lange bleiben. Also Handschuhe an! Mit Silbernitrat kann man Chloridionen in einer Lösung nachweisen.
+
+Die Fällung von Silberchlorid dient als Nachweis für Chloridionen, sagt sie. Silberchlorid ist ein weißer Niederschlag, der sich am Licht dunkel färbt. Nach Zugabe von Silbernitrat wird die klare Probe sofort trüb. Eine leichte Trübung in der Lösung zeigt, dass sich ein Niederschlag bildet.
+
+Auch für andere Ionen gibt es solche Tests. Sulfat weist man mit einer Bariumchloridlösung als weißen Niederschlag nach. Bariumsulfat ist so schwer löslich, dass man es als Nachweis für Sulfat nutzt.
+
+Eine Nachweisreaktion zeigt, ob ein bestimmter Stoff in der Probe enthalten ist, fasst Frau Doktor Brandt zusammen. Das Reagenz muss man im Kühlschrank lagern und vor Licht schützen, besonders Silbernitrat. Und die Lösung muss vor der Messung klar und frei von Partikeln sein, sonst stört die Trübung.
+
+Im Krankenhaus benutzt man oft einfachere Tests. Der Nachweis von Glucose im Urin erfolgt oft mit einem Teststreifen, erzählt Lena am nächsten Tag Herrn Wagner. Richtig, sagt er, aber hinter jedem Teststreifen steckt eine Nachweisreaktion mit einem Farbumschlag.
+
+Kapitel neunzehn. Elektronen auf Wanderschaft.
+
+Das nächste Thema findet Lena am schwierigsten. Bei einer Redoxreaktion werden Elektronen von einem Teilchen auf ein anderes übertragen, sagt Frau Doktor Brandt. Jede Redoxreaktion beruht auf einer Elektronenübertragung zwischen zwei Teilchen.
+
+Die Oxidation ist eine Abgabe von Elektronen, dabei steigt die Oxidationszahl, erklärt sie. Die Reduktion ist eine Aufnahme von Elektronen, dabei sinkt die Oxidationszahl. Die Elektronenabgabe nennt man Oxidation, die Elektronenaufnahme dagegen Reduktion.
+
+Jonas stöhnt. Wie soll ich mir das merken? Frau Doktor Brandt lacht. Denk an ein Paar, sagt sie. Keiner kann allein geben oder nehmen. Bei einer Redoxreaktion werden Elektronen von einem Stoff auf einen anderen übertragen. Ein Redoxpaar besteht aus der oxidierten und der reduzierten Form eines Stoffes.
+
+Dann kommen die Mittel. Ein Oxidationsmittel nimmt Elektronen auf und wird dabei selbst reduziert, sagt sie. Ein Reduktionsmittel gibt Elektronen ab und wird dabei selbst oxidiert. Das Reduktionsmittel ist der Elektronendonator in einer Redoxreaktion. Sauerstoff ist in vielen Reaktionen ein starker Elektronenakzeptor.
+
+Lena braucht mehrere Abende, bis sie die Oxidationszahlen verstanden hat. Die Oxidationszahl von Sauerstoff ist in den meisten Verbindungen minus zwei, schreibt sie auf eine Karteikarte. Wasserstoff hat meistens plus eins. Eisen kommt in den Oxidationsstufen plus zwei und plus drei vor.
+
+Frau Doktor Brandt zeigt, wie man eine Redoxgleichung aufstellt. Zuerst müssen wir die Teilgleichungen für Oxidation und Reduktion aufstellen, sagt sie. Für die Oxidation und die Reduktion schreibt man je eine Teilgleichung. Dann gleicht man die Elektronen aus und addiert beide Gleichungen.
+
+Bei der Elektronenaufnahme sinkt die Oxidationszahl des Teilchens, wiederholt Lena immer wieder. Mit Wasserstoff kann man Kupferoxid wieder zu reinem Kupfer reduzieren. Eisen kann an feuchter Luft langsam oxidieren und dabei rosten.
+
+Kapitel zwanzig. Rost, Feuer und Strom.
+
+Redoxreaktionen passieren überall im Alltag, sagt Frau Doktor Brandt in der nächsten Stunde. Sie zeigt einen rostigen Nagel. Ein Nagel beginnt im Wasser schon nach wenigen Tagen zu rosten. Rost entsteht, wenn Eisen mit Sauerstoff und Wasser reagiert.
+
+Die Korrosion von Eisen kann man durch einen Schutzanstrich verhindern, erklärt sie. Beim Aluminium passiert etwas Interessantes. Aluminium ist ein leichtes Metall, das an der Luft schnell eine Oxidschicht bildet. Die dünne Oxidschicht schützt Aluminium vor weiterer Korrosion.
+
+Auch Feuer ist eine Redoxreaktion. Eine Verbrennung ist eine schnelle Oxidation, bei der Wärme und Licht entstehen, sagt sie. Ohne Sauerstoff kann eine Verbrennung im Labor nicht stattfinden. Bei Sauerstoffmangel ist die Verbrennung unvollständig und es entsteht Ruß.
+
+Sie hält ein Stück Magnesiumband in die Flamme. Magnesium kann an der Luft mit einer grellen weißen Flamme verbrennen. Alle schauen weg, so hell ist das Licht. Beim Verbrennen von Magnesium entsteht ein weißes Oxid.
+
+Oxide reagieren unterschiedlich mit Wasser, erklärt sie danach. Ein Metalloxid wie Calciumoxid bildet mit Wasser eine Lauge. Ein Nichtmetalloxid wie Kohlendioxid bildet mit Wasser eine Säure.
+
+Dann geht es um Strom. Bei der Elektrolyse wird eine chemische Reaktion durch elektrischen Strom erzwungen, sagt Frau Doktor Brandt. Die Elektrode taucht in die Lösung und leitet den Strom hinein. An der Anode findet bei jeder Elektrolyse die Oxidation statt. An der Kathode werden Elektronen aufgenommen, also findet dort eine Reduktion statt.
+
+Es geht auch umgekehrt. Eine galvanische Zelle wandelt chemische Energie in elektrische Energie um, erklärt sie. In einer Batterie läuft eine Redoxreaktion ab, die Strom liefert. In der Spannungsreihe stehen die edlen Metalle rechts von den unedlen. Zwischen den beiden Elektroden misst man eine Spannung von einem Volt.
+
+Im Krankenhaus zeigt Herr Wagner Lena später, dass sie das wirklich braucht. Die ionenselektive Elektrode misst Natrium und Kalium direkt im Serum der Patienten, sagt er. Ohne Elektrochemie gäbe es keine schnellen Elektrolytwerte. Lena ist erstaunt, dass ihr schwierigstes Schulthema so nah an ihrer Arbeit liegt.
+
+Kapitel einundzwanzig. Sauer oder basisch.
+
+Das letzte große Thema vor der Zwischenprüfung sind Säuren und Basen. Frau Doktor Brandt stellt eine Reihe von Flaschen auf den Tisch. Salzsäure, Schwefelsäure, Salpetersäure, Essigsäure und Natronlauge.
+
+Eine Säure gibt in wässriger Lösung Protonen an Wassermoleküle ab, sagt sie. Eine Base nimmt Protonen auf und erhöht dadurch den pH-Wert. Nach der Theorie von Brönsted ist eine Säure ein Protonendonator. Eine Base ist ein Protonenakzeptor, weil sie Protonen aufnehmen kann.
+
+Bei jeder Säure-Base-Reaktion findet eine Protonenübertragung zwischen zwei Teilchen statt, erklärt sie. Ein Wasserstoffion ist eigentlich nur ein einzelnes Proton ohne Elektron. Allein kann es in Wasser nicht existieren. Das Oxoniumion entsteht, wenn ein Wassermolekül ein Proton aufnimmt.
+
+Und was macht eine Lösung basisch, fragt Jonas. Jedes Hydroxidion trägt eine negative Ladung und macht eine Lösung basisch, antwortet sie. Eine Lauge ist die wässrige Lösung einer Base. Natriumhydroxid ist ein Hydroxid, das sich sehr gut in Wasser löst.
+
+Sie erklärt die pH-Skala. Die pH-Skala reicht im Labor meistens von null bis vierzehn, sagt sie. Eine Lösung ist sauer, wenn ihr pH-Wert unter sieben liegt. Eine Lösung mit einem pH-Wert über sieben nennt man basisch. Seifenlauge ist alkalisch und färbt das Universalindikatorpapier deutlich blau.
+
+Auch reines Wasser enthält ein paar Ionen, erklärt sie. Durch die Autoprotolyse enthält auch reines Wasser einige Oxoniumionen und Hydroxidionen. Wasser ist ein Ampholyt, weil es als Säure und als Base reagieren kann.
+
+Dann stellt sie die Säuren einzeln vor. Salzsäure kommt auch im menschlichen Magen vor und hilft bei der Verdauung. Salpetersäure ist eine starke Säure und greift viele Metalle an. Phosphorsäure ist eine mittelstarke Säure und kommt sogar in Cola vor. Essigsäure ist eine schwache Säure und steckt im Haushaltsessig.
+
+Und die Kohlensäure, fragt Lena. Kohlensäure entsteht, wenn sich Kohlendioxid in Wasser löst, antwortet Frau Doktor Brandt. Kohlendioxid entsteht bei der Atmung und wird mit dem Blut transportiert. Merkt euch das gut, das wird noch wichtig.
+
+Kapitel zweiundzwanzig. Starke und schwache Säuren.
+
+Nicht jede Säure ist gleich gefährlich, sagt Frau Doktor Brandt. Salzsäure ist eine starke Säure und gibt ihre Protonen fast vollständig ab. Starke Säuren dissoziieren in Wasser fast vollständig in Ionen. Essigsäure ist eine schwache Säure und dissoziiert nur zu einem kleinen Teil.
+
+Die Säurekonstante zeigt, wie stark eine Säure in Wasser dissoziiert, erklärt sie. Einfacher zu merken ist der pKs-Wert. Je kleiner der pKs-Wert ist, desto stärker ist die Säure. Die Säurestärke erkennt man am pKs-Wert der Säure.
+
+Zu jeder Säure gehört eine Base. Ein Säure-Base-Paar unterscheidet sich immer nur um ein einzelnes Proton, sagt sie. Das Acetat-Ion ist die korrespondierende Base der Essigsäure. Das Ammonium-Ion entsteht, wenn Ammoniak ein Proton aufnimmt.
+
+Ammoniak kennt Lena aus dem Putzmittel. Ammoniak ist ein stechend riechendes Gas, das in Wasser basisch reagiert, sagt Frau Doktor Brandt. Der Geruch von Ammoniak ist stechend und unangenehm. Bei der Reaktion entsteht ein farbloses Gas, das nach Ammoniak riecht, liest Lena später in einer Prüfungsaufgabe.
+
+Salze können übrigens auch sauer oder basisch reagieren. Bei der Hydrolyse wird eine Verbindung durch die Reaktion mit Wasser gespalten, erklärt sie. Beim Zugeben von Säure zu einem Carbonat entsteht Kohlendioxid, das sprudelt. Zu viel Nitrat im Trinkwasser kann für Säuglinge gefährlich sein.
+
+Kapitel dreiundzwanzig. Die Titration.
+
+Heute ist Lena aufgeregt. Zum ersten Mal darf sie eine Titration allein durchführen. Mit einer Titration bestimmt man die unbekannte Konzentration einer Säure, sagt Frau Doktor Brandt. Den Versuch dürfen wir nur unter Aufsicht der Lehrkraft durchführen.
+
+Natronlauge verwenden wir als Maßlösung, um Säuren zu titrieren, erklärt sie. Die Maßlösung für die Titration hat eine genau bekannte Konzentration. Aus der Bürette tropfen wir die Maßlösung langsam in den Kolben.
+
+Für die Titration geben wir die Probe in einen Erlenmeyerkolben. Lena gibt mit der Vollpipette genau zwanzig Milliliter Säure hinein. Wir geben einen Tropfen Indikator in die farblose Lösung. Zum Schluss müssen wir noch zwei Tropfen Indikator zugeben, sagt sie leise zu sich selbst.
+
+Der Indikator Phenolphthalein wird im basischen Bereich pink, erklärt Frau Doktor Brandt. Der Umschlagsbereich des Indikators muss zum Äquivalenzpunkt der Titration passen. Lackmuspapier färbt sich in sauren Lösungen rot und in basischen blau. Mit dem Indikatorpapier kann man den pH-Wert schnell grob abschätzen.
+
+Dann beginnt Lena zu titrieren. Die Lauge geben wir tropfenweise zu, bis sich die Farbe ändert. Die Lösung muss man während der Zugabe ständig rühren. Wir titrieren die Probe langsam, bis der Indikator die Farbe wechselt.
+
+Plötzlich färbt sich die Lösung zartrosa, und die Farbe bleibt. Der Farbumschlag des Indikators zeigt das Ende der Titration an, sagt Frau Doktor Brandt. Am Äquivalenzpunkt hat die gesamte Säure mit der Lauge reagiert.
+
+Lena liest den Stand an der Bürette ab. Aus dem Verbrauch an Maßlösung berechnen wir die Konzentration der Probe. Bei der Neutralisation reagieren Säure und Lauge zu Salz und Wasser. Natriumchlorid ist der chemische Name für das normale Kochsalz. Kochsalz löst sich gut in Wasser und leitet dann den Strom.
+
+Frau Doktor Brandt zeigt noch eine Titrationskurve an der Tafel. An der Titrationskurve erkennt man den Äquivalenzpunkt als steilen Sprung, sagt sie. Moderne Labore messen dabei mit dem pH-Meter. Das pH-Meter muss vor jeder Messreihe mit Pufferlösungen kalibriert werden.
+
+Als Lena fertig ist, hilft sie Jonas beim Aufräumen. Er hat etwas Säure verschüttet. Verschüttete Säure muss man sofort mit einer schwachen Base neutralisieren, sagt Lena. Jonas grinst. Du klingst schon wie Herr Wagner.
+
+Kapitel vierundzwanzig. Der Puffer im Blut.
+
+Im Krankenhaus fragt Herr Wagner, was Lena über Puffer weiß. Ein Puffer hält den pH-Wert auch bei Zugabe von Säure fast konstant, antwortet sie. Die Pufferlösung besteht aus einer schwachen Säure und ihrer korrespondierenden Base.
+
+Sehr gut, sagt er. Und im Blut ist das lebenswichtig. Der pH-Wert des Blutes liegt normalerweise bei etwa sieben komma vier. Schon kleine Abweichungen sind gefährlich. Der Kohlensäure-Bicarbonat-Puffer ist das wichtigste Puffersystem im Blut. Hydrogencarbonat ist ein wichtiger Teil des Puffersystems im Blut.
+
+Wenn die Pufferkapazität erschöpft ist, ändert sich der pH-Wert plötzlich stark, erklärt er. Bei einer Azidose ist der pH-Wert des Blutes zu niedrig. Bei einer Alkalose ist der pH-Wert des Blutes zu hoch. Beides kann lebensgefährlich sein.
+
+Er führt Lena zu einem kleinen Gerät auf der Intensivstation. Mit der Blutgasanalyse misst man den pH-Wert und die Gase im Blut, sagt er. Die Probe muss sofort gemessen werden, ohne Luftblasen. Sonst entweicht Kohlendioxid, und der Wert stimmt nicht mehr.
+
+Manchmal muss man den pH-Wert einer Probe aber auch absichtlich ändern. Vor der Messung muss man die Urinprobe mit etwas Säure ansäuern, erklärt Herr Wagner bei einem anderen Test. So bleiben bestimmte Stoffe stabil, bis wir sie messen.
+
+Kapitel fünfundzwanzig. Messen, zweifeln, wiederholen.
+
+Im Frühling arbeitet Lena schon fast selbstständig. Vor den Patientenproben läuft jeden Morgen eine Qualitätskontrolle, erklärt ihr Herr Wagner. Erst wenn die Kontrolle stimmt, dürfen wir Patientenwerte herausgeben.
+
+Die Messung wiederholen wir dreimal, um Fehler zu erkennen, sagt er. Aus den drei Messungen berechnen wir am Ende den Mittelwert. Eine hohe Präzision bedeutet, dass wiederholte Messungen eng beieinander liegen. Die Genauigkeit sagt dagegen, wie nah wir am wahren Wert sind.
+
+Die Genauigkeit einer Vollpipette ist höher als die eines Messzylinders, fügt er hinzu. Ein Messfehler kann durch eine schlecht gereinigte Pipette entstehen. Deshalb muss jedes Glasgerät nach dem Versuch gründlich gespült werden.
+
+Lena lernt, die Werte kritisch zu betrachten. Wir vergleichen den Messwert der Probe mit dem Referenzbereich, sagt Herr Wagner. Der Referenzbereich zeigt, welche Werte bei gesunden Menschen normal sind. Der gemessene Wert liegt deutlich über dem normalen Bereich, liest Lena bei einer Probe.
+
+Was jetzt, fragt sie. Ein auffälliger Messwert muss immer noch einmal überprüft werden, sagt Herr Wagner. Wenn das Ergebnis unklar ist, müssen wir die Messung wiederholen. Lena misst noch einmal, und der Wert ist wieder so hoch. Dann rufen wir den Arzt an, sagt Herr Wagner. Das kann für den Patienten sehr wichtig sein.
+
+An einem anderen Tag stimmt etwas nicht. Die Probe ist verunreinigt und muss neu abgenommen werden, sagt Herr Wagner, nachdem er das Röhrchen gegen das Licht gehalten hat. Das passiert, sagt er. Wichtig ist nur, dass wir es merken.
+
+Nach der Arbeit schreibt Lena ihr Berichtsheft. Im Protokoll stehen Material, Durchführung, Beobachtung und Auswertung. Jede Beobachtung schreiben wir sofort in das Versuchsprotokoll, hat Frau Doktor Brandt immer gesagt. Nach dem Versuch müssen wir die Messwerte sorgfältig auswerten. Die Auswertung der Messergebnisse erfolgt später in Ruhe am Computer.
+
+Kapitel sechsundzwanzig. Ordnung im Labor.
+
+Herr Wagner legt großen Wert auf Ordnung. Jedes Röhrchen müssen wir sofort nach der Abnahme deutlich beschriften, sagt er jeden Morgen. Säuren und Laugen muss man getrennt voneinander aufbewahren. Die Flasche muss luftdicht verschlossen sein, damit nichts verdunstet.
+
+Nach dem Spülen trocknen die Glasgeräte im Trockenschrank. Im Trockenschrank werden die Glasgeräte bei hundertzwanzig Grad getrocknet. Den Niederschlag lassen wir über Nacht im Trockenschrank trocknen. Im Exsikkator kühlen die Proben ab, ohne Feuchtigkeit aufzunehmen.
+
+Die heiße Lösung muss erst auf Raumtemperatur abkühlen, bevor wir weiterarbeiten, erinnert er Lena. Die Probe darf man nur vorsichtig im Wasserbad erhitzen. Das Reagenzglas halten wir beim Erhitzen immer schräg und vom Körper weg. Die Flamme des Bunsenbrenners ist bei richtiger Einstellung blau.
+
+Auch Abfall braucht Ordnung. Reste von Schwermetallen muss man in einem speziellen Behälter entsorgen, sagt Herr Wagner. Jeder Gefahrstoff muss im Labor in einem Verzeichnis erfasst werden. Dieser Stoff ist reizend für Haut und Augen, deshalb tragen wir Handschuhe.
+
+Und wenn doch etwas passiert, zeigt er ihr die Augendusche. Nach einem Spritzer ins Auge geht man sofort zur Augendusche und spült lange. Im Labor darf man weder essen noch trinken, auch nicht in Pausen. Lena findet die Regeln manchmal streng, aber sie versteht jetzt, warum es sie gibt.
+
+Mit dem Spatel nehmen wir eine kleine Menge Pulver aus der Dose, zeigt sie einer neuen Praktikantin. Mit einem Trichter kann man Flüssigkeiten ohne Verlust umfüllen. Auf dem Uhrglas lassen wir die Kristalle an der Luft trocknen. Lena merkt, dass sie jetzt selbst erklärt, was ihr vor einem Jahr noch fremd war.
+
+Kapitel siebenundzwanzig. Die Prüfung.
+
+Dann kommt der Tag der Zwischenprüfung. Lena sitzt im großen Saal der Schule, und vor ihr liegt ein dickes Heft mit Aufgaben. Ihre Hände sind kalt, aber ihr Kopf ist klar.
+
+Die erste Aufgabe fragt nach dem Aufbau des Atoms. Lena lächelt. Ein Atom besteht aus einem Kern und einer Hülle aus Elektronen, schreibt sie. Dann erklärt sie Isotope, die Ordnungszahl und die Massenzahl. Die Wörter kommen fast von selbst.
+
+In der zweiten Aufgabe soll sie eine Reaktionsgleichung ausgleichen. Sie zählt die Atome auf beiden Seiten und setzt die Koeffizienten. Dann muss sie die Stoffmenge berechnen. Sie schreibt jede Einheit sorgfältig mit, so wie Frau Doktor Brandt es ihr beigebracht hat.
+
+Die dritte Aufgabe ist eine Verdünnung. Aus einer Stammlösung soll eine Lösung mit einer bestimmten Konzentration hergestellt werden. Lena denkt an ihren ersten Tag mit der Analysenwaage und an das Mischungskreuz auf dem Zettel von Herrn Wagner.
+
+Bei der Redoxaufgabe zögert sie kurz. Oxidation ist Elektronenabgabe, Reduktion ist Elektronenaufnahme, sagt sie sich leise vor. Dann bestimmt sie die Oxidationszahlen und stellt die Teilgleichungen auf.
+
+Die letzte Aufgabe fragt nach dem pH-Wert des Blutes und nach Puffersystemen. Lena denkt an die Blutgasanalyse auf der Intensivstation. Sie schreibt über den Kohlensäure-Bicarbonat-Puffer, über Azidose und Alkalose, und über die Pufferkapazität.
+
+Als sie das Heft abgibt, ist sie erschöpft, aber zufrieden. Draußen wartet Jonas. Und, fragt er. Ich glaube, es lief gut, sagt Lena. Weißt du, was das Seltsamste war? Ich habe bei jeder Aufgabe an einen echten Moment im Labor gedacht.
+
+Kapitel achtundzwanzig. Ein Jahr später.
+
+Zwei Wochen später bekommt Lena ihre Ergebnisse. Sie hat die Zwischenprüfung mit einer sehr guten Note bestanden. Sie ruft zuerst ihre Mutter an und dann Herrn Wagner.
+
+Herr Wagner freut sich ehrlich. Weißt du noch, wie du am ersten Tag vor der Zentrifuge standest, fragt er. Du hattest Angst, dass du nicht gut genug in Chemie bist. Lena lacht. Ich habe immer noch manchmal Angst, sagt sie. Aber jetzt weiß ich, wie ich nachschauen kann.
+
+Am Abend sitzt sie am Fenster und schaut auf die Stadt. Sie denkt an alles, was sie gelernt hat. An das Atom und seine Schalen, an das Periodensystem an der Wand, an Ionen und Moleküle. An Lösungen, Konzentrationen und Verdünnungen. An Säuren, Basen und Puffer. An Elektronen, die von einem Teilchen zum anderen wandern.
+
+Und sie denkt an die vielen Röhrchen mit Blut, die jeden Tag im Labor ankommen. Hinter jedem Röhrchen steht ein Mensch, der auf ein Ergebnis wartet. Und hinter jedem Ergebnis steht jetzt auch ein bisschen von ihr.
+
+Die Chemie ist für Lena keine fremde Sprache mehr. Sie ist ein Werkzeug geworden, mit dem sie Menschen helfen kann. Morgen früh beginnt ihr zweites Ausbildungsjahr. Sie freut sich darauf.
+
+Ende.
