@@ -33,6 +33,9 @@ class Silence:
 
 TimelineItem = ClipSpec | Silence
 
+# build_timeline lays out each entry as this many items (5 clips, 5 pauses).
+ITEMS_PER_ENTRY = 10
+
 
 def build_timeline(
     entries: list[Entry],
@@ -64,6 +67,11 @@ def build_timeline(
         )
 
     return timeline
+
+
+def vocab_marks(entries: list[Entry]) -> dict[int, str]:
+    """A chapter at the start of every entry, titled "German — English" for the Hörplayer."""
+    return {i * ITEMS_PER_ENTRY: f"{entry.german} — {entry.english}" for i, entry in enumerate(entries)}
 
 
 def render(

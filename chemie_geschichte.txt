@@ -1,6 +1,6 @@
 Lenas Jahr im Labor. Eine Geschichte über Chemie, Mut und viele kleine Fehler.
 
-Kapitel eins. Der erste Tag.
+# Der erste Tag — The first day
 
 Lena Berger ist neunzehn Jahre alt, und heute beginnt ihre Ausbildung zur Medizinischen Technologin für Laboratoriumsanalytik. Sie steht früh am Morgen vor dem großen Krankenhaus und hält ihre Tasche fest. In der Nacht hat sie kaum geschlafen. Sie hat sich immer wieder gefragt, ob sie gut genug in Chemie ist.
 
@@ -30,7 +30,7 @@ Am Ende des Tages zeigt Herr Wagner ihr den Kühlraum. Diese Reagenzien muss man
 
 Als Lena am Abend nach Hause fährt, ist sie müde, aber glücklich. Sie hat so viele neue Wörter gehört, dass ihr der Kopf brummt. Aber sie weiß jetzt eins sicher: Sie will in diesem Labor arbeiten.
 
-Kapitel zwei. Die kleinsten Teilchen.
+# Die kleinsten Teilchen — The smallest particles
 
 Zwei Tage in der Woche geht Lena in die Berufsfachschule. Dort unterrichtet Frau Doktor Brandt das Fach Chemie. Sie ist klein, spricht schnell und malt beim Erklären ständig Kreise an die Tafel.
 
@@ -60,7 +60,7 @@ Und was passiert, wenn man einem Atom Energie gibt, fragt Lena. Frau Doktor Bran
 
 Am Ende der Stunde fasst Lena für sich zusammen. Kern mit Protonen und Neutronen, Hülle mit Elektronen, Außenschale entscheidet über die Chemie. Sie malt ein kleines Atom an den Rand ihres Hefts und fühlt sich zum ersten Mal ein bisschen wie eine richtige Chemikerin.
 
-Kapitel drei. Gleiche Elemente, andere Kerne.
+# Gleiche Elemente, andere Kerne — Same elements, different nuclei
 
 In der nächsten Woche bringt Frau Doktor Brandt ein altes Messgerät mit in die Klasse. Es sieht aus wie ein kleines Radio mit einem Metallstab. Heute sprechen wir über Isotope, sagt sie.
 
@@ -76,7 +76,7 @@ Lena denkt an die Klinik. In der Nuklearmedizin benutzt man radioaktive Stoffe m
 
 Und welche Kerne sind stabil, fragt Lena. Die meisten Atomkerne in unserer Umgebung sind stabil, antwortet Frau Doktor Brandt. Das ist auch gut so. Ohne stabile Kerne gäbe es kein Leben, keine Steine und kein Wasser.
 
-Kapitel vier. Die große Tabelle.
+# Die große Tabelle — The big table
 
 An der Wand des Klassenzimmers hängt ein riesiges Plakat mit vielen bunten Kästchen. Das ist das Periodensystem, sagt Frau Doktor Brandt. Im Periodensystem sind die Elemente nach steigender Ordnungszahl angeordnet. Für einen Chemiker ist es wie eine Landkarte.
 
@@ -110,7 +110,7 @@ Und die Ionisierungsenergie, fragt sie in die Runde. Die Ionisierungsenergie ist
 
 Am Ende der Stunde spricht sie über edle und unedle Metalle. Gold gilt als edel, weil es kaum mit anderen Stoffen reagiert. Silber ist ein Edelmetall und reagiert nur schwer mit Sauerstoff. Zink ist unedel und löst sich deshalb in verdünnter Säure auf. Zink reagiert mit Salzsäure, und dabei entsteht Wasserstoffgas.
 
-Kapitel fünf. Elemente im Körper.
+# Elemente im Körper — Elements in the body
 
 Am nächsten Praxistag im Krankenhaus fragt Herr Wagner, was Lena in der Schule gelernt hat. Sie erzählt vom Periodensystem. Sehr gut, sagt er. Dann zeige ich dir jetzt, wo diese Elemente in unserer Arbeit vorkommen.
 
@@ -126,7 +126,7 @@ Dann zeigt er Lena eine besondere Anforderung. Hier möchte ein Arzt wissen, ob 
 
 Lena ist überrascht, wie viel Chemie in einer einfachen Blutprobe steckt. Kupfer leitet den elektrischen Strom sehr gut und hat eine rötliche Farbe, denkt sie, aber im Körper ist es ein wichtiger Helfer für Enzyme. Sie nimmt sich vor, zu jedem Element auch eine Bedeutung für den Menschen zu lernen.
 
-Kapitel sechs. Wie Atome zusammenhalten.
+# Wie Atome zusammenhalten — How atoms hold together
 
 In der Schule beginnt ein neues Thema. Eine chemische Bindung hält die Atome in einem Molekül zusammen, sagt Frau Doktor Brandt. Es gibt drei große Arten von Bindungen: die Ionenbindung, die Atombindung und die Metallbindung.
 
@@ -148,7 +148,7 @@ Lena fragt nach dem Unterschied zur Summenformel. Die Summenformel von Wasser ze
 
 Am Ende erwähnt sie noch die Metallbindung. Die Metallbindung erklärt, warum Metalle den Strom so gut leiten, sagt sie. Die Elektronen bewegen sich frei zwischen den Metallatomen, wie ein Gas aus Elektronen. Metalle leiten Wärme und Strom besser als die meisten anderen Stoffe.
 
-Kapitel sieben. Das besondere Wasser.
+# Das besondere Wasser — The special water
 
 In der nächsten Stunde stellt Frau Doktor Brandt ein Glas Wasser auf den Tisch. Dieses Molekül ist das wichtigste in eurem Beruf, sagt sie. Wasser ist eine Verbindung aus den Elementen Wasserstoff und Sauerstoff. Ein Wassermolekül besteht aus zwei Wasserstoffatomen und einem Sauerstoffatom.
 
@@ -164,7 +164,7 @@ Zwischen den Molekülen wirken ebenfalls Kräfte. Jede zwischenmolekulare Kraft 
 
 Ohne Wasserstoffbrücken würde Wasser schon weit unter null Grad sieden, erzählt Frau Doktor Brandt. Dann gäbe es auf der Erde kein flüssiges Wasser und kein Leben. Lena schaut auf das Glas und findet, dass Wasser auf einmal gar nicht mehr langweilig aussieht.
 
-Kapitel acht. Rechnen mit dem Mol.
+# Rechnen mit dem Mol — Calculating with the mole
 
 Vor dem Thema Mol haben viele in der Klasse Angst. Auch Lena. Sie war in Mathe nie besonders gut. Frau Doktor Brandt merkt das sofort. Keine Panik, sagt sie. Das Mol ist nur eine Zahl, genau wie ein Dutzend.
 
@@ -186,7 +186,7 @@ Viele Aufgaben zur Konzentration kann man einfach mit dem Dreisatz lösen, sagt 
 
 Am Abend übt Lena mit Jonas in der Bibliothek. Nach der zehnten Aufgabe lacht Jonas plötzlich. Das ist ja gar nicht so schwer, sagt er. Man muss nur wissen, was man sucht und was man hat. Lena nickt. Das Ergebnis der Messung tragen wir sofort ins Protokoll ein, denkt sie, und das Ergebnis der Rechnung mit Einheit ins Heft.
 
-Kapitel neun. Gleichungen im Gleichgewicht.
+# Gleichungen im Gleichgewicht — Equations in balance
 
 In der nächsten Woche lernen sie, Reaktionen aufzuschreiben. Die Reaktionsgleichung zeigt die Ausgangsstoffe links und die Produkte rechts, sagt Frau Doktor Brandt. Der Reaktionspfeil zeigt die Richtung an, in der die Reaktion abläuft.
 
@@ -210,7 +210,7 @@ Frau Doktor Brandt spricht auch über das Gleichgewicht. Viele chemische Reaktio
 
 Das chemische Gleichgewicht stellt sich ein, wenn Hin- und Rückreaktion gleich schnell ablaufen, erklärt sie. Von außen sieht es dann so aus, als ob nichts mehr passiert. In Wirklichkeit reagieren die Teilchen ständig weiter, nur eben in beide Richtungen gleich viel.
 
-Kapitel zehn. Energie und Geschwindigkeit.
+# Energie und Geschwindigkeit — Energy and speed
 
 Heute ist Laborunterricht in der Schule. Die Klasse steht an langen Tischen, und auf jedem Tisch steht ein Bunsenbrenner. Den Bunsenbrenner darf man nie unbeaufsichtigt brennen lassen, sagt Frau Doktor Brandt, bevor jemand ein Streichholz anzündet.
 
@@ -232,7 +232,7 @@ Zum Schluss erklärt sie den Unterschied zwischen chemischen und physikalischen 
 
 Lena schreibt in ihr Protokoll: Bei einer chemischen Reaktion entstehen neue Stoffe. Bei der Reaktion von Säure und Lauge entstehen Salz und Wasser. Natrium und Chlor reagieren heftig miteinander zu Natriumchlorid. Eine Kerze kann in einem geschlossenen Glas den gesamten Sauerstoff verbrauchen.
 
-Kapitel elf. Fest, flüssig, gasförmig.
+# Fest, flüssig, gasförmig — Solid, liquid, gaseous
 
 Im Winter ist es in der Stadt sehr kalt. Auf dem Weg zur Schule sieht Lena, wie Arbeiter Salz auf die Straße streuen. Salz senkt den Gefrierpunkt von Wasser, deshalb streut man es im Winter, denkt sie. Sie lächelt, weil sie jetzt die Chemie hinter den Dingen erkennt.
 
@@ -254,7 +254,7 @@ Der Schmelzpunkt eines Stoffes hilft uns, seine Reinheit zu überprüfen, sagt s
 
 Dann spricht sie über Gase. Wenn man den Druck erhöht, sinkt das Volumen eines Gases. Der Dampfdruck einer Flüssigkeit steigt, wenn man sie erwärmt. Die Dichte von Wasser beträgt ungefähr ein Gramm pro Milliliter.
 
-Kapitel zwölf. Warum Zellen platzen.
+# Warum Zellen platzen — Why cells burst
 
 Frau Doktor Brandt zeigt der Klasse einen Tropfen Tinte in einem Glas Wasser. Durch Diffusion verteilt sich ein Tropfen Tinte langsam im ganzen Wasser, sagt sie. Niemand muss rühren. Die Teilchen bewegen sich ganz von selbst.
 
@@ -264,7 +264,7 @@ Der osmotische Druck hängt von der Zahl der gelösten Teilchen ab, sagt sie. De
 
 Lena kennt diese Lösung aus dem Krankenhaus. Die physiologische Kochsalzlösung enthält neun Gramm Natriumchlorid pro Liter, sagt sie. Genau, antwortet Frau Doktor Brandt. Jeder Patient mit einem Tropf bekommt diese Lösung.
 
-Kapitel dreizehn. Alles über Lösungen.
+# Alles über Lösungen — All about solutions
 
 In ihrem Beruf wird Lena fast nur mit Lösungen arbeiten. Deshalb nimmt sich Frau Doktor Brandt für dieses Thema viel Zeit. Wasser ist das wichtigste Lösungsmittel im Labor und im Körper, sagt sie.
 
@@ -288,7 +288,7 @@ Eine Suspension besteht aus festen Teilchen, die in einer Flüssigkeit schweben,
 
 Das Gegenteil eines Gemischs ist ein Reinstoff. Destilliertes Wasser ist ein Reinstoff, Leitungswasser dagegen ein Gemisch, sagt sie. Die Reinheit der Chemikalie steht auf dem Etikett der Flasche. Das destillierte Wasser für die Lösungen steht im Kanister neben der Spüle.
 
-Kapitel vierzehn. Trennen, was zusammen ist.
+# Trennen, was zusammen ist — Separating what belongs together
 
 Im Laborunterricht sollen Lena und Jonas ein Gemisch aus Salz und Sand trennen. Ein Gemisch aus Salz und Sand kann man mit Wasser gut trennen, sagt Frau Doktor Brandt. Überlegt euch selbst, wie.
 
@@ -302,7 +302,7 @@ Frau Doktor Brandt erklärt noch weitere Trennverfahren. Die Destillation ist ei
 
 Nach dem Absetzen kann man die klare Flüssigkeit vorsichtig dekantieren, sagt sie. Mit der Chromatographie kann man die Farbstoffe einer Tinte trennen. Bei der Extraktion löst man einen Stoff mit einem geeigneten Lösungsmittel heraus. Und das Trennverfahren, das ihr am häufigsten benutzen werdet, kennt ihr schon: das Zentrifugieren.
 
-Kapitel fünfzehn. Wie viel ist drin?
+# Wie viel ist drin? — How much is in it?
 
 Zurück im Krankenhaus bekommt Lena ihre erste richtige Aufgabe. Heute müssen wir eine neue Pufferlösung für die Messungen ansetzen, sagt Herr Wagner. Und du machst das, ich schaue nur zu.
 
@@ -328,7 +328,7 @@ Wie weiß ich, wann es genau stimmt, fragt sie. Der Meniskus muss genau auf der 
 
 Zum Schluss verschließt Lena den Kolben und dreht ihn mehrmals um. Vor der Messung muss man das Röhrchen vorsichtig schütteln, hat Herr Wagner ihr einmal erklärt, und beim Messkolben ist es genauso. Die Lösung muss vor der Messung gut gemischt werden, sagt Herr Wagner. Er nickt zufrieden. Du hast gerade deine erste Stammlösung hergestellt. Aus dem Pulver kann man eine Lösung mit genauer Konzentration herstellen, wenn man sauber arbeitet.
 
-Kapitel sechzehn. Die Kunst des Pipettierens.
+# Die Kunst des Pipettierens — The art of pipetting
 
 In der nächsten Woche übt Lena das Pipettieren. Herr Wagner legt verschiedene Pipetten vor sie auf den Tisch. Beim Pipettieren darf man niemals mit dem Mund ansaugen, sagt er als Erstes. Früher haben das manche gemacht. Heute ist es streng verboten.
 
@@ -352,7 +352,7 @@ Zum Schluss erzählt er ihr die wichtigste Sicherheitsregel beim Verdünnen. Bei
 
 Säure und Wasser darf man nur in der richtigen Reihenfolge mischen, wiederholt Lena leise. Herr Wagner lacht. Den Satz vergisst du nie wieder, sagt er. Jeder Chemiker hat ihn irgendwann im Kopf wie ein Lied.
 
-Kapitel siebzehn. Licht und Farbe.
+# Licht und Farbe — Light and colour
 
 Eines Morgens nimmt Herr Wagner Lena mit an ein großes Gerät. Das Photometer misst, wie stark eine farbige Lösung das Licht schwächt, erklärt er. Mit dem Photometer messen wir, wie viel Licht die Probe absorbiert.
 
@@ -370,7 +370,7 @@ Manche Messungen brauchen Wärme. Die Lösung sollte man im Wasserbad leicht erw
 
 Lena schaut zu, wie die Zahlen auf dem Bildschirm erscheinen. Sie denkt an die vielen Patienten, deren Blut hier gemessen wird. Hinter jeder Zahl steht ein Mensch, sagt Herr Wagner leise, als hätte er ihre Gedanken gelesen.
 
-Kapitel achtzehn. Wenn etwas ausfällt.
+# Wenn etwas ausfällt — When something precipitates
 
 In der Schule mischt Frau Doktor Brandt zwei klare Flüssigkeiten. Nach dem Zusammengeben bildet sich sofort ein weißer Niederschlag. Die Klasse beugt sich neugierig nach vorne. Während der Reaktion sollen wir genau beobachten, was im Glas passiert, sagt Frau Doktor Brandt.
 
@@ -386,7 +386,7 @@ Eine Nachweisreaktion zeigt, ob ein bestimmter Stoff in der Probe enthalten ist,
 
 Im Krankenhaus benutzt man oft einfachere Tests. Der Nachweis von Glucose im Urin erfolgt oft mit einem Teststreifen, erzählt Lena am nächsten Tag Herrn Wagner. Richtig, sagt er, aber hinter jedem Teststreifen steckt eine Nachweisreaktion mit einem Farbumschlag.
 
-Kapitel neunzehn. Elektronen auf Wanderschaft.
+# Elektronen auf Wanderschaft — Electrons on the move
 
 Das nächste Thema findet Lena am schwierigsten. Bei einer Redoxreaktion werden Elektronen von einem Teilchen auf ein anderes übertragen, sagt Frau Doktor Brandt. Jede Redoxreaktion beruht auf einer Elektronenübertragung zwischen zwei Teilchen.
 
@@ -402,7 +402,7 @@ Frau Doktor Brandt zeigt, wie man eine Redoxgleichung aufstellt. Zuerst müssen 
 
 Bei der Elektronenaufnahme sinkt die Oxidationszahl des Teilchens, wiederholt Lena immer wieder. Mit Wasserstoff kann man Kupferoxid wieder zu reinem Kupfer reduzieren. Eisen kann an feuchter Luft langsam oxidieren und dabei rosten.
 
-Kapitel zwanzig. Rost, Feuer und Strom.
+# Rost, Feuer und Strom — Rust, fire and electricity
 
 Redoxreaktionen passieren überall im Alltag, sagt Frau Doktor Brandt in der nächsten Stunde. Sie zeigt einen rostigen Nagel. Ein Nagel beginnt im Wasser schon nach wenigen Tagen zu rosten. Rost entsteht, wenn Eisen mit Sauerstoff und Wasser reagiert.
 
@@ -420,7 +420,7 @@ Es geht auch umgekehrt. Eine galvanische Zelle wandelt chemische Energie in elek
 
 Im Krankenhaus zeigt Herr Wagner Lena später, dass sie das wirklich braucht. Die ionenselektive Elektrode misst Natrium und Kalium direkt im Serum der Patienten, sagt er. Ohne Elektrochemie gäbe es keine schnellen Elektrolytwerte. Lena ist erstaunt, dass ihr schwierigstes Schulthema so nah an ihrer Arbeit liegt.
 
-Kapitel einundzwanzig. Sauer oder basisch.
+# Sauer oder basisch — Acidic or basic
 
 Das letzte große Thema vor der Zwischenprüfung sind Säuren und Basen. Frau Doktor Brandt stellt eine Reihe von Flaschen auf den Tisch. Salzsäure, Schwefelsäure, Salpetersäure, Essigsäure und Natronlauge.
 
@@ -438,7 +438,7 @@ Dann stellt sie die Säuren einzeln vor. Salzsäure kommt auch im menschlichen M
 
 Und die Kohlensäure, fragt Lena. Kohlensäure entsteht, wenn sich Kohlendioxid in Wasser löst, antwortet Frau Doktor Brandt. Kohlendioxid entsteht bei der Atmung und wird mit dem Blut transportiert. Merkt euch das gut, das wird noch wichtig.
 
-Kapitel zweiundzwanzig. Starke und schwache Säuren.
+# Starke und schwache Säuren — Strong and weak acids
 
 Nicht jede Säure ist gleich gefährlich, sagt Frau Doktor Brandt. Salzsäure ist eine starke Säure und gibt ihre Protonen fast vollständig ab. Starke Säuren dissoziieren in Wasser fast vollständig in Ionen. Essigsäure ist eine schwache Säure und dissoziiert nur zu einem kleinen Teil.
 
@@ -450,7 +450,7 @@ Ammoniak kennt Lena aus dem Putzmittel. Ammoniak ist ein stechend riechendes Gas
 
 Salze können übrigens auch sauer oder basisch reagieren. Bei der Hydrolyse wird eine Verbindung durch die Reaktion mit Wasser gespalten, erklärt sie. Beim Zugeben von Säure zu einem Carbonat entsteht Kohlendioxid, das sprudelt. Zu viel Nitrat im Trinkwasser kann für Säuglinge gefährlich sein.
 
-Kapitel dreiundzwanzig. Die Titration.
+# Die Titration — The titration
 
 Heute ist Lena aufgeregt. Zum ersten Mal darf sie eine Titration allein durchführen. Mit einer Titration bestimmt man die unbekannte Konzentration einer Säure, sagt Frau Doktor Brandt. Den Versuch dürfen wir nur unter Aufsicht der Lehrkraft durchführen.
 
@@ -470,7 +470,7 @@ Frau Doktor Brandt zeigt noch eine Titrationskurve an der Tafel. An der Titratio
 
 Als Lena fertig ist, hilft sie Jonas beim Aufräumen. Er hat etwas Säure verschüttet. Verschüttete Säure muss man sofort mit einer schwachen Base neutralisieren, sagt Lena. Jonas grinst. Du klingst schon wie Herr Wagner.
 
-Kapitel vierundzwanzig. Der Puffer im Blut.
+# Der Puffer im Blut — The buffer in the blood
 
 Im Krankenhaus fragt Herr Wagner, was Lena über Puffer weiß. Ein Puffer hält den pH-Wert auch bei Zugabe von Säure fast konstant, antwortet sie. Die Pufferlösung besteht aus einer schwachen Säure und ihrer korrespondierenden Base.
 
@@ -482,7 +482,7 @@ Er führt Lena zu einem kleinen Gerät auf der Intensivstation. Mit der Blutgasa
 
 Manchmal muss man den pH-Wert einer Probe aber auch absichtlich ändern. Vor der Messung muss man die Urinprobe mit etwas Säure ansäuern, erklärt Herr Wagner bei einem anderen Test. So bleiben bestimmte Stoffe stabil, bis wir sie messen.
 
-Kapitel fünfundzwanzig. Messen, zweifeln, wiederholen.
+# Messen, zweifeln, wiederholen — Measure, doubt, repeat
 
 Im Frühling arbeitet Lena schon fast selbstständig. Vor den Patientenproben läuft jeden Morgen eine Qualitätskontrolle, erklärt ihr Herr Wagner. Erst wenn die Kontrolle stimmt, dürfen wir Patientenwerte herausgeben.
 
@@ -498,7 +498,7 @@ An einem anderen Tag stimmt etwas nicht. Die Probe ist verunreinigt und muss neu
 
 Nach der Arbeit schreibt Lena ihr Berichtsheft. Im Protokoll stehen Material, Durchführung, Beobachtung und Auswertung. Jede Beobachtung schreiben wir sofort in das Versuchsprotokoll, hat Frau Doktor Brandt immer gesagt. Nach dem Versuch müssen wir die Messwerte sorgfältig auswerten. Die Auswertung der Messergebnisse erfolgt später in Ruhe am Computer.
 
-Kapitel sechsundzwanzig. Ordnung im Labor.
+# Ordnung im Labor — Order in the lab
 
 Herr Wagner legt großen Wert auf Ordnung. Jedes Röhrchen müssen wir sofort nach der Abnahme deutlich beschriften, sagt er jeden Morgen. Säuren und Laugen muss man getrennt voneinander aufbewahren. Die Flasche muss luftdicht verschlossen sein, damit nichts verdunstet.
 
@@ -512,7 +512,7 @@ Und wenn doch etwas passiert, zeigt er ihr die Augendusche. Nach einem Spritzer 
 
 Mit dem Spatel nehmen wir eine kleine Menge Pulver aus der Dose, zeigt sie einer neuen Praktikantin. Mit einem Trichter kann man Flüssigkeiten ohne Verlust umfüllen. Auf dem Uhrglas lassen wir die Kristalle an der Luft trocknen. Lena merkt, dass sie jetzt selbst erklärt, was ihr vor einem Jahr noch fremd war.
 
-Kapitel siebenundzwanzig. Die Prüfung.
+# Die Prüfung — The exam
 
 Dann kommt der Tag der Zwischenprüfung. Lena sitzt im großen Saal der Schule, und vor ihr liegt ein dickes Heft mit Aufgaben. Ihre Hände sind kalt, aber ihr Kopf ist klar.
 
@@ -528,7 +528,7 @@ Die letzte Aufgabe fragt nach dem pH-Wert des Blutes und nach Puffersystemen. Le
 
 Als sie das Heft abgibt, ist sie erschöpft, aber zufrieden. Draußen wartet Jonas. Und, fragt er. Ich glaube, es lief gut, sagt Lena. Weißt du, was das Seltsamste war? Ich habe bei jeder Aufgabe an einen echten Moment im Labor gedacht.
 
-Kapitel achtundzwanzig. Ein Jahr später.
+# Ein Jahr später — A year later
 
 Zwei Wochen später bekommt Lena ihre Ergebnisse. Sie hat die Zwischenprüfung mit einer sehr guten Note bestanden. Sie ruft zuerst ihre Mutter an und dann Herrn Wagner.
 

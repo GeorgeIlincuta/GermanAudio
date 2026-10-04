@@ -8,6 +8,7 @@ and encoding are shared with the vocabulary track unchanged.
 """
 
 import re
+from dataclasses import dataclass
 from pathlib import Path
 
 from germanaudio.assemble import Silence, TimelineItem
@@ -15,7 +16,33 @@ from germanaudio.config import TextPauseConfig
 from germanaudio.loader import LoadError
 from germanaudio.synth import ClipSpec
 
-Paragraphs = list[list[str]]
+
+# Space + em dash + space, the same separator the Hörplayer splits section titles on.
+TITLE_SEPARATOR = " — "
+
+
+@dataclass(frozen=True)
+class Heading:
+    """A section heading line ("# Die Entscheidung — The decision").
+
+    Only the German part is spoken; the full title becomes the chapter mark
+    the Hörplayer shows (German big, English underneath).
+    """
+
+    german: str
+    english: str | None
+
+    @property
+    def title(self) -> str:
+        return f"{self.german}{TITLE_SEPARATOR}{self.english}" if self.english else self.german
+
+    @property
+    def spoken(self) -> str:
+        return self.german if self.german[-1] in ".!?…" else f"{self.german}."
+
+
+Paragraphs = list[list[str] | Heading]
+Marks = dict[int, str]  # timeline index -> chapter title
 
 _PARAGRAPH_BREAK = re.compile(r"\n\s*\n")
 
@@ -52,13 +79,39 @@ def _split_sentences(paragraph: str) -> list[str]:
     return sentences
 
 
+def _parse_heading(line: str) -> Heading | None:
+    text = " ".join(line.lstrip()[1:].split())
+    if not text:
+        return None
+    german, _, english = text.partition(TITLE_SEPARATOR.strip())
+    return Heading(german.strip(), english.strip() or None)
+
+
 def split_text(text: str) -> Paragraphs:
-    """Paragraphs at blank lines, sentences within them, line wraps joined."""
+    """Paragraphs at blank lines, sentences within them, line wraps joined.
+
+    A line starting with "#" is a section heading and always stands alone,
+    even without blank lines around it.
+    """
     paragraphs: Paragraphs = []
-    for block in _PARAGRAPH_BREAK.split(text):
-        joined = " ".join(block.split())
+
+    def flush(lines: list[str]) -> None:
+        joined = " ".join(" ".join(lines).split())
         if joined:
             paragraphs.append(_split_sentences(joined))
+        lines.clear()
+
+    for block in _PARAGRAPH_BREAK.split(text):
+        pending: list[str] = []
+        for line in block.splitlines():
+            if line.lstrip().startswith("#"):
+                flush(pending)
+                heading = _parse_heading(line)
+                if heading is not None:
+                    paragraphs.append(heading)
+            else:
+                pending.append(line)
+        flush(pending)
     return paragraphs
 
 
@@ -81,19 +134,50 @@ def limit_sentences(paragraphs: Paragraphs, limit: int) -> Paragraphs:
     """The first `limit` sentences, keeping their paragraph grouping."""
     kept: Paragraphs = []
     remaining = limit
-    for sentences in paragraphs:
+    for block in paragraphs:
         if remaining <= 0:
             break
-        kept.append(sentences[:remaining])
+        if isinstance(block, Heading):
+            kept.append(block)
+            remaining -= 1
+            continue
+        kept.append(block[:remaining])
         remaining -= len(kept[-1])
     return kept
 
 
+def story_title(paragraphs: Paragraphs) -> str | None:
+    """The story's first sentence without its final punctuation, e.g. "Ioanas neues Leben"."""
+    for block in paragraphs:
+        if isinstance(block, Heading):
+            return None
+        return block[0].rstrip(".!?… ")
+    return None
+
+
 def text_timeline(paragraphs: Paragraphs, voice: str, pauses: TextPauseConfig) -> list[TimelineItem]:
     timeline: list[TimelineItem] = []
-    for sentences in paragraphs:
+    for block in paragraphs:
+        if isinstance(block, Heading):
+            timeline.append(ClipSpec(block.spoken, "de", voice))
+            timeline.append(Silence(pauses.after_paragraph))
+            continue
+        sentences = block
         for index, sentence in enumerate(sentences):
             is_last = index == len(sentences) - 1
             timeline.append(ClipSpec(sentence, "de", voice))
             timeline.append(Silence(pauses.after_paragraph if is_last else pauses.after_sentence))
     return timeline
+
+
+def text_marks(paragraphs: Paragraphs) -> Marks:
+    """Where each heading's spoken clip sits in `text_timeline`, keyed by timeline index."""
+    marks: Marks = {}
+    index = 0
+    for block in paragraphs:
+        if isinstance(block, Heading):
+            marks[index] = block.title
+            index += 2
+        else:
+            index += 2 * len(block)
+    return marks

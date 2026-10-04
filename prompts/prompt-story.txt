@@ -31,16 +31,26 @@ WHAT THE STORY SHOULD BE
 
 HOW THE APP READS THE TEXT (this decides the format)
 
-- Plain UTF-8 text, no markdown: no #, *, bullet points or numbered lists.
+- Plain UTF-8 text, no markdown: no *, bullet points or numbered lists.
+  The only special character is # at the start of a chapter heading line
+  (see below).
 - An empty line starts a new paragraph, which gets a 1.5 s pause. Every
   sentence gets a 0.6 s pause after it. A line break without an empty
   line is ignored.
 - Sentences are split at . ! ? or … followed by a space. So every
   sentence must end with one of those.
-- A chapter heading goes in its own paragraph and ends with a period, so
-  it gets a pause:
-  Kapitel eins. Der erste Tag.
-- Write chapter numbers as words ("Kapitel zwölf", not "Kapitel 12").
+- Every chapter starts with a heading line: # , then a short German title
+  of one to four words that says what the chapter is about, then space,
+  em dash (—), space, and its English translation. No chapter number, no
+  period at the end. Put an empty line before it:
+
+  # Der erste Tag — The first day
+
+  Only the German part is read aloud ("Der erste Tag."). The player app
+  shows each chapter as a section: German title big, English under it, so
+  I can jump between chapters and repeat one.
+- Make a new chapter every 3 to 6 minutes of audio (about 350 to 650
+  words), at a natural change of scene or topic.
 
 THE WORD MUST APPEAR IN THE TEXT
 

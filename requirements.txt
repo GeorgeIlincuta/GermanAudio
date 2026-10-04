@@ -2,3 +2,4 @@ supertonic
 numpy
 lameenc
 pytest
+mutagen

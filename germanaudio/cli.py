@@ -12,7 +12,8 @@ import sys
 import wave
 from pathlib import Path
 
-from germanaudio.assemble import TimelineItem, build_timeline, encode_mp3, render
+from germanaudio.assemble import TimelineItem, build_timeline, encode_mp3, render, vocab_marks
+from germanaudio.chapters import mark_positions, write_tags
 from germanaudio.config import (
     CACHE_DIR,
     MP3_BITRATE,
@@ -22,7 +23,7 @@ from germanaudio.config import (
     VoiceConfig,
 )
 from germanaudio.loader import LoadError, load_vocab
-from germanaudio.reader import limit_sentences, load_text, text_timeline
+from germanaudio.reader import Heading, limit_sentences, load_text, story_title, text_marks, text_timeline
 from germanaudio.synth import ClipSpec, synthesize_clips
 
 
@@ -60,6 +61,10 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser.add_argument(
         "--check", action="store_true",
         help="validate the input file and exit without synthesizing",
+    )
+    parser.add_argument(
+        "--title", default=None,
+        help="title shown in the player (default: the story's first sentence, or the vocab file name)",
     )
     parser.add_argument(
         "--limit", type=int, default=None,
@@ -104,8 +109,11 @@ def _report_load_error(path: Path, error: LoadError) -> None:
         print(f"  {problem}", file=sys.stderr)
 
 
-def _vocab_timeline(args: argparse.Namespace, voices: VoiceConfig) -> list[TimelineItem] | int:
-    """The vocab drill timeline, or an exit code if the run stops here."""
+Plan = tuple[list[TimelineItem], dict[int, str], str]  # timeline, chapter marks, file title
+
+
+def _vocab_timeline(args: argparse.Namespace, voices: VoiceConfig) -> Plan | int:
+    """The vocab drill timeline with a chapter per entry, or an exit code if the run stops here."""
     try:
         result = load_vocab(args.input)
     except LoadError as error:
@@ -124,11 +132,12 @@ def _vocab_timeline(args: argparse.Namespace, voices: VoiceConfig) -> list[Timel
     print(f"loaded {len(entries)} entries from {args.input}")
     if args.check:
         return 0
-    return build_timeline(entries, voices, PauseConfig())
+    title = args.title or args.input.stem
+    return build_timeline(entries, voices, PauseConfig()), vocab_marks(entries), title
 
 
-def _text_timeline(args: argparse.Namespace, voices: VoiceConfig) -> list[TimelineItem] | int:
-    """The read-aloud timeline, or an exit code if the run stops here."""
+def _text_timeline(args: argparse.Namespace, voices: VoiceConfig) -> Plan | int:
+    """The read-aloud timeline with a chapter per "#" heading, or an exit code if the run stops here."""
     try:
         paragraphs = load_text(args.input)
     except LoadError as error:
@@ -138,20 +147,27 @@ def _text_timeline(args: argparse.Namespace, voices: VoiceConfig) -> list[Timeli
     if args.limit is not None:
         paragraphs = limit_sentences(paragraphs, args.limit)
 
-    sentences = sum(len(sentences) for sentences in paragraphs)
-    print(f"loaded {sentences} sentences in {len(paragraphs)} paragraphs from {args.input}")
+    headings = sum(isinstance(block, Heading) for block in paragraphs)
+    blocks = [block for block in paragraphs if not isinstance(block, Heading)]
+    sentences = sum(len(block) for block in blocks)
+    summary = f"loaded {sentences} sentences in {len(blocks)} paragraphs"
+    if headings:
+        summary += f" and {headings} headings"
+    print(f"{summary} from {args.input}")
     if args.check:
         return 0
-    return text_timeline(paragraphs, voices.de, TextPauseConfig())
+    title = args.title or story_title(paragraphs) or args.input.stem
+    return text_timeline(paragraphs, voices.de, TextPauseConfig()), text_marks(paragraphs), title
 
 
 def main(argv: list[str] | None = None) -> int:
     args = _parse_args(argv)
     voices = VoiceConfig()
 
-    timeline = _text_timeline(args, voices) if args.text else _vocab_timeline(args, voices)
-    if isinstance(timeline, int):
-        return timeline
+    plan = _text_timeline(args, voices) if args.text else _vocab_timeline(args, voices)
+    if isinstance(plan, int):
+        return plan
+    timeline, marks, title = plan
 
     # Checked now, not after an hour of synthesis: a bad output path should
     # fail in a second, before stage 2 even starts.
@@ -204,6 +220,16 @@ def main(argv: list[str] | None = None) -> int:
     except (MemoryError, OSError) as error:
         print(f"failed to encode {args.output}: {error}", file=sys.stderr)
         return 1
+
+    try:
+        chapters, total = mark_positions(
+            timeline, marks, args.cache_dir, engine.engine_id, engine.sample_rate
+        )
+        write_tags(args.output, title, chapters, total, engine.sample_rate)
+    except (OSError, wave.Error) as error:
+        print(f"track written, but adding the title and chapters failed: {error}", file=sys.stderr)
+        return 1
+    print(f"  title {title!r}, {len(chapters)} chapters")
 
     size_mb = args.output.stat().st_size / 1_000_000
     print(f"done: {args.output} ({size_mb:.1f} MB)")

@@ -187,3 +187,67 @@ def test_text_mode_rejects_an_empty_file(tmp_path, capsys, stub_engine):
 
     assert exit_code == 1
     assert "no text" in capsys.readouterr().err
+
+
+# --- title and chapter tags ------------------------------------------------------------------
+
+from mutagen.id3 import ID3  # noqa: E402
+
+
+def chapter_titles(path):
+    return [c.sub_frames["TIT2"].text[0] for c in sorted(ID3(path).getall("CHAP"), key=lambda c: c.start_time)]
+
+
+def test_vocab_track_gets_a_chapter_per_entry_and_the_file_name_as_title(vocab_file, tmp_path):
+    out = tmp_path / "track.mp3"
+
+    assert cli.main([str(vocab_file), "-o", str(out), "--cache-dir", str(tmp_path / "c")]) == 0
+
+    assert ID3(out)["TIT2"].text == ["vocab"]
+    assert chapter_titles(out) == ["das Fenster — the window", "der Schlüssel — the key"]
+
+
+def test_title_flag_overrides_the_default_title(vocab_file, tmp_path):
+    out = tmp_path / "track.mp3"
+
+    cli.main([str(vocab_file), "-o", str(out), "--cache-dir", str(tmp_path / "c"), "--title", "B1 Vokabeln"])
+
+    assert ID3(out)["TIT2"].text == ["B1 Vokabeln"]
+
+
+HEADED_STORY = (
+    "Der kleine Fuchs. Eine Geschichte.\n\n"
+    "# Der Hunger — The hunger\nEr war sehr hungrig.\n\n"
+    "# Das Brot — The bread\nAm Abend fand er Brot.\n"
+)
+
+
+def test_story_headings_become_spoken_chapters_titled_from_the_first_sentence(tmp_path, stub_engine):
+    story = tmp_path / "story.txt"
+    story.write_text(HEADED_STORY, encoding="utf-8")
+    out = tmp_path / "story.mp3"
+
+    assert cli.main([str(story), "--text", "-o", str(out), "--cache-dir", str(tmp_path / "c")]) == 0
+
+    assert ID3(out)["TIT2"].text == ["Der kleine Fuchs"]
+    assert chapter_titles(out) == ["Der Hunger — The hunger", "Das Brot — The bread"]
+    spoken = [text for text, _, _ in stub_engine.calls]
+    assert "Der Hunger." in spoken and "The hunger" not in " ".join(spoken)
+
+
+def test_story_without_headings_gets_a_title_but_no_chapters(story_file, tmp_path):
+    out = tmp_path / "story.mp3"
+
+    cli.main([str(story_file), "--text", "-o", str(out), "--cache-dir", str(tmp_path / "c")])
+
+    assert ID3(out)["TIT2"].text == ["Es war einmal ein Fuchs"]
+    assert ID3(out).getall("CHAP") == []
+
+
+def test_check_mode_reports_headings(tmp_path, capsys):
+    story = tmp_path / "story.txt"
+    story.write_text(HEADED_STORY, encoding="utf-8")
+
+    assert cli.main([str(story), "--text", "--check"]) == 0
+
+    assert "2 headings" in capsys.readouterr().out

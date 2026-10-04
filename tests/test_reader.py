@@ -109,3 +109,70 @@ def test_load_text_reports_a_missing_file(tmp_path):
 def test_leading_period_does_not_read_the_paragraphs_last_character():
     # paragraph[match.start() - 1] wraps to the final "5" when the match is at 0.
     assert split_text(". Seite 5") == [[".", "Seite 5"]]
+
+
+# --- section headings ("# Deutsch — English") -------------------------------------------------
+
+from germanaudio.reader import Heading, story_title  # noqa: E402
+
+
+def test_hash_line_becomes_a_heading_split_on_the_em_dash():
+    assert split_text("# Die Entscheidung — The decision\nEs beginnt.") == [
+        Heading("Die Entscheidung", "The decision"),
+        ["Es beginnt."],
+    ]
+
+
+def test_heading_without_translation_keeps_german_only():
+    heading = split_text("#Das Ende")[0]
+
+    assert heading == Heading("Das Ende", None)
+    assert heading.title == "Das Ende"
+
+
+def test_heading_title_is_german_dash_english():
+    assert Heading("Die Entscheidung", "The decision").title == "Die Entscheidung — The decision"
+
+
+def test_only_the_german_part_is_spoken_and_ends_with_a_period():
+    assert Heading("Die Entscheidung", "The decision").spoken == "Die Entscheidung."
+    assert Heading("Wie viel ist drin?", "How much is in it?").spoken == "Wie viel ist drin?"
+
+
+def test_heading_in_the_middle_of_a_block_splits_the_paragraphs_around_it():
+    assert split_text("Vorher.\n# Mitte — Middle\nNachher.") == [
+        ["Vorher."],
+        Heading("Mitte", "Middle"),
+        ["Nachher."],
+    ]
+
+
+def test_empty_heading_lines_are_ignored():
+    assert split_text("#\n#   \nText.") == [["Text."]]
+
+
+def test_heading_is_spoken_then_followed_by_the_paragraph_pause():
+    timeline = text_timeline([Heading("Anfang", "Start"), ["A."]], "M1", PAUSES)
+
+    assert timeline == [
+        ClipSpec("Anfang.", "de", "M1"),
+        Silence(2.0),
+        ClipSpec("A.", "de", "M1"),
+        Silence(2.0),
+    ]
+
+
+def test_limit_counts_a_heading_as_one_sentence():
+    paragraphs = [Heading("Anfang", None), ["A.", "B."], ["C."]]
+
+    assert limit_sentences(paragraphs, 2) == [Heading("Anfang", None), ["A."]]
+
+
+def test_story_title_is_the_first_sentence_without_its_period():
+    paragraphs = split_text("Ioanas neues Leben. Eine Geschichte.\n\n# Die Entscheidung — The decision\nText.")
+
+    assert story_title(paragraphs) == "Ioanas neues Leben"
+
+
+def test_story_title_is_none_when_the_text_starts_with_a_heading_only():
+    assert story_title([Heading("Anfang", None)]) is None

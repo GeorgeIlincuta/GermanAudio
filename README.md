@@ -169,3 +169,21 @@ file, which is fine.
 ```
 python -m pytest
 ```
+
+## Titles and chapters (for the Hörplayer app)
+
+Every MP3 gets a title and chapter marks, so the Hörplayer shows it as a list of sections you can jump to,
+search and repeat.
+
+- **Vocabulary track:** one chapter per entry, titled `German — English` (e.g. `das Fenster — the window`).
+- **Read aloud:** one chapter per heading line. Start a chapter with `#`, a short German title, space, em dash,
+  space, and the English translation:
+
+  ```
+  # Der erste Tag — The first day
+  ```
+
+  Only the German part is read aloud ("Der erste Tag."). A story without `#` lines gets a title but no chapters.
+- **Title:** `--title "B1 Vokabeln"`. Without it, a story uses its first sentence and a vocabulary file its file name.
+
+Chapters cost nothing extra: their times are worked out from the cached clips, and the audio itself is unchanged.

@@ -1,6 +1,6 @@
 Ioanas neues Leben. Eine Geschichte über Mut, Arbeit und Freundschaft in Deutschland.
 
-Kapitel eins. Die Entscheidung.
+# Die Entscheidung — The decision
 
 Ioana Popescu ist vierundzwanzig Jahre alt und lebt in Cluj, einer schönen Stadt in Rumänien. Sie arbeitet in einem kleinen Kaffeehaus, aber sie ist unzufrieden. Das Gehalt ist niedrig, und sie hat keine Zukunft in diesem Job. Ihr Traum ist eine Ausbildung im Labor, am liebsten in Deutschland. Lange weiß sie nicht, wie sie sich entscheiden soll. Aber heute will sie endlich beschließen, was sie tun wird.
 
@@ -48,7 +48,7 @@ Frau Doktor Keller lächelt. Das ist ein überzeugender Satz, sagt sie. Wir werd
 
 Eine Woche später klingelt das Telefon. Ioana hat den Platz bekommen. Sie schreit vor Freude, und ihre Mutter kommt aus der Küche gelaufen. Die beiden umarmen sich lange. Ihre Mutter weint ein bisschen, aber diesmal vor Glück. Alle Verwandten werden sich freuen, sagt sie.
 
-Kapitel zwei. Der Umzug.
+# Der Umzug — The move
 
 Im August kommt der Umzug. Ioana packt ihr ganzes Leben in zwei Koffer und drei Kartons. Ihre Ersparnisse sind nicht groß, aber sie reichen für die ersten Monate. An der Grenze zeigt sie ihren Pass, und dann fährt der Bus weiter nach Westen. Die Reise dauert fast zwei Tage. Im Bus will sie sich erholen, aber sie ist viel zu aufgeregt zum Schlafen.
 
@@ -90,7 +90,7 @@ Ioana füllt alles aus. Am Ende bekommt sie ein Papier mit einem Stempel. Sie is
 
 Am Abend ruft sie ihre Mutter an. Ich habe die erste Herausforderung geschafft, sagt sie stolz.
 
-Kapitel drei. Der erste Tag im Labor.
+# Der erste Tag im Labor — The first day in the lab
 
 Am ersten September beginnt die Ausbildung. Ioana steht schon um sechs Uhr auf. Sie will auf keinen Fall zu spät kommen. Sie muss sich anziehen, frühstücken und den richtigen Bus erreichen. In Deutschland muss man pünktlich sein, das weiß sie.
 
@@ -120,7 +120,7 @@ Am Nachmittag bekommt Ioana ihren Ausbildungsvertrag. Im Vertrag steht ihr Gehal
 
 Am Abend ist Ioana müde, aber glücklich. Sie sitzt auf ihrem Balkon und schaut in den Wald. Ihr neues Leben hat wirklich begonnen.
 
-Kapitel vier. Schule und Prüfungen.
+# Schule und Prüfungen — School and exams
 
 Die Ausbildung findet an zwei Orten statt. Ioana arbeitet im Krankenhaus, und sie besucht eine Schule. Dort gibt es Unterricht in Chemie, Biologie und Hämatologie. Jeden Monat gibt es eine kleine Prüfung.
 
@@ -156,7 +156,7 @@ Das stimmt nicht, sagt Ioana. Du bist nicht dumm, vielmehr fehlt dir die Übung.
 
 Lukas zögert, dann nickt er. Ab jetzt lernen sie jeden Dienstag zusammen. Und Lukas wird jede Woche ein bisschen fleißiger.
 
-Kapitel fünf. Geld und Papiere.
+# Geld und Papiere — Money and paperwork
 
 Im Oktober braucht Ioana ein deutsches Konto. Ihr Gehalt kann nicht auf ein rumänisches Konto gehen. Also macht sie einen Termin bei der Bank.
 
@@ -188,7 +188,7 @@ So kannst du viel Energie sparen, sagt Frau Weber. Das ist gut für dein Konto u
 
 Ioana folgt jedem Rat. Nach drei Monaten sieht sie den Unterschied. Sie ist stolz, dass sie ihr Geld selbst organisieren kann. Jetzt ist sie wirklich unabhängig.
 
-Kapitel sechs. Freizeit und neue Freunde.
+# Freizeit und neue Freunde — Free time and new friends
 
 Nach drei Monaten kennt Ioana ihre Arbeit gut. Aber ihre Freizeit ist noch leer. Am Wochenende sitzt sie oft allein in der Wohnung. Sie vermisst ihre Familie, und manchmal ist sie traurig.
 
@@ -228,7 +228,7 @@ Danach gehen sie in ein Konzert in der Altstadt. Eine Band aus Freiburg spielt J
 
 Auf dem Heimweg nimmt Jonas ihre Hand. Ioana sagt nichts, aber sie lächelt. Sie weiß noch nicht genau, was sie fühlt. Aber in dieser Stadt kann man sich verlieben, denkt sie. Und vielleicht passiert das gerade.
 
-Kapitel sieben. Krank im Winter.
+# Krank im Winter — Sick in winter
 
 Im Januar wird es kalt in Freiburg. Viele Kollegen sind krank. Auch Ioana fühlt sich nicht gut. Sie hat Kopfschmerzen und Fieber. Im Krankenhaus sind solche Infekte im Winter häufig. Das Fieber steigt in der Nacht, sodass sie kaum schlafen kann.
 
@@ -264,7 +264,7 @@ Ioana ist schockiert. Kann man ihr helfen?, fragt sie.
 
 Ja, sagt Markus. Ein Facharzt wird mit ihr sprechen. Aber sie muss selbst aufhören wollen. Ohne ihren Willen funktioniert keine Behandlung. Der Einfluss von Freunden und Familie ist dabei sehr wichtig.
 
-Kapitel acht. Die Umwelt und das Klima.
+# Die Umwelt und das Klima — The environment and the climate
 
 Im Frühling nimmt Jonas Ioana mit in seine Firma. Das Unternehmen stellt Solaranlagen für Dächer her. Jonas ist dort für die Entwicklung von neuen Produkten verantwortlich.
 
@@ -292,7 +292,7 @@ Nach dem Essen stellt der Vater eine Frage. Ioana, sagt er, wie ist es eigentlic
 
 Ioana denkt kurz nach. Meistens ja, sagt sie. Aber manchmal ist es nicht einfach.
 
-Kapitel neun. Vorurteile und Respekt.
+# Vorurteile und Respekt — Prejudice and respect
 
 Was Ioana nicht erzählt, ist ein Erlebnis aus der letzten Woche. Im Labor gab es einen Fehler. Eine Probe war falsch beschriftet. Herr Hoffmann, der zweite Chef, war sehr wütend.
 
@@ -334,7 +334,7 @@ Am Abend fragt Ioana Jonas, welche Partei er wählen will. Jonas lacht. Das ist 
 
 Ioana darf in Deutschland nicht für den Bundestag wählen. Als Bürgerin der Europäischen Union darf sie aber bei der Wahl in der Gemeinde mitmachen. Sie ist stolz, dass sie sich beteiligen darf. Für sie ist das ein kleines Zeichen, dass sie dazugehört.
 
-Kapitel zehn. Die Krise.
+# Die Krise — The crisis
 
 Im Sommer bekommt Jonas schlechte Nachrichten. Seine Firma hat Probleme. Es gibt eine Wirtschaftskrise, und die Nachfrage nach Solaranlagen ist plötzlich gesunken. Viele Menschen haben weniger Geld, und eine Solaranlage ist eine teure Investition.
 
@@ -368,7 +368,7 @@ In der Firma ist man auf einmal sehr gespannt. Eine Kollegin aus der Werbung hil
 
 Nach zwei Monaten sind die Zahlen da. Das Ergebnis ist tatsächlich besser, als alle erwarten konnten. Hunderte Menschen haben die App heruntergeladen. Die Branche spricht über die kleine Freiburger Firma. Der Chef ist zufrieden. Die Firma kann wieder Solaranlagen an viele neue Kunden liefern. Niemand muss gehen, und Jonas bekommt eine neue Stelle als Projektleiter. Für seine Karriere ist das ein großer Schritt.
 
-Kapitel elf. Ein Missverständnis.
+# Ein Missverständnis — A misunderstanding
 
 Doch nicht alles ist leicht. Durch das Projekt hat Jonas kaum noch Zeit. Er arbeitet abends und am Wochenende. Ioana sieht ihn nur noch selten.
 
@@ -404,7 +404,7 @@ Sie wollen sich einigen, wie es weitergehen soll. Sie sprechen bis Mitternacht. 
 
 Nach dieser Nacht ist ihre Beziehung stärker als vorher. Ioana hat etwas gelernt. Liebe braucht Vertrauen, aber auch Ehrlichkeit und Geduld.
 
-Kapitel zwölf. Das zweite Jahr.
+# Das zweite Jahr — The second year
 
 Im September beginnt Ioanas zweites Jahr. Jetzt ist sie keine Anfängerin mehr. Sie kann viele Analysen selbstständig machen. Markus ist mit ihrer Leistung sehr zufrieden.
 
@@ -428,7 +428,7 @@ Im Dezember gibt es im Krankenhaus ein großes Fest. Alle Kollegen sind da, und 
 
 Über Weihnachten fährt sie in den Urlaub nach Cluj. Ihre Mutter wartet am Busbahnhof. Sie hat Tränen in den Augen. Übrigens, sagt sie später im Auto, deine Tante hat ein Baby bekommen. Du siehst erwachsen aus, sagt sie. Ioana lacht. Ich bin erwachsen, Mama, sagt sie.
 
-Kapitel dreizehn. Ein ganz gewöhnlicher Tag.
+# Ein ganz gewöhnlicher Tag — A completely ordinary day
 
 Zurück in Freiburg fängt ein neues Jahr an. An einem ganz gewöhnlichen Dienstag kommt Ioana ins Labor. Es ist kalt, und der Bus ist wieder einmal verspätet. Trotzdem ist sie pünktlich, denn sie ist früh losgegangen.
 
@@ -450,7 +450,7 @@ Ioana wird rot. Ich habe nur gemacht, was Markus mir gezeigt hat, sagt sie besch
 
 Am nächsten Tag kommt ein Techniker. Er muss das kaputte Gerät reparieren, vielleicht sogar ersetzen. Herr Hoffmann sagt, dass das alte Gerät jetzt doch nicht überflüssig ist. Alle lachen. Obgleich der Tag anstrengend war, ist Ioana am Abend sehr glücklich.
 
-Kapitel vierzehn. Die Abschlussprüfung.
+# Die Abschlussprüfung — The final exam
 
 Die Zeit vergeht schnell. Nach drei Jahren kommt die Abschlussprüfung. Ioana lernt mit Lukas und Amira in der Bibliothek. Lukas ist mittlerweile einer der besten Schüler der Klasse. Er will Ioana nur noch als seine Lebensretterin bezeichnen.
 
