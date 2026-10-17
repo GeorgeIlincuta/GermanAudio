@@ -108,3 +108,60 @@ def test_write_tags_keeps_the_audio_playable_and_untouched(tmp_path):
     write_tags(path, "T", [Chapter("a", 0)], RATE, RATE)
 
     assert path.read_bytes().endswith(audio)
+
+
+from germanaudio.chapters import Line, item_starts, line_positions
+from germanaudio.reader import text_lines
+
+STORY = "Der Titel. Zweiter Satz.\n\n# Der Anfang — The beginning\n\nErster Satz. Noch einer.\n\nNeuer Absatz.\n"
+
+
+def test_text_lines_mark_paragraphs_and_headings():
+    paragraphs = split_text(STORY)
+    lines = text_lines(paragraphs)
+
+    assert list(lines.values()) == [
+        "Der Titel.", "Zweiter Satz.",
+        "# Der Anfang — The beginning",
+        "\nErster Satz.", "Noch einer.",
+        "\nNeuer Absatz.",
+    ]
+    timeline = text_timeline(paragraphs, "M1", TextPauseConfig())
+    assert all(isinstance(timeline[i], ClipSpec) for i in lines)
+
+
+def test_line_positions_match_the_chapter_starts(tmp_path, fake_engine):
+    paragraphs = split_text(STORY)
+    timeline = text_timeline(paragraphs, "M1", TextPauseConfig())
+    synthesize(timeline, fake_engine, tmp_path)
+
+    starts, total = item_starts(timeline, tmp_path, fake_engine.engine_id, RATE)
+    chapters, total2 = mark_positions(timeline, text_marks(paragraphs), tmp_path, fake_engine.engine_id, RATE)
+    lines = line_positions(starts, text_lines(paragraphs))
+
+    assert total == total2
+    assert [line.start_sample for line in lines] == sorted(line.start_sample for line in lines)
+    heading = next(line for line in lines if line.text.startswith("# "))
+    assert heading.start_sample == chapters[0].start_sample
+    assert lines[0].start_sample == 0
+
+
+def test_write_tags_adds_one_sylt_with_ms_times(tmp_path):
+    path = tmp_path / "t.mp3"
+    path.write_bytes(b"\xff\xfb\x90\x00" + b"\x00" * 413)
+    lines = [Line("Der Titel.", 0), Line("# Der Anfang — The beginning", 44100), Line("\nErster Satz.", 66150)]
+    write_tags(path, "Der Titel", [Chapter("Der Anfang — The beginning", 44100)], 88200, RATE, lines=lines)
+
+    sylt = ID3(path).getall("SYLT")
+    assert len(sylt) == 1
+    assert sylt[0].lang == "deu" and sylt[0].format == 2 and sylt[0].type == 1 and sylt[0].encoding == 1
+    assert sylt[0].text == [("Der Titel.", 0), ("# Der Anfang — The beginning", 1000), ("\nErster Satz.", 1500)]
+    assert ID3(path).getall("CHAP")[0].start_time == 1000
+
+
+def test_write_tags_without_lines_removes_an_old_sylt(tmp_path):
+    path = tmp_path / "t.mp3"
+    path.write_bytes(b"\xff\xfb\x90\x00" + b"\x00" * 413)
+    write_tags(path, "T", [], 44100, RATE, lines=[Line("Satz.", 0)])
+    write_tags(path, "T", [], 44100, RATE)
+    assert ID3(path).getall("SYLT") == []

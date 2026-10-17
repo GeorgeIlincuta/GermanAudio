@@ -13,7 +13,7 @@ import wave
 from pathlib import Path
 
 from germanaudio.assemble import TimelineItem, build_timeline, encode_mp3, render, vocab_marks
-from germanaudio.chapters import mark_positions, write_tags
+from germanaudio.chapters import Chapter, item_starts, line_positions, write_tags
 from germanaudio.config import (
     CACHE_DIR,
     MP3_BITRATE,
@@ -23,7 +23,7 @@ from germanaudio.config import (
     VoiceConfig,
 )
 from germanaudio.loader import LoadError, load_vocab
-from germanaudio.reader import Heading, limit_sentences, load_text, story_title, text_marks, text_timeline
+from germanaudio.reader import Heading, limit_sentences, load_text, story_title, text_lines, text_marks, text_timeline
 from germanaudio.synth import ClipSpec, synthesize_clips
 
 
@@ -109,7 +109,7 @@ def _report_load_error(path: Path, error: LoadError) -> None:
         print(f"  {problem}", file=sys.stderr)
 
 
-Plan = tuple[list[TimelineItem], dict[int, str], str]  # timeline, chapter marks, file title
+Plan = tuple[list[TimelineItem], dict[int, str], dict[int, str], str]  # timeline, chapter marks, read-along lines, file title
 
 
 def _vocab_timeline(args: argparse.Namespace, voices: VoiceConfig) -> Plan | int:
@@ -133,7 +133,7 @@ def _vocab_timeline(args: argparse.Namespace, voices: VoiceConfig) -> Plan | int
     if args.check:
         return 0
     title = args.title or args.input.stem
-    return build_timeline(entries, voices, PauseConfig()), vocab_marks(entries), title
+    return build_timeline(entries, voices, PauseConfig()), vocab_marks(entries), {}, title
 
 
 def _text_timeline(args: argparse.Namespace, voices: VoiceConfig) -> Plan | int:
@@ -157,7 +157,7 @@ def _text_timeline(args: argparse.Namespace, voices: VoiceConfig) -> Plan | int:
     if args.check:
         return 0
     title = args.title or story_title(paragraphs) or args.input.stem
-    return text_timeline(paragraphs, voices.de, TextPauseConfig()), text_marks(paragraphs), title
+    return text_timeline(paragraphs, voices.de, TextPauseConfig()), text_marks(paragraphs), text_lines(paragraphs), title
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -167,7 +167,7 @@ def main(argv: list[str] | None = None) -> int:
     plan = _text_timeline(args, voices) if args.text else _vocab_timeline(args, voices)
     if isinstance(plan, int):
         return plan
-    timeline, marks, title = plan
+    timeline, marks, lines, title = plan
 
     # Checked now, not after an hour of synthesis: a bad output path should
     # fail in a second, before stage 2 even starts.
@@ -222,14 +222,13 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     try:
-        chapters, total = mark_positions(
-            timeline, marks, args.cache_dir, engine.engine_id, engine.sample_rate
-        )
-        write_tags(args.output, title, chapters, total, engine.sample_rate)
+        starts, total = item_starts(timeline, args.cache_dir, engine.engine_id, engine.sample_rate)
+        chapters = [Chapter(marks[i], starts[i]) for i in sorted(marks)]
+        write_tags(args.output, title, chapters, total, engine.sample_rate, line_positions(starts, lines))
     except (OSError, wave.Error) as error:
         print(f"track written, but adding the title and chapters failed: {error}", file=sys.stderr)
         return 1
-    print(f"  title {title!r}, {len(chapters)} chapters")
+    print(f"  title {title!r}, {len(chapters)} chapters, {len(lines)} text lines")
 
     size_mb = args.output.stat().st_size / 1_000_000
     print(f"done: {args.output} ({size_mb:.1f} MB)")
