@@ -165,3 +165,20 @@ def test_write_tags_without_lines_removes_an_old_sylt(tmp_path):
     write_tags(path, "T", [], 44100, RATE, lines=[Line("Satz.", 0)])
     write_tags(path, "T", [], 44100, RATE)
     assert ID3(path).getall("SYLT") == []
+
+
+def test_write_tags_writes_exactly_one_genre(tmp_path):
+    path = tmp_path / "t.mp3"
+    path.write_bytes(b"\xff\xfb\x90\x00" + b"\x00" * 413)
+    write_tags(path, "T", [], 44100, RATE, genre="Wortschatz")
+    write_tags(path, "T", [], 44100, RATE, genre="Geschichte")
+    tcon = ID3(path).getall("TCON")
+    assert len(tcon) == 1 and tcon[0].text == ["Geschichte"] and tcon[0].encoding == 1
+
+
+def test_write_tags_without_genre_removes_an_old_one(tmp_path):
+    path = tmp_path / "t.mp3"
+    path.write_bytes(b"\xff\xfb\x90\x00" + b"\x00" * 413)
+    write_tags(path, "T", [], 44100, RATE, genre="Wortschatz")
+    write_tags(path, "T", [], 44100, RATE)
+    assert ID3(path).getall("TCON") == []

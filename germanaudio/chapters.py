@@ -10,7 +10,7 @@ import wave
 from dataclasses import dataclass
 from pathlib import Path
 
-from mutagen.id3 import CHAP, CTOC, CTOCFlags, ID3, ID3NoHeaderError, SYLT, TIT2
+from mutagen.id3 import CHAP, CTOC, CTOCFlags, ID3, ID3NoHeaderError, SYLT, TCON, TIT2
 
 from germanaudio.assemble import Silence, TimelineItem
 from germanaudio.audio import silence
@@ -82,8 +82,9 @@ def write_tags(
     total_samples: int,
     sample_rate: int,
     lines: list[Line] | None = None,
+    genre: str | None = None,
 ) -> None:
-    """Write the file title and one chapter per mark; each chapter ends where the next begins."""
+    """Write the file title, the genre (the player's file type) and one chapter per mark; each chapter ends where the next begins."""
     try:
         tags = ID3(path)
     except ID3NoHeaderError:
@@ -93,6 +94,9 @@ def write_tags(
     tags.delall("CTOC")
     tags.delall("SYLT")
     tags.add(TIT2(encoding=3, text=[title]))
+    tags.delall("TCON")
+    if genre:
+        tags.add(TCON(encoding=1, text=[genre]))
 
     def ms(samples: int) -> int:
         return round(samples * 1000 / sample_rate)

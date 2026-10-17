@@ -26,6 +26,8 @@ hand-edit tags; fix the input and rebuild.
   spoken sentence: the sentence as written, a leading line break on the first sentence of each paragraph, and
   `# Deutsch — English` for headings (same time as their `CHAP`). The Hörplayer highlights the sentence being spoken.
   Vocabulary tracks have no `SYLT`.
+- **Genre = file type:** one `TCON` frame (UTF-16): `Wortschatz` for vocabulary, `Geschichte` for `--text` stories.
+  The Hörplayer shows its type icon from it. Build and `--retag` both write it.
 - **Retag** (adds/refreshes title, chapters and text without re-synthesizing; the audio is verified unchanged):
   `python -m germanaudio <story>.txt --text --retag -o out/<story>.mp3`. It refuses (and changes nothing) if a
   clip is missing from the cache or the text no longer matches the audio.

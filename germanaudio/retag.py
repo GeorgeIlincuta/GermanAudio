@@ -49,6 +49,7 @@ def retag_file(
     cache_dir: Path,
     engine_id: str,
     sample_rate: int,
+    genre: str | None = None,
 ) -> tuple[int, int]:
     """Retag [path] in place; returns (chapters, text lines). Raises RetagError and leaves the file untouched."""
     path = Path(path)
@@ -69,7 +70,7 @@ def retag_file(
     temp = path.with_name(path.name + ".retag")
     shutil.copyfile(path, temp)
     try:
-        write_tags(temp, title, chapters, total, sample_rate, line_positions(starts, lines))
+        write_tags(temp, title, chapters, total, sample_rate, line_positions(starts, lines), genre)
         if audio_digest(temp) != before:
             raise RetagError("writing the tag changed the audio — nothing changed")
         os.replace(temp, path)

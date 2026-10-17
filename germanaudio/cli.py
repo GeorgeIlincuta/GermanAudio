@@ -123,6 +123,10 @@ def _report_load_error(path: Path, error: LoadError) -> None:
         print(f"  {problem}", file=sys.stderr)
 
 
+# The player's file type, written as the ID3 genre (TCON).
+VOCAB_GENRE = "Wortschatz"
+STORY_GENRE = "Geschichte"
+
 Plan = tuple[list[TimelineItem], dict[int, str], dict[int, str], str]  # timeline, chapter marks, read-along lines, file title
 
 
@@ -182,12 +186,13 @@ def main(argv: list[str] | None = None) -> int:
     if isinstance(plan, int):
         return plan
     timeline, marks, lines, title = plan
+    genre = STORY_GENRE if args.text else VOCAB_GENRE
 
     if args.retag:
         engine_id, sample_rate = engine_identity()
         try:
             chapters_written, lines_written = retag_file(
-                args.output, title, timeline, marks, lines, args.cache_dir, engine_id, sample_rate
+                args.output, title, timeline, marks, lines, args.cache_dir, engine_id, sample_rate, genre
             )
         except RetagError as error:
             print(f"retag failed: {error}", file=sys.stderr)
@@ -195,7 +200,7 @@ def main(argv: list[str] | None = None) -> int:
         except (OSError, wave.Error) as error:
             print(f"retag failed: {error} — nothing changed", file=sys.stderr)
             return 1
-        print(f"retagged {args.output}: title {title!r}, {chapters_written} chapters, {lines_written} text lines")
+        print(f"retagged {args.output}: title {title!r}, genre {genre}, {chapters_written} chapters, {lines_written} text lines")
         return 0
 
     # Checked now, not after an hour of synthesis: a bad output path should
@@ -253,11 +258,11 @@ def main(argv: list[str] | None = None) -> int:
     try:
         starts, total = item_starts(timeline, args.cache_dir, engine.engine_id, engine.sample_rate)
         chapters = [Chapter(marks[i], starts[i]) for i in sorted(marks)]
-        write_tags(args.output, title, chapters, total, engine.sample_rate, line_positions(starts, lines))
+        write_tags(args.output, title, chapters, total, engine.sample_rate, line_positions(starts, lines), genre=genre)
     except (OSError, wave.Error) as error:
         print(f"track written, but adding the title and chapters failed: {error}", file=sys.stderr)
         return 1
-    print(f"  title {title!r}, {len(chapters)} chapters, {len(lines)} text lines")
+    print(f"  title {title!r}, genre {genre}, {len(chapters)} chapters, {len(lines)} text lines")
 
     size_mb = args.output.stat().st_size / 1_000_000
     print(f"done: {args.output} ({size_mb:.1f} MB)")

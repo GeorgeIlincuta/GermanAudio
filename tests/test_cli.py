@@ -268,3 +268,19 @@ def test_story_build_writes_read_along_text_and_vocab_does_not(tmp_path, stub_en
     vout = tmp_path / "v.mp3"
     assert cli.main([str(vocab), "-o", str(vout), "--cache-dir", str(tmp_path / "c")]) == 0
     assert ID3(vout).getall("SYLT") == []
+
+
+def test_story_build_is_a_geschichte_and_vocab_a_wortschatz(tmp_path, stub_engine):
+    from mutagen.id3 import ID3
+
+    story = tmp_path / "s.txt"
+    story.write_text("Der Titel.\n\n# Teil — Part\n\nEin Satz.\n", encoding="utf-8")
+    out = tmp_path / "s.mp3"
+    assert cli.main([str(story), "--text", "-o", str(out), "--cache-dir", str(tmp_path / "c")]) == 0
+    assert ID3(out)["TCON"].text == ["Geschichte"]
+
+    vocab = tmp_path / "v.tsv"
+    vocab.write_text("german\tenglish\tphrase\ndas Haus\tthe house\tDas Haus ist groß.\n", encoding="utf-8")
+    vout = tmp_path / "v.mp3"
+    assert cli.main([str(vocab), "-o", str(vout), "--cache-dir", str(tmp_path / "c")]) == 0
+    assert ID3(vout)["TCON"].text == ["Wortschatz"]

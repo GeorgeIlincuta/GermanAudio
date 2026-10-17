@@ -21,6 +21,7 @@ def built(tmp_path, monkeypatch, fake_engine):
     assert cli.main([str(story), "--text", "-o", str(out), "--cache-dir", str(cache)]) == 0
     tags = ID3(out)
     tags.delall("SYLT")
+    tags.delall("TCON")
     tags.save(out, v2_version=3)
     return story, out, cache
 
@@ -80,3 +81,14 @@ def test_retag_of_a_missing_file_fails(tmp_path, monkeypatch, fake_engine):
     story = tmp_path / "s.txt"
     story.write_text(STORY, encoding="utf-8")
     assert retag(story, tmp_path / "nope.mp3", tmp_path / "c") == 1
+
+
+def test_retag_adds_the_genre_and_keeps_the_audio(built):
+    story, out, cache = built
+    before = audio_digest(out)
+    assert ID3(out).getall("TCON") == []
+
+    assert retag(story, out, cache) == 0
+
+    assert ID3(out)["TCON"].text == ["Geschichte"]
+    assert audio_digest(out) == before

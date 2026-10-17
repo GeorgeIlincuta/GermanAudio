@@ -139,6 +139,10 @@ byte-for-byte the same):
 python -m germanaudio story.txt --text --retag -o out/story.mp3
 ```
 
+Every track also carries its type as the ID3 genre (`TCON`): `Wortschatz` for a vocabulary list, `Geschichte` for a
+`--text` story. The Hörplayer picks the file's icon from it, and `--retag` writes it too. A vocabulary list built with
+`--title` needs the same `--title` on retag, or its title goes back to the file name.
+
 The pauses are in `TextPauseConfig` in `germanaudio/config.py`:
 
 ```python
