@@ -131,6 +131,14 @@ python -m germanaudio story.txt --text -o out/story.mp3
 Always give `-o` a name of its own. Without it the output goes to `out/german.mp3` and overwrites your vocabulary
 track. Interrupted runs resume, and editing one sentence re-synthesizes only that sentence.
 
+Story tracks carry their text with sentence timings (an ID3 `SYLT` frame), which the Hörplayer shows as read-along
+text. To add or refresh the title, chapters and text of an existing track without re-synthesizing (the audio stays
+byte-for-byte the same):
+
+```
+python -m germanaudio story.txt --text --retag -o out/story.mp3
+```
+
 The pauses are in `TextPauseConfig` in `germanaudio/config.py`:
 
 ```python

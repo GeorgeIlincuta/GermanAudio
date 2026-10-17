@@ -22,6 +22,13 @@ hand-edit tags; fix the input and rebuild.
   (the app shows "Kapitel 3 von 14" itself). A new chapter every 3–6 minutes (~350–650 words). The app labels these
   "Kapitel".
 - Chapter times are computed from cached clip lengths + configured pauses, identical to `render`; they're exact.
+- **Read-along text (stories only):** one `SYLT` frame (UTF-16, `deu`, ms timestamps, type lyrics) with one entry per
+  spoken sentence: the sentence as written, a leading line break on the first sentence of each paragraph, and
+  `# Deutsch — English` for headings (same time as their `CHAP`). The Hörplayer highlights the sentence being spoken.
+  Vocabulary tracks have no `SYLT`.
+- **Retag** (adds/refreshes title, chapters and text without re-synthesizing; the audio is verified unchanged):
+  `python -m germanaudio <story>.txt --text --retag -o out/<story>.mp3`. It refuses (and changes nothing) if a
+  clip is missing from the cache or the text no longer matches the audio.
   The audio bytes are never changed by tagging.
 
 ## Titles (TIT2) — conventions in use

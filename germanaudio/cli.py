@@ -23,8 +23,17 @@ from germanaudio.config import (
     VoiceConfig,
 )
 from germanaudio.loader import LoadError, load_vocab
+from germanaudio.retag import RetagError, retag_file
 from germanaudio.reader import Heading, limit_sentences, load_text, story_title, text_lines, text_marks, text_timeline
 from germanaudio.synth import ClipSpec, synthesize_clips
+
+
+def engine_identity() -> tuple[str, int]:
+    """The real engine's cache id and sample rate, without loading the model (retag only needs the cache keys)."""
+    from germanaudio.config import SAMPLE_RATE
+    from germanaudio.tts.supertonic import SupertonicEngine
+
+    return SupertonicEngine.engine_id, SAMPLE_RATE
 
 
 def build_engine():
@@ -65,6 +74,11 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser.add_argument(
         "--title", default=None,
         help="title shown in the player (default: the story's first sentence, or the vocab file name)",
+    )
+    parser.add_argument(
+        "--retag", action="store_true",
+        help="rewrite only the tag (title, chapters, read-along text) of the existing output file from the cache; "
+             "no synthesis, the audio is not touched",
     )
     parser.add_argument(
         "--limit", type=int, default=None,
@@ -168,6 +182,21 @@ def main(argv: list[str] | None = None) -> int:
     if isinstance(plan, int):
         return plan
     timeline, marks, lines, title = plan
+
+    if args.retag:
+        engine_id, sample_rate = engine_identity()
+        try:
+            chapters_written, lines_written = retag_file(
+                args.output, title, timeline, marks, lines, args.cache_dir, engine_id, sample_rate
+            )
+        except RetagError as error:
+            print(f"retag failed: {error}", file=sys.stderr)
+            return 1
+        except (OSError, wave.Error) as error:
+            print(f"retag failed: {error} — nothing changed", file=sys.stderr)
+            return 1
+        print(f"retagged {args.output}: title {title!r}, {chapters_written} chapters, {lines_written} text lines")
+        return 0
 
     # Checked now, not after an hour of synthesis: a bad output path should
     # fail in a second, before stage 2 even starts.
