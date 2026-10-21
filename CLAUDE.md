@@ -73,12 +73,20 @@ copy it to `out/<name>.original.mp3`.
 
 Phone: Samsung Galaxy S9+ (Android 10), adb serial `21fcf6986b0c7ece`,
 adb = `C:\Users\ilinc\AppData\Local\Android\Sdk\platform-tools\adb.exe`. In Git Bash set `MSYS_NO_PATHCONV=1`.
-All tracks live in the **SD-card folder `MTL`**: `/storage/3838-6430/MTL/` (the Hörplayer watches this folder and
-rescans it every time its library opens — new files appear, changed files are re-read automatically).
+All tracks live under the **SD-card folder `MTL`**: `/storage/3838-6430/MTL/` (the Hörplayer watches this folder and
+rescans it every time its library opens — new files appear, changed files are re-read automatically). Layout:
+vocabulary in `MTL/Wortschatz/<Thema>/<topic>.mp3` (e.g. `Wortschatz/Schmerz/schmerz.mp3`), stories in
+`MTL/Geschichten/<topic>_geschichte.mp3`.
 
 ```
-adb push out/<file>.mp3 /storage/3838-6430/MTL/<file>.mp3
+adb push out/<topic>.mp3 /storage/3838-6430/MTL/Wortschatz/<Thema>/<topic>.mp3
+adb push out/<topic>_geschichte.mp3 /storage/3838-6430/MTL/Geschichten/<topic>_geschichte.mp3
 ```
+
+If `adb devices` lists nothing (USB debugging off), copy over MTP instead: the phone shows up in Windows as the
+portable device `Senex`, SD card = `Card`; PowerShell `Shell.Application` → `NameSpace(17)` → `Senex` → `Card` → `MTL`,
+then `CopyHere`. Compare `System.Size` with the local file afterwards. Also copy finished tracks to
+`C:\LOCAL FILES\Study\German`.
 
 Overwrite in place rather than adding a second copy (keeps the user's place in the app). Only finished, tagged
 files go there — no `.original` backups.
