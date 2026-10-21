@@ -43,6 +43,8 @@ hand-edit tags; fix the input and rebuild.
 | `b1_geschichte.txt` | `out/b1_geschichte.mp3` | first sentence: `Ioanas neues Leben` |
 | `chemie_geschichte.txt` | `out/chemie_geschichte.mp3` | `Lenas Jahr im Labor` |
 | `mikrobiom_geschichte.txt` | `out/mikrobiom_geschichte.mp3` | `Jonas und die unsichtbaren Helfer` |
+| `schmerz.tsv` | `out/schmerz.mp3` | `Schmerz Vokabeln` |
+| `schmerz_geschichte.txt` | `out/schmerz_geschichte.mp3` | `Bewegung statt Tabletten` |
 
 Vocab tracks: always pass `--title "<Thema> Vokabeln"` (the default would be the bare file name). Stories: the
 default (first sentence of the text, without its period) is right; the first line of a story is its title.
