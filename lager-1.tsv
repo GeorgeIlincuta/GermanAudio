@@ -1,0 +1,175 @@
+german	english	phrase
+das Lager	the warehouse	Die neue Ware kommt heute Nachmittag ins Lager.
+die Lagerhalle	the warehouse building	Die Lagerhalle ist im Winter ziemlich kalt.
+die Halle	the hall	In Halle zwei lagern wir die schweren Teile.
+der Lagerist	the warehouse clerk	Der Lagerist weiß genau, wo jeder Artikel liegt.
+die Lageristin	the warehouse clerk (female)	Die Lageristin prüft jeden Morgen den Bestand.
+der Lagerhelfer	the warehouse assistant	Wir suchen ab sofort einen Lagerhelfer für die Frühschicht.
+die Lagerhelferin	the warehouse assistant (female)	Als Lagerhelferin packt sie den ganzen Tag Pakete.
+der Lagerarbeiter	the warehouse worker	Der Lagerarbeiter fuhr mit dem Gabelstapler zur Warenannahme.
+die Lagerarbeiterin	the warehouse worker (female)	Die Lagerarbeiterin zeigt mir, wo die Kartons stehen.
+die Logistik	logistics	Im Bereich Logistik müssen wir viele Prozesse neu gestalten.
+das Regal	the shelf, the rack	Stell die leeren Kisten oben ins Regal.
+das Hochregal	the high-bay rack	Die Paletten oben im Hochregal holt nur der Stapler.
+das Fach	the compartment	Jedes Fach im Regal hat eine eigene Nummer.
+der Gang	the aisle	Die Schrauben findest du in Gang vier.
+der Lagerplatz	the storage location	Scann den Lagerplatz, bevor du die Ware ablegst.
+der Stellplatz	the storage space	Jede Palette hat ihren eigenen Stellplatz.
+die Palette	the pallet	Auf eine Palette passen ungefähr vierzig Kartons.
+die Europalette	the Euro pallet	Die Kartons kommen auf eine Europalette.
+die Gitterbox	the mesh box pallet	Die kaputten Teile kommen in die Gitterbox.
+der Rollwagen	the roll container	Schieb den Rollwagen bitte zum Packtisch.
+die Sackkarre	the hand truck	Ich hole mit der Sackkarre eine Kiste Bier.
+der Hubwagen	the pallet jack	Mit dem Hubwagen kannst du die Palette selbst bewegen.
+die Ameise	the electric pallet jack	Die Ameise steht an der Ladestation.
+der Gabelstapler	the forklift truck	Er transportierte die Paletten mit einem Gabelstapler ab.
+der Stapler	the forklift	Der Stapler fährt rückwärts, pass auf!
+die Leiter	the ladder	Er ist von der Leiter gefallen.
+das Förderband	the conveyor belt	Die Pakete laufen über das Förderband zum Versand.
+die Rampe	the ramp	Fahr mit dem Hubwagen langsam die Rampe hinunter.
+die Laderampe	the loading ramp	Der Lastwagen steht schon an der Laderampe.
+das Tor	the gate, the dock door	Der Lastwagen aus Polen kommt an Tor fünf.
+die Waage	the scales	Stell das Paket auf die Waage.
+der Scanner	the scanner	Halt den Scanner etwas näher an das Etikett.
+der Handscanner	the handheld scanner	Mit dem Handscanner scannst du jedes Paket.
+der Akku	the rechargeable battery	Wenn der Akku leer ist, holst du dir einen neuen Scanner.
+die Ladestation	the charging station	Nach der Schicht kommen alle Scanner zurück in die Ladestation.
+der Drucker	the printer	Der Drucker für die Etiketten hat kein Papier mehr.
+der Bildschirm	the screen	Es knallte und der Bildschirm erlosch.
+die Ware	the goods	Die Ware muss heute noch ins Regal.
+der Artikel	the item	Dieser Artikel ist leider nicht mehr im Lager.
+die Sendung	the shipment	Diese Sendung geht morgen nach Österreich.
+die Lieferung	the delivery, shipment	Bei der Lieferung ist etwas kaputt gegangen.
+das Paket	the parcel	Ich mache ein Paket fertig.
+das Päckchen	the small parcel	Kleine Päckchen kommen in die blaue Kiste.
+der Karton	the cardboard box	Der Karton ist zu schwer, nimm einen kleineren.
+die Kiste	the box, the crate	Sie bekam eine Kiste Wein nach Hause geliefert.
+der Behälter	the container	Die Schrauben liegen in dem grauen Behälter.
+die Box	the box	Was soll ich mit all den leeren Boxen machen?
+die Kartonage	the cardboard packaging	Gefaltet können leere Kartonagen sehr platzsparend gelagert werden.
+die Verpackung	the packaging	Wenn man etwas mit der Post verschickt, sollte die Verpackung strapazierfähig sein.
+das Füllmaterial	the packing material	Füll die Lücken im Karton mit Füllmaterial.
+die Luftpolsterfolie	the bubble wrap	Gläser wickelst du immer in Luftpolsterfolie.
+die Folie	the plastic film	Die Palette wird zum Schluss mit Folie umwickelt.
+das Klebeband	the adhesive tape	Das Poster war mit Klebeband an der Wand befestigt.
+das Paketband	the packing tape	Kleb den Karton mit Paketband gut zu.
+das Cuttermesser	the box cutter	Öffne den Karton vorsichtig mit dem Cuttermesser.
+das Teppichmesser	the utility knife	Ich habe das Teppichmesser verloren.
+das Etikett	the label, tag	Fast jede Weinflasche hat ein Etikett.
+der Aufkleber	the sticker	Auf zerbrechliche Pakete kommt ein roter Aufkleber.
+der Barcode	the barcode	Auf jedem Paket ist ein Barcode.
+der Strichcode	the barcode	Der Scanner liest den Strichcode nicht.
+die Artikelnummer	the article number	Gib die Artikelnummer ein, dann siehst du den Lagerplatz.
+die Seriennummer	the serial number	Eine Seriennummer muss nicht nur Ziffern, sondern kann auch Buchstaben enthalten.
+die Menge	the quantity	Prüf, ob die Menge mit dem Lieferschein übereinstimmt.
+das Stück	the piece	Ich brauche noch Glühbirnen. Geben Sie mir bitte drei Stück!
+das Gewicht	the weight	Das Gewicht steht auf dem Etikett.
+der Bestand	the stock, the holdings	Unser Bestand an Bleistiften ist merklich geschrumpft.
+der Lagerbestand	the stock level	Im System siehst du den aktuellen Lagerbestand.
+der Wareneingang	the goods receiving area	Im Wareneingang wird jede Lieferung kontrolliert.
+der Warenausgang	the goods dispatch area	Die fertigen Paletten stehen im Warenausgang.
+abladen	to unload	Wir müssen die Kartons noch vom Lastwagen abladen.
+entladen	to unload, to discharge	Rolf soll als erstes den Anhänger entladen!
+ausladen	to unload, discharge	Wir müssen noch einige Kartons ausladen.
+aufladen	to load onto, to load up	Wir müssen noch zehn Paletten aufladen.
+beladen	to load	Wir beladen den Lastwagen bis um acht.
+verladen	to load	Die Ware wird um sieben Uhr verladen.
+annehmen	to accept	Nimm die Lieferung erst an, wenn du sie geprüft hast.
+prüfen	to check	Prüf bitte jedes Paket auf Schäden.
+kontrollieren	to check	Kannst du mal kontrollieren, ob ich alles richtig gemacht habe?
+zählen	to count	Zähl bitte die Kartons auf der Palette.
+einlagern	to put into storage	Die neuen Paletten musst du hinten in der Halle einlagern.
+auslagern	to take out of storage	Wenn Sie regelmäßig viele Artikel einlagern, auslagern und umlagern, hilft Ihnen ein Warenwirtschaftssystem.
+umlagern	to relocate	Heute müssen wir die ganze Ware aus Gang drei umlagern.
+kommissionieren	to pick orders	Heute musst du drei Aufträge kommissionieren.
+die Kommissionierung	the order picking	Die Kommissionierung läuft heute mit dem Scanner.
+der Kommissionierer	the order picker	Der Kommissionierer holt die Artikel aus dem Regal.
+die Kommissioniererin	the order picker (female)	Die Kommissioniererin arbeitet die Pickliste ab.
+die Pickliste	the pick list	Auf der Pickliste steht, welche Artikel du holen musst.
+der Auftrag	the order	Dieser Auftrag muss heute noch raus.
+die Bestellung	the order	Ich habe vor zwei Wochen eine Bestellung über 2000 Paar Socken aufgegeben.
+der Lieferschein	the delivery note	Vergleich die Ware mit dem Lieferschein.
+die Packliste	the packing list	Die Packliste liegt oben im Karton.
+verpacken	to pack	Vor dem Umzug verpackte er die in Seidenpapier gehüllten Statuetten in große Schachteln.
+packen	to pack	Du musst deine Sachen packen.
+einpacken	to wrap up	Soll ich Ihnen das als Geschenk einpacken?
+auspacken	to unbox, to unpack	Du musst die Kartons auspacken und die Teile zählen.
+umpacken	to repack	Kannst du eben die Eier aus dem Karton in den Kühlschrank umpacken?
+sortieren	to sort	Ich sortiere die Briefe nach ihrem Datum.
+stapeln	to pile up	Vor dem Winter hatte er das Brennholz unter dem Vordach gestapelt.
+abstellen	to place, to leave	Wenn wir den Besen nicht mehr brauchen, stellen wir ihn einfach in der Abstellkammer ab.
+bekleben	to stick labels on	Sie hatte ihr Notizbuch über und über mit Star-Wars-Aufklebern beklebt.
+scannen	to scan	Das Gerät kann scannen und kopieren.
+buchen	to book in (stock)	Er buchte die Ein- und Ausgänge.
+wiegen	to weigh	Jedes Paket musst du vor dem Versand wiegen.
+der Versand	shipping, dispatch	Bestimmungen zum Versand der Ware finden Sie im Anhang.
+versenden	to ship, to dispatch	Die E-Mails werden noch heute an die Empfänger versendet.
+verschicken	to send out	Verschicke doch diese Papprolle mit der Post.
+die Spedition	the haulage company	Den Umzug von Berlin nach Hamburg hat eine Spedition durchgeführt.
+der Spediteur	the haulier	Der Spediteur holt die Paletten morgen früh ab.
+der Lastwagen	the truck, lorry	Für diesen Transport brauchen wir einen Lastwagen.
+der Fahrer	the driver	Der Fahrer wartet, bis alles abgeladen ist.
+der Paketdienst	the parcel service	Der Paketdienst kommt jeden Tag um drei.
+die Zustellung	the delivery	Die Zustellung des Pakets war gleich beim ersten Versuch erfolgreich.
+die Abholung	the collection	Die Sendung ist fertig für die Abholung.
+die Retoure	the return	Die Überprüfung der Retouren ist ein großer Arbeitsaufwand.
+die Rücksendung	the return shipment	Bei jeder Rücksendung prüfen wir, ob die Ware noch neu ist.
+die Reklamation	the complaint	Es gab viele Reklamationen über dieses Produkt, ich würde es also nicht kaufen.
+beschädigt	damaged	Der Karton ist beschädigt, mach bitte ein Foto.
+der Bruch	the breakage	Beim Abladen gab es Bruch, zwei Kartons Gläser sind kaputt.
+die Inventur	the stocktaking	Das Einkaufszentrum ist heute wegen Inventur geschlossen.
+die Fehlmenge	the shortfall	Bei einer Fehlmenge sagst du sofort Bescheid.
+die Sicherheit	the safety	Sicherheit geht vor, auch wenn es schnell gehen muss.
+die Arbeitssicherheit	workplace safety	Am ersten Tag gibt es eine Schulung zur Arbeitssicherheit.
+der Unfall	the accident	Ein Unfall ist schnell passiert.
+der Sicherheitsschuh	the safety shoe	Ohne Sicherheitsschuhe darfst du nicht in die Halle.
+die Warnweste	the high-vis vest	Besonders Fahrradfahrer werden besser von Autofahrern wahrgenommen, wenn sie eine Warnweste tragen.
+der Handschuh	the glove	Zieh dir lieber Handschuhe an, es ist kalt draußen.
+der Arbeitshandschuh	the work glove	Zieh die Arbeitshandschuhe an, die Kartons sind scharf.
+der Gehörschutz	the ear protection	An der Maschine trägst du immer Gehörschutz.
+der Helm	the helmet	Der Helm blieb bei dem Unfall ganz.
+die Schutzbrille	the safety glasses	Beim Aufschneiden der Bänder trägst du eine Schutzbrille.
+der Fußweg	the walkway	In der Halle läufst du nur auf dem gelben Fußweg.
+der Notausgang	the emergency exit	Der Notausgang ermöglicht im Brandfall das schnelle Verlassen eines Gebäudes.
+der Feuerlöscher	the fire extinguisher	Auch Feuerlöscher haben eine Prüfplakette und müssen wiederkehrend auf Funktionssicherheit geprüft werden.
+der Sammelplatz	the assembly point	Der Sammelplatz ist draußen auf dem Parkplatz.
+der Staplerschein	the forklift licence	Ohne Staplerschein darfst du keinen Stapler fahren.
+die Schicht	the shift	Meine Schicht geht heute von sechs bis halb drei.
+die Frühschicht	the early shift	Jeden Dienstag und Donnerstag hatte er Frühschicht und war deshalb am Abend sehr müde.
+die Spätschicht	the late shift	Während der Spätschicht werden nur die Ersatzteile produziert.
+die Nachtschicht	the night shift	Wie immer musste er einige Nachtschichten einlegen, damit er seine Seminararbeit rechtzeitig abgeben konnte.
+der Schichtleiter	the shift supervisor	Bei Problemen fragst du den Schichtleiter.
+die Schichtleiterin	the shift supervisor (female)	Die Schichtleiterin rief eine Aushilfe an, die sofort kommen sollte.
+der Vorarbeiter	the foreman	Der Vorarbeiter teilt morgens die Arbeit ein.
+die Vorarbeiterin	the forewoman	Die Vorarbeiterin zeigt dir deinen Platz.
+der Teamleiter	the team leader	Der Teamleiter erklärt dir morgens die Aufgaben.
+die Teamleiterin	the team leader (female)	Frag die Teamleiterin, wenn du fertig bist.
+die Pause	the break	Um neun machen wir eine kurze Pause.
+der Pausenraum	the break room	Im Pausenraum gibt es Kaffee und eine Mikrowelle.
+der Spind	the locker	Bevor man den Lesesaal der Bibliothek betreten darf, muss man seine Jacke und Taschen in einem Spind einschließen.
+die Umkleide	the changing room	Im Hallenbad gibt es nur zwei Umkleiden - jeweils ein großer Raum für Männer und Frauen.
+die Stechuhr	the time clock	Beim Betreten des Bürogebäudes muss die Stechuhr betätigt werden.
+einstempeln	to clock in	Vergiss nicht, morgens einzustempeln.
+ausstempeln	to clock out	Nach der Schicht musst du ausstempeln.
+die Überstunde	the hour of overtime	Wir müssen ein wichtiges Projekt fertigkriegen, deshalb müssen wir alle Überstunden machen.
+der Feierabend	the end of the working day	Jetzt machen wir Feierabend!
+die Zeitarbeit	temporary agency work	Viele Lagerhelfer fangen in der Zeitarbeit an.
+die Zeitarbeitsfirma	the temp agency	Die Zeitarbeitsfirma schickt mich für drei Monate hierher.
+die Leiharbeit	agency work	In der Leiharbeit bekommst du den Lohn von der Agentur.
+der Leiharbeiter	the agency worker	Im Sommer arbeiten hier viele Leiharbeiter.
+der Einsatz	the assignment	Mein Einsatz bei dieser Firma dauert bis Dezember.
+der Arbeitsvertrag	the employment contract	Dieser Arbeitsvertrag ist rechtswidrig, es müssen Anpassungen gemacht werden.
+die Probezeit	the probation period	Die Probezeit dauert sechs Monate.
+der Stundenlohn	the hourly wage	Bei einem Stundenlohn von sieben Euro kann man keine großen Sprünge machen.
+der Mindestlohn	the minimum wage	Ich bekomme mehr als den Mindestlohn.
+der Lohn	the wages	Der Lohn kommt immer am Monatsende.
+die Lohnabrechnung	the payslip	Durch den Tarifabschluss werde ich 200 Euro mehr auf der nächsten Lohnabrechnung sehen.
+der Stundenzettel	the timesheet	Am Freitag gibst du den Stundenzettel ab.
+die Krankmeldung	the sick note	Die Krankmeldung beim Arbeitgeber ist unverzüglich vorzunehmen.
+die Arbeitsunfähigkeitsbescheinigung	the doctor's sick note	Die Arbeitsunfähigkeitsbescheinigung bekommst du vom Arzt.
+sich krankmelden	to call in sick	Du musst dich vor Schichtbeginn krankmelden.
+der Urlaubsantrag	the application for leave	Ich habe bei meinem Chef einen Urlaubsantrag eingereicht.
+die Kündigung	the notice of dismissal	In der Probezeit ist die Kündigung sehr kurzfristig möglich.
+die Einarbeitung	the induction	Die Einarbeitung dauert ungefähr eine Woche.
+einarbeiten	to train for a new job	Ein Kollege wird dich in den ersten Tagen einarbeiten.
+die Arbeitskleidung	the workwear	Die Arbeitskleidung bekommst du von der Firma.
