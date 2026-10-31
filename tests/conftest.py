@@ -34,3 +34,12 @@ class FakeEngine:
 @pytest.fixture
 def fake_engine() -> FakeEngine:
     return FakeEngine()
+
+
+@pytest.fixture(autouse=True)
+def no_real_library(monkeypatch, tmp_path):
+    """Never let a test read the real Hörplayer library or talk to the phone."""
+    from germanaudio import library
+
+    monkeypatch.setattr(library, "LIBRARY_ROOT", tmp_path / "no-library")
+    monkeypatch.setattr(library, "ADB", tmp_path / "no-adb.exe")

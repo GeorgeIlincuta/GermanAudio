@@ -387,3 +387,68 @@ def test_text_check_fails_on_a_bad_override(tmp_path, capsys):
     story.write_text("Der Titel.\n\nEs waren {37 sieben Leute.\n", encoding="utf-8")
     assert cli.main([str(story), "--text", "--check"]) == 1
     assert "line 3:" in capsys.readouterr().err
+
+
+def _library(tmp_path):
+    from mutagen.id3 import TIT2
+
+    root = tmp_path / "MTL"
+    track = root / "Wortschatz" / "B1" / "b1.mp3"
+    track.parent.mkdir(parents=True)
+    track.write_bytes(b"\0" * 10)
+    tag = ID3()
+    tag.add(TIT2(encoding=3, text=["01 · B1 Vokabeln"]))
+    tag.save(track)
+    return root
+
+
+def test_build_numbers_the_title_from_the_library(vocab_file, tmp_path):
+    out = tmp_path / "zucker.mp3"
+    root = _library(tmp_path)
+
+    assert cli.main([str(vocab_file), "-o", str(out), "--cache-dir", str(tmp_path / "c"),
+                     "--title", "Zucker Vokabeln", "--library", str(root)]) == 0
+
+    assert ID3(out)["TIT2"].text == ["02 · Zucker Vokabeln"]
+
+
+def test_a_preview_build_is_not_numbered(vocab_file, tmp_path):
+    out = tmp_path / "zucker.mp3"
+    root = _library(tmp_path)
+
+    cli.main([str(vocab_file), "-o", str(out), "--cache-dir", str(tmp_path / "c"), "--title", "Zucker Vokabeln",
+              "--library", str(root), "--limit", "1"])
+
+    assert ID3(out)["TIT2"].text == ["Zucker Vokabeln"]
+
+
+def test_retag_keeps_the_published_number(vocab_file, tmp_path, monkeypatch, fake_engine):
+    monkeypatch.setattr(cli, "engine_identity", lambda: (fake_engine.engine_id, fake_engine.sample_rate))
+    out = tmp_path / "b1.mp3"
+    root = _library(tmp_path)
+    args = [str(vocab_file), "-o", str(out), "--cache-dir", str(tmp_path / "c"), "--title", "B1 Vokabeln",
+            "--library", str(root)]
+    assert cli.main(args) == 0
+
+    assert cli.main(args + ["--retag"]) == 0
+
+    assert ID3(out)["TIT2"].text == ["01 · B1 Vokabeln"]
+
+
+def test_publish_copies_the_built_track_into_the_library(vocab_file, tmp_path, capsys):
+    out = tmp_path / "zucker.mp3"
+    root = _library(tmp_path)
+
+    assert cli.main([str(vocab_file), "-o", str(out), "--cache-dir", str(tmp_path / "c"), "--title", "Zucker Vokabeln",
+                     "--library", str(root), "--publish"]) == 0
+
+    assert (root / "Wortschatz" / "Zucker" / "zucker.mp3").read_bytes() == out.read_bytes()
+    assert "phone: not connected" in capsys.readouterr().out
+
+
+def test_publish_is_refused_for_a_preview(vocab_file, tmp_path, capsys):
+    root = _library(tmp_path)
+
+    assert cli.main([str(vocab_file), "-o", str(tmp_path / "z.mp3"), "--cache-dir", str(tmp_path / "c"),
+                     "--library", str(root), "--limit", "1", "--publish"]) == 2
+    assert not (root / "Wortschatz" / "vocab").exists()

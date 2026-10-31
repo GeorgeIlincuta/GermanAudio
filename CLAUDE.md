@@ -44,8 +44,14 @@ hand-edit tags; fix the input and rebuild.
 ## Titles (TIT2) — numbered per category
 
 Every track's title is `NN · Short title` (two digits, space, middle dot U+00B7, space), numbered in build order
-**within its category** (the phone folder): a new track gets the next free number. Short title = no subtitle after a
-colon. Always pass `--title` (also on `--retag`); the default (file name / first sentence) has no number.
+**within its category** (the phone folder). Short title = no subtitle after a colon.
+
+**Numbering is automatic** (`germanaudio/library.py`, same file in StudyAudio): pass the short title (`--title "Zucker
+Vokabeln"`, or rely on a story's first sentence) and a build or `--retag` adds the number. The record is the library
+folder `C:\LOCAL FILES\Study\MTL` (the desktop Hörplayer's watched folder, same layout as the phone): a file already in
+its category folder keeps its number, a new one gets the highest + 1. So **publish right after building** (`--publish`),
+or a second new track would get the same number. A title already starting with `NN · ` is kept as given; `--limit`
+previews get no number; without the library folder titles stay unnumbered. `--library DIR` points elsewhere.
 
 | Category | NN · title (input → output) |
 |---|---|
@@ -54,18 +60,18 @@ colon. Always pass `--title` (also on `--retag`); the default (file name / first
 | Artikel | 01 · Wie sich das Gedächtnis im Alter verändert (`artikel/gedaechtnis.md`) |
 | Leitfaden, Enzyklopädie | StudyAudio — see its README |
 
-Next numbers: Wortschatz 09, Geschichten 06, Artikel 02. Inputs are `<name>.tsv` / `<name>.txt`, outputs `out/<name>.mp3`.
-Example: `python -m germanaudio zucker.tsv -o out/zucker.mp3 --title "09 · Zucker Vokabeln"`.
+Inputs are `<name>.tsv` / `<name>.txt`, outputs `out/<name>.mp3`.
+Example: `python -m germanaudio zucker.tsv -o out/zucker.mp3 --title "Zucker Vokabeln" --publish` → `09 · Zucker Vokabeln`.
 
 ## Workflow for a new topic
 
 1. **Vocabulary list:** prompt `prompts/prompt-vocab.txt` (or `generate-vocab.md`) in a Claude chat → `<topic>.tsv`
    (tab-separated `german  english  phrase`, header row). Check: `python -m germanaudio <topic>.tsv --check`.
 2. **Build vocab first** (its sentences are then reused by the story):
-   `python -m germanaudio <topic>.tsv -o out/<topic>.mp3 --title "NN · <Topic> Vokabeln"`
+   `python -m germanaudio <topic>.tsv -o out/<topic>.mp3 --title "<Topic> Vokabeln" --publish`
 3. **Story:** prompt `prompts/prompt-story.txt` (already asks for `#` headings) → `<topic>_geschichte.txt`, UTF-8.
    Check: `python -m germanaudio <topic>_geschichte.txt --text --check` → must report "… and N headings".
-4. **Build story:** `python -m germanaudio <topic>_geschichte.txt --text -o out/<topic>_geschichte.mp3 --title "NN · <Story title>"`
+4. **Build story:** `python -m germanaudio <topic>_geschichte.txt --text -o out/<topic>_geschichte.mp3 --publish`
    Always give `-o` its own name (default would overwrite `out/german.mp3`).
 5. **Verify** (prints title + chapter count + first chapter):
    ```
@@ -88,10 +94,19 @@ copy it to `out/<name>.original.mp3`.
    `{shown|spoken}`; replaces „“ with »«.
 3. The user reviews the word list.
 4. `python -m germanaudio artikel/<topic>.md --article --check` → `loaded N entries and … headings`.
-5. `python -m germanaudio artikel/<topic>.md --article -o out/<topic>.mp3 --title "NN · <front-matter title>"`.
-6. Push to `MTL/Artikel/<topic>.mp3`, copy to `C:\LOCAL FILES\Study\German`, commit `artikel/<topic>.md`.
+5. `python -m germanaudio artikel/<topic>.md --article -o out/<topic>.mp3 --publish` (title = front-matter `title`,
+   numbered).
+6. Commit `artikel/<topic>.md`.
 
-## Getting tracks onto the phone
+## Getting tracks onto the phone and the PC
+
+**`--publish`** (on a build or `--retag`) does all of this: copies the track to `C:\LOCAL FILES\Study\MTL\<path>`
+(the desktop Hörplayer's library) and pushes it to `/storage/3838-6430/MTL/<path>` on the phone when it's connected
+over adb, checks both sizes, and prints where it went. `<path>` = `Wortschatz/<Thema>/<file>` (Thema = first word of
+the short title, or the folder the file is already in), `Geschichten/`, `Artikel/`, `Leitfaden/`, `Enzyklopädie/`.
+A disconnected phone is reported and skipped; push it later with the commands below. `C:\LOCAL FILES\Study\German` is
+an old plain copy folder and no longer needed (don't add it to the desktop app — it would duplicate every track).
+
 
 Phone: Samsung Galaxy S9+ (Android 10), adb serial `21fcf6986b0c7ece`,
 adb = `C:\Users\ilinc\AppData\Local\Android\Sdk\platform-tools\adb.exe`. In Git Bash set `MSYS_NO_PATHCONV=1`.
@@ -107,8 +122,7 @@ adb push out/<topic>_geschichte.mp3 /storage/3838-6430/MTL/Geschichten/<topic>_g
 
 If `adb devices` lists nothing (USB debugging off), copy over MTP instead: the phone shows up in Windows as the
 portable device `Senex`, SD card = `Card`; PowerShell `Shell.Application` → `NameSpace(17)` → `Senex` → `Card` → `MTL`,
-then `CopyHere`. Compare `System.Size` with the local file afterwards. Also copy finished tracks to
-`C:\LOCAL FILES\Study\German`.
+then `CopyHere`. Compare `System.Size` with the local file afterwards.
 
 Overwrite in place rather than adding a second copy (keeps the user's place in the app). Only finished, tagged
 files go there — no `.original` backups.
@@ -118,7 +132,7 @@ files go there — no `.original` backups.
 - `loader.py` (TSV, `parse_vocab_rows`) · `reader.py` (text, `Heading`, `text_marks`, `story_title`, overrides) ·
   `article.py` (Artikel source file) · `synth.py` (content-hash clip
   cache in `cache/audio`) · `assemble.py` (timeline, `vocab_marks`, render, MP3 encode) · `chapters.py`
-  (`mark_positions`, `write_tags`) · `cli.py` · tests in `tests/` (`python -m pytest -q`, no real model needed).
+  (`mark_positions`, `write_tags`) · `library.py` (numbered titles, `--publish`) · `cli.py` · tests in `tests/` (`python -m pytest -q`, no real model needed).
 - Changing pauses or titles is free (re-stitch from cache); changing text or voice re-synthesizes those clips.
 - Work test-first; keep `build_timeline` / `text_timeline` and their marks functions in step (marks are timeline
   indices).

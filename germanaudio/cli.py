@@ -5,6 +5,7 @@
     python -m germanaudio vocab.tsv --limit 8 -o out/sample.mp3
     python -m germanaudio story.txt --text -o out/story.mp3
     python -m germanaudio artikel/topic.md --article -o out/topic.mp3
+    python -m germanaudio zucker.tsv -o out/zucker.mp3 --title "Zucker Vokabeln" --publish
 """
 
 import argparse
@@ -14,6 +15,7 @@ import wave
 from dataclasses import dataclass
 from pathlib import Path
 
+from germanaudio import library
 from germanaudio.article import load_article
 from germanaudio.assemble import Silence, TimelineItem, build_timeline, encode_mp3, render, vocab_marks
 from germanaudio.chapters import ArticleInfo, Chapter, item_starts, line_positions, write_tags
@@ -82,7 +84,17 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     )
     parser.add_argument(
         "--title", default=None,
-        help="title shown in the player (default: the story's first sentence, or the vocab file name)",
+        help="title shown in the player, without its number (default: the story's first sentence, or the vocab "
+             "file name); the category number from the library is added in front: \"09 · Zucker Vokabeln\"",
+    )
+    parser.add_argument(
+        "--library", type=Path, default=None,
+        help="the Hörplayer library folder that numbers the titles and receives --publish "
+             f"(default: {library.LIBRARY_ROOT})",
+    )
+    parser.add_argument(
+        "--publish", action="store_true",
+        help="after building or retagging, copy the track into the library folder and onto the phone (if connected)",
     )
     parser.add_argument(
         "--retag", action="store_true",
@@ -250,7 +262,14 @@ def main(argv: list[str] | None = None) -> int:
         plan = _vocab_timeline(args, voices)
     if isinstance(plan, int):
         return plan
-    timeline, marks, lines, title, genre = plan.timeline, plan.marks, plan.lines, plan.title, plan.genre
+    if args.publish and args.limit is not None:
+        print("--publish needs a full track: drop --limit", file=sys.stderr)
+        return 2
+    library_root = args.library or library.LIBRARY_ROOT
+    timeline, marks, lines, genre = plan.timeline, plan.marks, plan.lines, plan.genre
+    # a --limit preview isn't a library track, so it gets no number
+    title = plan.title if args.limit is not None else library.numbered_title(
+        plan.title, genre, args.output.name, library_root)
 
     if args.retag:
         engine_id, sample_rate = engine_identity()
@@ -266,7 +285,7 @@ def main(argv: list[str] | None = None) -> int:
             print(f"retag failed: {error} — nothing changed", file=sys.stderr)
             return 1
         print(f"retagged {args.output}: title {title!r}, genre {genre}, {chapters_written} chapters, {lines_written} text lines")
-        return 0
+        return _publish(args, genre, title, library_root)
 
     # Checked now, not after an hour of synthesis: a bad output path should
     # fail in a second, before stage 2 even starts.
@@ -333,7 +352,16 @@ def main(argv: list[str] | None = None) -> int:
 
     size_mb = args.output.stat().st_size / 1_000_000
     print(f"done: {args.output} ({size_mb:.1f} MB)")
-    return 0
+    return _publish(args, genre, title, library_root)
+
+
+def _publish(args: argparse.Namespace, genre: str, title: str, library_root: Path) -> int:
+    if not args.publish:
+        return 0
+    ok, report = library.publish(args.output, genre, title, library_root, adb_path=library.ADB)
+    for line in report:
+        print(f"  {line}")
+    return 0 if ok else 1
 
 
 if __name__ == "__main__":
