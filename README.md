@@ -1,4 +1,4 @@
-# germanaudio
+# GermanAudio
 
 Turns German text into MP3 listening tracks, using the Supertonic text-to-speech model locally. It has two modes:
 
