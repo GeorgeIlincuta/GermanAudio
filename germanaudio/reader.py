@@ -154,10 +154,24 @@ def load_text(path: Path) -> Paragraphs:
     except UnicodeDecodeError as error:
         raise LoadError([f"{path} is not valid UTF-8"]) from error
 
+    problems = override_problems(text.splitlines())
+    if problems:
+        raise LoadError(problems)
     paragraphs = split_text(text)
     if not paragraphs:
         raise LoadError([f"{path} contains no text"])
     return paragraphs
+
+
+def override_problems(lines: list[str], first_line_number: int = 1) -> list[str]:
+    """"line N: …" for every line with a malformed {shown|spoken} override (an override must sit on one line)."""
+    problems = []
+    for number, line in enumerate(lines, start=first_line_number):
+        try:
+            spoken_text(line)
+        except OverrideError as error:
+            problems.append(f"line {number}: {error} (an override must be on one line)")
+    return problems
 
 
 def limit_sentences(paragraphs: Paragraphs, limit: int) -> Paragraphs:

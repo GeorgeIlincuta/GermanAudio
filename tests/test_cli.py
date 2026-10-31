@@ -380,3 +380,10 @@ def test_article_retag_round_trip(artikel_file, tmp_path, monkeypatch, fake_engi
 def test_article_and_text_are_exclusive(artikel_file, capsys):
     with pytest.raises(SystemExit):
         cli.main([str(artikel_file), "--article", "--text", "--check"])
+
+
+def test_text_check_fails_on_a_bad_override(tmp_path, capsys):
+    story = tmp_path / "s.txt"
+    story.write_text("Der Titel.\n\nEs waren {37 sieben Leute.\n", encoding="utf-8")
+    assert cli.main([str(story), "--text", "--check"]) == 1
+    assert "line 3:" in capsys.readouterr().err

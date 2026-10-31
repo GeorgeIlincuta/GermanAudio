@@ -211,3 +211,11 @@ def test_text_without_braces_is_unchanged():
 def test_bad_overrides_raise(bad):
     with pytest.raises(OverrideError):
         spoken_text(bad)
+
+
+def test_load_text_reports_a_bad_override_with_its_line(tmp_path):
+    path = tmp_path / "s.txt"
+    path.write_text("Der Titel.\n\nEs waren {37 sieben Leute.\n", encoding="utf-8")
+    with pytest.raises(LoadError) as error:
+        load_text(path)
+    assert error.value.problems[0].startswith("line 3:")
