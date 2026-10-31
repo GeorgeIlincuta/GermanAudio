@@ -41,31 +41,31 @@ hand-edit tags; fix the input and rebuild.
   clip is missing from the cache or the text no longer matches the audio.
   The audio bytes are never changed by tagging.
 
-## Titles (TIT2) — conventions in use
+## Titles (TIT2) — numbered per category
 
-| Input | Output | Title |
-|---|---|---|
-| `b1.tsv` | `out/b1.mp3` | `B1 Vokabeln` |
-| `chemie.tsv` | `out/chemie.mp3` | `Chemie Vokabeln` |
-| `mikrobiom.tsv` | `out/mikrobiom.mp3` | `Mikrobiom Vokabeln` |
-| `b1_geschichte.txt` | `out/b1_geschichte.mp3` | first sentence: `Ioanas neues Leben` |
-| `chemie_geschichte.txt` | `out/chemie_geschichte.mp3` | `Lenas Jahr im Labor` |
-| `mikrobiom_geschichte.txt` | `out/mikrobiom_geschichte.mp3` | `Jonas und die unsichtbaren Helfer` |
-| `schmerz.tsv` | `out/schmerz.mp3` | `Schmerz Vokabeln` |
-| `schmerz_geschichte.txt` | `out/schmerz_geschichte.mp3` | `Bewegung statt Tabletten` |
+Every track's title is `NN · Short title` (two digits, space, middle dot U+00B7, space), numbered in build order
+**within its category** (the phone folder): a new track gets the next free number. Short title = no subtitle after a
+colon. Always pass `--title` (also on `--retag`); the default (file name / first sentence) has no number.
 
-Vocab tracks: always pass `--title "<Thema> Vokabeln"` (the default would be the bare file name). Stories: the
-default (first sentence of the text, without its period) is right; the first line of a story is its title.
+| Category | NN · title (input → output) |
+|---|---|
+| Wortschatz | 01 · B1 Vokabeln (`b1`) · 02 · Chemie Vokabeln (`chemie`) · 03 · Mikrobiom Vokabeln (`mikrobiom`) · 04 · MTL Vokabeln 1 (`mtl-1`) · 05 · Schmerz Vokabeln (`schmerz`) · 06 · Arbeit Sätze (`arbeit-saetze`) · 07 · Lager Vokabeln (`lager-1`) · 08 · Archiv Vokabeln (`archiv-1`) |
+| Geschichten | 01 · Ioanas neues Leben (`b1_geschichte`) · 02 · Lenas Jahr im Labor (`chemie_geschichte`) · 03 · Jonas und die unsichtbaren Helfer (`mikrobiom_geschichte`) · 04 · Andrei lernt die Grundlagen für das Labor (StudyAudio `story_grundlagen_phase1_de`) · 05 · Bewegung statt Tabletten (`schmerz_geschichte`) |
+| Artikel | 01 · Wie sich das Gedächtnis im Alter verändert (`artikel/gedaechtnis.md`) |
+| Leitfaden, Enzyklopädie | StudyAudio — see its README |
+
+Next numbers: Wortschatz 09, Geschichten 06, Artikel 02. Inputs are `<name>.tsv` / `<name>.txt`, outputs `out/<name>.mp3`.
+Example: `python -m germanaudio zucker.tsv -o out/zucker.mp3 --title "09 · Zucker Vokabeln"`.
 
 ## Workflow for a new topic
 
 1. **Vocabulary list:** prompt `prompts/prompt-vocab.txt` (or `generate-vocab.md`) in a Claude chat → `<topic>.tsv`
    (tab-separated `german  english  phrase`, header row). Check: `python -m germanaudio <topic>.tsv --check`.
 2. **Build vocab first** (its sentences are then reused by the story):
-   `python -m germanaudio <topic>.tsv -o out/<topic>.mp3 --title "<Topic> Vokabeln"`
+   `python -m germanaudio <topic>.tsv -o out/<topic>.mp3 --title "NN · <Topic> Vokabeln"`
 3. **Story:** prompt `prompts/prompt-story.txt` (already asks for `#` headings) → `<topic>_geschichte.txt`, UTF-8.
    Check: `python -m germanaudio <topic>_geschichte.txt --text --check` → must report "… and N headings".
-4. **Build story:** `python -m germanaudio <topic>_geschichte.txt --text -o out/<topic>_geschichte.mp3`
+4. **Build story:** `python -m germanaudio <topic>_geschichte.txt --text -o out/<topic>_geschichte.mp3 --title "NN · <Story title>"`
    Always give `-o` its own name (default would overwrite `out/german.mp3`).
 5. **Verify** (prints title + chapter count + first chapter):
    ```
@@ -88,7 +88,7 @@ copy it to `out/<name>.original.mp3`.
    `{shown|spoken}`; replaces „“ with »«.
 3. The user reviews the word list.
 4. `python -m germanaudio artikel/<topic>.md --article --check` → `loaded N entries and … headings`.
-5. `python -m germanaudio artikel/<topic>.md --article -o out/<topic>.mp3` (title = front-matter `title`).
+5. `python -m germanaudio artikel/<topic>.md --article -o out/<topic>.mp3 --title "NN · <front-matter title>"`.
 6. Push to `MTL/Artikel/<topic>.mp3`, copy to `C:\LOCAL FILES\Study\German`, commit `artikel/<topic>.md`.
 
 ## Getting tracks onto the phone
