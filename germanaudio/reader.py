@@ -20,6 +20,31 @@ from germanaudio.synth import ClipSpec
 # Space + em dash + space, the same separator the Hörplayer splits section titles on.
 TITLE_SEPARATOR = " — "
 
+# "{37|siebenunddreißig}": the read-along text shows the left side, the voice reads the right side.
+_OVERRIDE = re.compile(r"\{([^{}|]+)\|([^{}|]+)\}")
+
+
+class OverrideError(ValueError):
+    """A malformed {shown|spoken} override; the message quotes the text."""
+
+
+def _resolve(text: str, side: int) -> str:
+    resolved = _OVERRIDE.sub(lambda m: m.group(side), text)
+    leftover = _OVERRIDE.sub("", text)
+    if "{" in leftover or "}" in leftover:
+        raise OverrideError(f"malformed {{shown|spoken}} override in {text!r}")
+    return resolved
+
+
+def spoken_text(text: str) -> str:
+    """The text as the voice reads it: every override replaced by its spoken side."""
+    return _resolve(text, 2)
+
+
+def shown_text(text: str) -> str:
+    """The text as the read-along shows it: every override replaced by its shown side."""
+    return _resolve(text, 1)
+
 
 @dataclass(frozen=True)
 class Heading:
@@ -34,11 +59,13 @@ class Heading:
 
     @property
     def title(self) -> str:
-        return f"{self.german}{TITLE_SEPARATOR}{self.english}" if self.english else self.german
+        german = shown_text(self.german)
+        return f"{german}{TITLE_SEPARATOR}{shown_text(self.english)}" if self.english else german
 
     @property
     def spoken(self) -> str:
-        return self.german if self.german[-1] in ".!?…" else f"{self.german}."
+        german = spoken_text(self.german)
+        return german if german[-1] in ".!?…" else f"{german}."
 
 
 Paragraphs = list[list[str] | Heading]
@@ -69,7 +96,10 @@ def _is_sentence_end(paragraph: str, match: re.Match) -> bool:
 def _split_sentences(paragraph: str) -> list[str]:
     sentences: list[str] = []
     start = 0
+    overrides = [m.span() for m in _OVERRIDE.finditer(paragraph)]
     for match in _CANDIDATE_END.finditer(paragraph):
+        if any(first < match.start() < last for first, last in overrides):
+            continue  # a period inside {z. B.|zum Beispiel} is not a sentence end
         if _is_sentence_end(paragraph, match):
             sentences.append(paragraph[start:match.end()].strip())
             start = match.end()
@@ -151,7 +181,7 @@ def story_title(paragraphs: Paragraphs) -> str | None:
     for block in paragraphs:
         if isinstance(block, Heading):
             return None
-        return block[0].rstrip(".!?… ")
+        return shown_text(block[0]).rstrip(".!?… ")
     return None
 
 
@@ -165,7 +195,7 @@ def text_timeline(paragraphs: Paragraphs, voice: str, pauses: TextPauseConfig) -
         sentences = block
         for index, sentence in enumerate(sentences):
             is_last = index == len(sentences) - 1
-            timeline.append(ClipSpec(sentence, "de", voice))
+            timeline.append(ClipSpec(spoken_text(sentence), "de", voice))
             timeline.append(Silence(pauses.after_paragraph if is_last else pauses.after_sentence))
     return timeline
 
@@ -185,7 +215,8 @@ def text_lines(paragraphs: Paragraphs) -> dict[int, str]:
             continue
         for position, sentence in enumerate(block):
             new_paragraph = position == 0 and bool(lines)
-            lines[index] = f"\n{sentence}" if new_paragraph else sentence
+            shown = shown_text(sentence)
+            lines[index] = f"\n{shown}" if new_paragraph else shown
             index += 2
     return lines
 

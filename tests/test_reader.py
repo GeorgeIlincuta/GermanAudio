@@ -176,3 +176,38 @@ def test_story_title_is_the_first_sentence_without_its_period():
 
 def test_story_title_is_none_when_the_text_starts_with_a_heading_only():
     assert story_title([Heading("Anfang", None)]) is None
+
+
+# --- spoken overrides {shown|spoken} -----------------------------------------------------------
+
+from germanaudio.reader import OverrideError, shown_text, spoken_text, text_lines, text_marks  # noqa: E402
+
+
+def test_overrides_resolve_per_side():
+    assert spoken_text("Es waren {37|siebenunddreißig} Menschen.") == "Es waren siebenunddreißig Menschen."
+    assert shown_text("Es waren {37|siebenunddreißig} Menschen.") == "Es waren 37 Menschen."
+
+
+def test_override_with_a_period_does_not_split_the_sentence():
+    assert split_text("Das ist {z. B.|zum Beispiel} gut. Ja.") == [["Das ist {z. B.|zum Beispiel} gut.", "Ja."]]
+
+
+def test_timeline_speaks_and_lines_show():
+    paragraphs = split_text("# {3|Drei} Tage — Three days\n\nEs waren {37|siebenunddreißig}.")
+    clips = [i.text for i in text_timeline(paragraphs, "M1", PAUSES) if isinstance(i, ClipSpec)]
+    assert clips == ["Drei Tage.", "Es waren siebenunddreißig."]
+    assert list(text_lines(paragraphs).values()) == ["# 3 Tage — Three days", "\nEs waren 37."]
+    assert text_marks(paragraphs) == {0: "3 Tage — Three days"}
+
+
+def test_text_without_braces_is_unchanged():
+    p = split_text("Der Titel.\n\n# Teil — Part\n\nEin Satz. Noch einer!\n")
+    assert [i.text for i in text_timeline(p, "M1", PAUSES) if isinstance(i, ClipSpec)] == \
+        ["Der Titel.", "Teil.", "Ein Satz.", "Noch einer!"]
+    assert list(text_lines(p).values()) == ["Der Titel.", "# Teil — Part", "\nEin Satz.", "Noch einer!"]
+
+
+@pytest.mark.parametrize("bad", ["{37 sieben", "{|x}", "{x|}", "a}b", "{a|b|c}"])
+def test_bad_overrides_raise(bad):
+    with pytest.raises(OverrideError):
+        spoken_text(bad)
