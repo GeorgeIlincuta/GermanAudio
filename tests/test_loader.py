@@ -238,3 +238,19 @@ def test_rejects_invalid_utf8(tmp_path):
         load_vocab(path)
 
     assert any("utf-8" in problem.lower() for problem in excinfo.value.problems)
+
+
+def test_rows_keep_their_file_line_numbers():
+    from germanaudio.loader import parse_vocab_rows
+
+    entries, problems, warnings = parse_vocab_rows(
+        [(12, "das Haus | the house | Das Haus ist groß."), (13, "der Stuhl | the chair | Ich sitze.")], "|")
+    assert [(e.german, e.line_number) for e in entries] == [("das Haus", 12), ("der Stuhl", 13)]
+    assert problems == []
+    assert warnings == ["line 13: phrase may not contain 'der Stuhl' — check it reads naturally"]
+
+
+def test_detect_delimiter_is_public():
+    from germanaudio.loader import detect_delimiter
+
+    assert detect_delimiter("a\tb\tc") == "\t" and detect_delimiter("a | b | c") == "|"

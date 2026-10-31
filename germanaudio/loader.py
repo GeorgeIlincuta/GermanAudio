@@ -30,7 +30,7 @@ class LoadResult:
     warnings: list[str] = field(default_factory=list)
 
 
-def _detect_delimiter(header: str) -> str:
+def detect_delimiter(header: str) -> str:
     """Tab is the documented format; pipe is the fallback.
 
     Copying tab-separated text out of a chat window sometimes converts tabs
@@ -63,7 +63,7 @@ def load_vocab(path: Path) -> LoadResult:
     if not lines:
         raise LoadError([f"{path} is empty"])
 
-    delimiter = _detect_delimiter(lines[0])
+    delimiter = detect_delimiter(lines[0])
     header = [cell.strip().lower() for cell in lines[0].split(delimiter)]
     if tuple(header) != EXPECTED_COLUMNS:
         raise LoadError(
@@ -73,12 +73,24 @@ def load_vocab(path: Path) -> LoadResult:
             ]
         )
 
+    entries, problems, warnings = parse_vocab_rows(list(enumerate(lines[1:], start=2)), delimiter)
+
+    if problems:
+        raise LoadError(problems)
+    if not entries:
+        raise LoadError([f"{path} contains a header but no entries"])
+
+    return LoadResult(entries=entries, warnings=warnings)
+
+
+def parse_vocab_rows(rows: list[tuple[int, str]], delimiter: str) -> tuple[list[Entry], list[str], list[str]]:
+    """Entries, problems and warnings for (line number, raw line) pairs; messages name the given line numbers."""
     entries: list[Entry] = []
     problems: list[str] = []
     warnings: list[str] = []
     seen: set[str] = set()
 
-    for offset, raw in enumerate(lines[1:], start=2):
+    for offset, raw in rows:
         # A line of only whitespace is a blank line, the same copy-paste
         # hazard the pipe fallback exists for, and should be skipped like
         # any other blank. But "\t\t" — a genuine three-empty-column row —
@@ -106,10 +118,4 @@ def load_vocab(path: Path) -> LoadResult:
             )
 
         entries.append(Entry(german, english, phrase, offset))
-
-    if problems:
-        raise LoadError(problems)
-    if not entries:
-        raise LoadError([f"{path} contains a header but no entries"])
-
-    return LoadResult(entries=entries, warnings=warnings)
+    return entries, problems, warnings
