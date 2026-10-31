@@ -4,17 +4,21 @@
     python -m germanaudio vocab.tsv --check
     python -m germanaudio vocab.tsv --limit 8 -o out/sample.mp3
     python -m germanaudio story.txt --text -o out/story.mp3
+    python -m germanaudio artikel/topic.md --article -o out/topic.mp3
 """
 
 import argparse
 import re
 import sys
 import wave
+from dataclasses import dataclass
 from pathlib import Path
 
-from germanaudio.assemble import TimelineItem, build_timeline, encode_mp3, render, vocab_marks
-from germanaudio.chapters import Chapter, item_starts, line_positions, write_tags
+from germanaudio.article import load_article
+from germanaudio.assemble import Silence, TimelineItem, build_timeline, encode_mp3, render, vocab_marks
+from germanaudio.chapters import ArticleInfo, Chapter, item_starts, line_positions, write_tags
 from germanaudio.config import (
+    ARTICLE_PART_GAP,
     CACHE_DIR,
     MP3_BITRATE,
     OUT_DIR,
@@ -53,11 +57,16 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     )
     parser.add_argument(
         "input", type=Path,
-        help="vocabulary file (tab- or pipe-separated), or a .txt file with --text",
+        help="vocabulary file (tab- or pipe-separated), a .txt file with --text, or a .md file with --article",
     )
-    parser.add_argument(
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument(
         "--text", action="store_true",
         help="read the input aloud as plain German text instead of a vocab list",
+    )
+    mode.add_argument(
+        "--article", action="store_true",
+        help="build an Artikel track from a .md source file: its vocabulary, then the article",
     )
     parser.add_argument(
         "-o", "--output", type=Path, default=OUT_DIR / "german.mp3",
@@ -126,8 +135,17 @@ def _report_load_error(path: Path, error: LoadError) -> None:
 # The player's file type, written as the ID3 genre (TCON).
 VOCAB_GENRE = "Wortschatz"
 STORY_GENRE = "Geschichte"
+ARTICLE_GENRE = "Artikel"
 
-Plan = tuple[list[TimelineItem], dict[int, str], dict[int, str], str]  # timeline, chapter marks, read-along lines, file title
+
+@dataclass(frozen=True)
+class Plan:
+    timeline: list[TimelineItem]
+    marks: dict[int, str]  # timeline index -> chapter title
+    lines: dict[int, str]  # timeline index -> read-along text
+    title: str
+    genre: str
+    article: tuple[int, dict[str, str]] | None = None  # (timeline index of the article part, metadata)
 
 
 def _vocab_timeline(args: argparse.Namespace, voices: VoiceConfig) -> Plan | int:
@@ -151,7 +169,7 @@ def _vocab_timeline(args: argparse.Namespace, voices: VoiceConfig) -> Plan | int
     if args.check:
         return 0
     title = args.title or args.input.stem
-    return build_timeline(entries, voices, PauseConfig()), vocab_marks(entries), {}, title
+    return Plan(build_timeline(entries, voices, PauseConfig()), vocab_marks(entries), {}, title, VOCAB_GENRE)
 
 
 def _text_timeline(args: argparse.Namespace, voices: VoiceConfig) -> Plan | int:
@@ -175,24 +193,71 @@ def _text_timeline(args: argparse.Namespace, voices: VoiceConfig) -> Plan | int:
     if args.check:
         return 0
     title = args.title or story_title(paragraphs) or args.input.stem
-    return text_timeline(paragraphs, voices.de, TextPauseConfig()), text_marks(paragraphs), text_lines(paragraphs), title
+    return Plan(text_timeline(paragraphs, voices.de, TextPauseConfig()), text_marks(paragraphs), text_lines(paragraphs),
+                title, STORY_GENRE)
+
+
+# Front-matter keys that become tag frames (the title goes to TIT2, "saved" stays in the source file).
+_TAGGED_META = ("author", "published", "category", "source", "study")
+
+
+def _article_timeline(args: argparse.Namespace, voices: VoiceConfig) -> Plan | int:
+    """The vocab drill, a gap, then the article read aloud; or an exit code if the run stops here."""
+    try:
+        article = load_article(args.input)
+    except LoadError as error:
+        _report_load_error(args.input, error)
+        return 1
+
+    entries = article.entries
+    paragraphs = article.paragraphs
+    if args.limit is not None:
+        entries = entries[: args.limit]
+        paragraphs = limit_sentences(paragraphs, args.limit)
+    for warning in article.warnings:
+        print(f"warning: {warning}", file=sys.stderr)
+
+    headings = sum(isinstance(block, Heading) for block in paragraphs)
+    blocks = [block for block in paragraphs if not isinstance(block, Heading)]
+    sentences = sum(len(block) for block in blocks)
+    print(f"loaded {len(entries)} entries and {sentences} sentences in {len(blocks)} paragraphs "
+          f"and {headings} headings from {args.input}")
+    if args.check:
+        return 0
+    if not entries:
+        print(f"no vocabulary in {args.input}: fill the ## Wortschatz section first", file=sys.stderr)
+        return 1
+
+    vocab = build_timeline(entries, voices, PauseConfig())
+    offset = len(vocab) + 1
+    timeline = vocab + [Silence(ARTICLE_PART_GAP)] + text_timeline(paragraphs, voices.de, TextPauseConfig())
+    marks = vocab_marks(entries) | {offset + i: title for i, title in text_marks(paragraphs).items()}
+    lines = {offset + i: line for i, line in text_lines(paragraphs).items()}
+    meta = {key: article.meta[key] for key in _TAGGED_META if key in article.meta}
+    title = args.title or article.meta["title"]
+    return Plan(timeline, marks, lines, title, ARTICLE_GENRE, (offset, meta))
 
 
 def main(argv: list[str] | None = None) -> int:
     args = _parse_args(argv)
     voices = VoiceConfig()
 
-    plan = _text_timeline(args, voices) if args.text else _vocab_timeline(args, voices)
+    if args.article:
+        plan = _article_timeline(args, voices)
+    elif args.text:
+        plan = _text_timeline(args, voices)
+    else:
+        plan = _vocab_timeline(args, voices)
     if isinstance(plan, int):
         return plan
-    timeline, marks, lines, title = plan
-    genre = STORY_GENRE if args.text else VOCAB_GENRE
+    timeline, marks, lines, title, genre = plan.timeline, plan.marks, plan.lines, plan.title, plan.genre
 
     if args.retag:
         engine_id, sample_rate = engine_identity()
         try:
             chapters_written, lines_written = retag_file(
-                args.output, title, timeline, marks, lines, args.cache_dir, engine_id, sample_rate, genre
+                args.output, title, timeline, marks, lines, args.cache_dir, engine_id, sample_rate, genre,
+                article=plan.article,
             )
         except RetagError as error:
             print(f"retag failed: {error}", file=sys.stderr)
@@ -258,7 +323,9 @@ def main(argv: list[str] | None = None) -> int:
     try:
         starts, total = item_starts(timeline, args.cache_dir, engine.engine_id, engine.sample_rate)
         chapters = [Chapter(marks[i], starts[i]) for i in sorted(marks)]
-        write_tags(args.output, title, chapters, total, engine.sample_rate, line_positions(starts, lines), genre=genre)
+        article = ArticleInfo(starts[plan.article[0]], plan.article[1]) if plan.article is not None else None
+        write_tags(args.output, title, chapters, total, engine.sample_rate, line_positions(starts, lines),
+                   genre=genre, article=article)
     except (OSError, wave.Error) as error:
         print(f"track written, but adding the title and chapters failed: {error}", file=sys.stderr)
         return 1

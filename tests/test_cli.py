@@ -284,3 +284,99 @@ def test_story_build_is_a_geschichte_and_vocab_a_wortschatz(tmp_path, stub_engin
     vout = tmp_path / "v.mp3"
     assert cli.main([str(vocab), "-o", str(vout), "--cache-dir", str(tmp_path / "c")]) == 0
     assert ID3(vout)["TCON"].text == ["Wortschatz"]
+
+
+# --- Artikel ---------------------------------------------------------------------------------
+
+ARTIKEL = """---
+title: Wie sich das Gedächtnis im Alter verändert
+author: Elena Bernard
+source: https://wissenschaft.de/artikel/x
+saved: 2026-10-31
+---
+
+## Wortschatz
+
+das Gedächtnis | the memory | Mein Gedächtnis für Namen ist nicht gut.
+abrufen | to retrieve | Unter Stress kann man Wissen schlechter abrufen.
+
+## Artikel
+
+# {3|Drei} Tage — Three days
+
+Es waren {37|siebenunddreißig}.
+"""
+
+
+@pytest.fixture
+def artikel_file(tmp_path):
+    path = tmp_path / "a.md"
+    path.write_text(ARTIKEL, encoding="utf-8")
+    return path
+
+
+def test_article_build_is_words_then_article(artikel_file, tmp_path, stub_engine):
+    out = tmp_path / "a.mp3"
+
+    assert cli.main([str(artikel_file), "--article", "-o", str(out), "--cache-dir", str(tmp_path / "c")]) == 0
+
+    t = ID3(out)
+    assert t["TCON"].text == ["Artikel"]
+    assert t["TIT2"].text == ["Wie sich das Gedächtnis im Alter verändert"]
+    assert chapter_titles(out) == ["das Gedächtnis — the memory", "abrufen — to retrieve", "3 Tage — Three days"]
+    article_chap = sorted(t.getall("CHAP"), key=lambda c: c.start_time)[2]
+    assert t["TXXX:Artikel-Start"].text == [str(article_chap.start_time)]
+    assert t["TPE1"].text == ["Elena Bernard"] and t["WOAS"].url == "https://wissenschaft.de/artikel/x"
+    assert [x for x, _ in t.getall("SYLT")[0].text] == ["# 3 Tage — Three days", "\nEs waren 37."]
+    spoken = [x for x, _, _ in stub_engine.calls]
+    assert "Es waren siebenunddreißig." in spoken and "Drei Tage." in spoken
+
+
+def test_article_parts_are_three_seconds_apart(artikel_file):
+    from germanaudio.assemble import Silence
+
+    plan = cli._article_timeline(cli._parse_args([str(artikel_file), "--article"]), cli.VoiceConfig())
+
+    assert plan.timeline[20] == Silence(3.0)  # after 2 entries x 10 items
+    assert plan.marks[21] == "3 Tage — Three days"
+    assert plan.article == (21, {"author": "Elena Bernard", "source": "https://wissenschaft.de/artikel/x"})
+    assert plan.genre == "Artikel"
+
+
+def test_article_check_reports_both_parts(artikel_file, capsys, stub_engine):
+    assert cli.main([str(artikel_file), "--article", "--check"]) == 0
+    assert stub_engine.calls == []
+    assert "loaded 2 entries and 1 sentences in 1 paragraphs and 1 headings" in capsys.readouterr().out
+
+
+def test_article_without_vocab_cannot_be_built(tmp_path, capsys):
+    path = tmp_path / "a.md"
+    path.write_text("\n".join(l for l in ARTIKEL.splitlines() if " | " not in l) + "\n", encoding="utf-8")
+    assert cli.main([str(path), "--article", "--check"]) == 0
+    assert cli.main([str(path), "--article", "-o", str(tmp_path / "a.mp3"), "--cache-dir", str(tmp_path / "c")]) == 1
+    assert "no vocabulary" in capsys.readouterr().err
+
+
+def test_article_retag_round_trip(artikel_file, tmp_path, monkeypatch, fake_engine):
+    from germanaudio.retag import audio_digest
+
+    monkeypatch.setattr(cli, "engine_identity", lambda: (fake_engine.engine_id, fake_engine.sample_rate))
+    out = tmp_path / "a.mp3"
+    args = [str(artikel_file), "--article", "-o", str(out), "--cache-dir", str(tmp_path / "c")]
+    assert cli.main(args) == 0
+    before = ID3(out)
+    snapshot = ([(c.start_time, c.sub_frames["TIT2"].text) for c in before.getall("CHAP")],
+                before.getall("SYLT")[0].text, before["TXXX:Artikel-Start"].text, before["TCON"].text)
+    digest = audio_digest(out)
+
+    assert cli.main(args + ["--retag"]) == 0
+
+    after = ID3(out)
+    assert ([(c.start_time, c.sub_frames["TIT2"].text) for c in after.getall("CHAP")],
+            after.getall("SYLT")[0].text, after["TXXX:Artikel-Start"].text, after["TCON"].text) == snapshot
+    assert audio_digest(out) == digest
+
+
+def test_article_and_text_are_exclusive(artikel_file, capsys):
+    with pytest.raises(SystemExit):
+        cli.main([str(artikel_file), "--article", "--text", "--check"])

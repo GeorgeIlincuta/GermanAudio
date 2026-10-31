@@ -15,6 +15,9 @@ MP3_BITRATE = 64  # kbps, mono — ~60 MB for two hours
 # noticeably quiet; 0.95 leaves a little headroom for the MP3 encoder.
 TARGET_PEAK = 0.95
 
+# Silence between the vocabulary part and the article part of an Artikel track, in seconds.
+ARTICLE_PART_GAP = 3.0
+
 CACHE_DIR = Path("cache/audio")
 OUT_DIR = Path("out")
 

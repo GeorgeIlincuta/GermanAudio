@@ -26,7 +26,15 @@ hand-edit tags; fix the input and rebuild.
   spoken sentence: the sentence as written, a leading line break on the first sentence of each paragraph, and
   `# Deutsch — English` for headings (same time as their `CHAP`). The Hörplayer highlights the sentence being spoken.
   Vocabulary tracks have no `SYLT`.
-- **Genre = file type:** one `TCON` frame (UTF-16): `Wortschatz` for vocabulary, `Geschichte` for `--text` stories.
+- **Artikel (`--article`):** one file = the article's vocabulary drill, 3 s, then the article read aloud (same rules as
+  a story). Extra frames: `TXXX` `Artikel-Start` (ms where the article part begins = its first `CHAP`), `TPE1` author,
+  `TDRC` published, `WOAS` source URL, `TXXX` `Rubrik` (category), `TXXX` `Studie` (study citation); a missing
+  front-matter key writes no frame. `SYLT` covers the article part only and holds the **shown** text (see overrides).
+  The Hörplayer (1.4+) shows "Wort 12 von 60" / "Kapitel 2 von 4" and the metadata at the top of the Text tab.
+- **Spoken overrides `{shown|spoken}`** (stories and articles): `{37|siebenunddreißig}` — the voice reads the right
+  side, the read-along shows the left. Use for digits, abbreviations, symbols. `--check` warns about digits outside one.
+- **Genre = file type:** one `TCON` frame (UTF-16): `Wortschatz` for vocabulary, `Geschichte` for `--text` stories,
+  `Artikel` for `--article`.
   The Hörplayer shows its type icon from it. Build and `--retag` both write it.
 - **Retag** (adds/refreshes title, chapters and text without re-synthesizing; the audio is verified unchanged):
   `python -m germanaudio <story>.txt --text --retag -o out/<story>.mp3`. It refuses (and changes nothing) if a
@@ -69,6 +77,20 @@ default (first sentence of the text, without its period) is right; the first lin
 Set `PYTHONIOENCODING=utf-8` in Git Bash so umlauts print correctly. Before replacing an existing MP3 that matters,
 copy it to `out/<name>.original.mp3`.
 
+## Workflow for an article (wissenschaft.de)
+
+1. The user saves the article with the WissenschaftExtractor Chrome extension (1.1+,
+   `C:\LOCAL FILES\Claude Code\Chrome Extensions\WissenschaftExtractor`) → `Downloads\Wissenschaft\<slug>-<date>.md`
+   in the Artikel source format (front matter, empty `## Wortschatz`, `## Artikel` with German-only `#` headings).
+2. Copy it to `artikel/<topic>.md` (leave the download untouched). Then Claude: removes anything that shouldn't be
+   heard; fills `## Wortschatz` with ~60 B2+ words (`german | english | phrase`, new B1 example sentences, same rules
+   as `prompts/prompt-vocab.txt`); adds the English half of every heading; wraps digits/abbreviations in
+   `{shown|spoken}`; replaces „“ with »«.
+3. The user reviews the word list.
+4. `python -m germanaudio artikel/<topic>.md --article --check` → `loaded N entries and … headings`.
+5. `python -m germanaudio artikel/<topic>.md --article -o out/<topic>.mp3` (title = front-matter `title`).
+6. Push to `MTL/Artikel/<topic>.mp3`, copy to `C:\LOCAL FILES\Study\German`, commit `artikel/<topic>.md`.
+
 ## Getting tracks onto the phone
 
 Phone: Samsung Galaxy S9+ (Android 10), adb serial `21fcf6986b0c7ece`,
@@ -76,7 +98,7 @@ adb = `C:\Users\ilinc\AppData\Local\Android\Sdk\platform-tools\adb.exe`. In Git 
 All tracks live under the **SD-card folder `MTL`**: `/storage/3838-6430/MTL/` (the Hörplayer watches this folder and
 rescans it every time its library opens — new files appear, changed files are re-read automatically). Layout:
 vocabulary in `MTL/Wortschatz/<Thema>/<topic>.mp3` (e.g. `Wortschatz/Schmerz/schmerz.mp3`), stories in
-`MTL/Geschichten/<topic>_geschichte.mp3`.
+`MTL/Geschichten/<topic>_geschichte.mp3`, articles in `MTL/Artikel/<topic>.mp3`.
 
 ```
 adb push out/<topic>.mp3 /storage/3838-6430/MTL/Wortschatz/<Thema>/<topic>.mp3
@@ -93,7 +115,8 @@ files go there — no `.original` backups.
 
 ## Code map and conventions
 
-- `loader.py` (TSV) · `reader.py` (text, `Heading`, `text_marks`, `story_title`) · `synth.py` (content-hash clip
+- `loader.py` (TSV, `parse_vocab_rows`) · `reader.py` (text, `Heading`, `text_marks`, `story_title`, overrides) ·
+  `article.py` (Artikel source file) · `synth.py` (content-hash clip
   cache in `cache/audio`) · `assemble.py` (timeline, `vocab_marks`, render, MP3 encode) · `chapters.py`
   (`mark_positions`, `write_tags`) · `cli.py` · tests in `tests/` (`python -m pytest -q`, no real model needed).
 - Changing pauses or titles is free (re-stitch from cache); changing text or voice re-synthesizes those clips.
