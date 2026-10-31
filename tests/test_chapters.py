@@ -182,3 +182,45 @@ def test_write_tags_without_genre_removes_an_old_one(tmp_path):
     write_tags(path, "T", [], 44100, RATE, genre="Wortschatz")
     write_tags(path, "T", [], 44100, RATE)
     assert ID3(path).getall("TCON") == []
+
+
+# --- Artikel frames ----------------------------------------------------------------------------
+
+from germanaudio.chapters import ArticleInfo  # noqa: E402
+
+META = {"author": "Elena Bernard", "published": "2026-10-23", "source": "https://wissenschaft.de/artikel/x",
+        "category": "Gesundheit & Medizin", "study": "Melega et al."}
+
+
+def bare_mp3(tmp_path):
+    path = tmp_path / "t.mp3"
+    path.write_bytes(b"\xff\xfb\x90\x00" + b"\x00" * 413)
+    return path
+
+
+def test_write_tags_adds_the_article_frames(tmp_path):
+    path = bare_mp3(tmp_path)
+    write_tags(path, "T", [], 10 * RATE, RATE, genre="Artikel", article=ArticleInfo(5 * RATE, META))
+    t = ID3(path)
+    assert t["TXXX:Artikel-Start"].text == ["5000"]
+    assert t["TPE1"].text == ["Elena Bernard"]
+    assert str(t["TDRC"].text[0]) == "2026-10-23"
+    assert t["WOAS"].url == "https://wissenschaft.de/artikel/x"
+    assert t["TXXX:Rubrik"].text == ["Gesundheit & Medizin"]
+    assert t["TXXX:Studie"].text == ["Melega et al."]
+
+
+def test_missing_meta_keys_write_no_frame(tmp_path):
+    path = bare_mp3(tmp_path)
+    write_tags(path, "T", [], 10 * RATE, RATE, genre="Artikel", article=ArticleInfo(RATE, {}))
+    t = ID3(path)
+    assert t["TXXX:Artikel-Start"].text == ["1000"]
+    assert not any(t.getall(k) for k in ("TPE1", "TDRC", "WOAS", "TXXX:Rubrik", "TXXX:Studie"))
+
+
+def test_non_article_rewrite_removes_the_article_frames(tmp_path):
+    path = bare_mp3(tmp_path)
+    write_tags(path, "T", [], 10 * RATE, RATE, genre="Artikel", article=ArticleInfo(RATE, META))
+    write_tags(path, "T", [], 10 * RATE, RATE, genre="Wortschatz")
+    t = ID3(path)
+    assert not any(t.getall(k) for k in ("TXXX:Artikel-Start", "TPE1", "TDRC", "WOAS", "TXXX:Rubrik", "TXXX:Studie"))

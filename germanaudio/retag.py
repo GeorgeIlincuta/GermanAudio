@@ -12,7 +12,7 @@ from pathlib import Path
 from mutagen.mp3 import MP3
 
 from germanaudio.assemble import TimelineItem
-from germanaudio.chapters import Chapter, item_starts, line_positions, write_tags
+from germanaudio.chapters import ArticleInfo, Chapter, item_starts, line_positions, write_tags
 from germanaudio.synth import ClipSpec, clip_path
 
 # A rebuilt timeline may differ from the encoded audio by encoder padding, never by a sentence.
@@ -50,6 +50,7 @@ def retag_file(
     engine_id: str,
     sample_rate: int,
     genre: str | None = None,
+    article: tuple[int, dict[str, str]] | None = None,
 ) -> tuple[int, int]:
     """Retag [path] in place; returns (chapters, text lines). Raises RetagError and leaves the file untouched."""
     path = Path(path)
@@ -70,7 +71,8 @@ def retag_file(
     temp = path.with_name(path.name + ".retag")
     shutil.copyfile(path, temp)
     try:
-        write_tags(temp, title, chapters, total, sample_rate, line_positions(starts, lines), genre)
+        info = ArticleInfo(starts[article[0]], article[1]) if article is not None else None
+        write_tags(temp, title, chapters, total, sample_rate, line_positions(starts, lines), genre, info)
         if audio_digest(temp) != before:
             raise RetagError("writing the tag changed the audio — nothing changed")
         os.replace(temp, path)

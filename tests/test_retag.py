@@ -92,3 +92,22 @@ def test_retag_adds_the_genre_and_keeps_the_audio(built):
 
     assert ID3(out)["TCON"].text == ["Geschichte"]
     assert audio_digest(out) == before
+
+
+def test_retag_writes_the_article_start_at_the_given_index(built, fake_engine):
+    from germanaudio.chapters import item_starts
+    from germanaudio.retag import retag_file
+
+    story, out, cache = built
+    paragraphs = cli.load_text(story)
+    timeline = cli.text_timeline(paragraphs, cli.VoiceConfig().de, cli.TextPauseConfig())
+    before = audio_digest(out)
+
+    retag_file(out, "T", timeline, cli.text_marks(paragraphs), cli.text_lines(paragraphs), cache,
+               fake_engine.engine_id, fake_engine.sample_rate, "Artikel", article=(2, {"author": "Elena Bernard"}))
+
+    starts, _ = item_starts(timeline, cache, fake_engine.engine_id, fake_engine.sample_rate)
+    tags = ID3(out)
+    assert tags["TXXX:Artikel-Start"].text == [str(round(starts[2] * 1000 / fake_engine.sample_rate))]
+    assert tags["TPE1"].text == ["Elena Bernard"]
+    assert audio_digest(out) == before

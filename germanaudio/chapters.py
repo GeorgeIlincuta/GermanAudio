@@ -10,7 +10,7 @@ import wave
 from dataclasses import dataclass
 from pathlib import Path
 
-from mutagen.id3 import CHAP, CTOC, CTOCFlags, ID3, ID3NoHeaderError, SYLT, TCON, TIT2
+from mutagen.id3 import CHAP, CTOC, CTOCFlags, ID3, ID3NoHeaderError, SYLT, TCON, TDRC, TIT2, TPE1, TXXX, WOAS
 
 from germanaudio.assemble import Silence, TimelineItem
 from germanaudio.audio import silence
@@ -24,6 +24,18 @@ _MAX_TOC_CHILDREN = 255
 class Chapter:
     title: str
     start_sample: int
+
+
+@dataclass(frozen=True)
+class ArticleInfo:
+    """An Artikel file's extra tags: where the article part starts, and the article's metadata (front-matter keys)."""
+
+    start_sample: int
+    meta: dict[str, str]
+
+
+# Frames only Artikel files carry; every write_tags removes them first, so a retag to another type drops them.
+_ARTICLE_FRAMES = ("TXXX:Artikel-Start", "TXXX:Rubrik", "TXXX:Studie", "TPE1", "TDRC", "WOAS")
 
 
 @dataclass(frozen=True)
@@ -83,6 +95,7 @@ def write_tags(
     sample_rate: int,
     lines: list[Line] | None = None,
     genre: str | None = None,
+    article: ArticleInfo | None = None,
 ) -> None:
     """Write the file title, the genre (the player's file type) and one chapter per mark; each chapter ends where the next begins."""
     try:
@@ -122,6 +135,22 @@ def write_tags(
                 top.append(sub_id)
         tags.add(CTOC(element_id="toc", flags=CTOCFlags.TOP_LEVEL | CTOCFlags.ORDERED,
                       child_element_ids=top, sub_frames=[TIT2(encoding=3, text=["Inhalt"])]))
+
+    for key in _ARTICLE_FRAMES:
+        tags.delall(key)
+    if article is not None:
+        tags.add(TXXX(encoding=1, desc="Artikel-Start", text=[str(ms(article.start_sample))]))
+        meta = article.meta
+        if meta.get("author"):
+            tags.add(TPE1(encoding=1, text=[meta["author"]]))
+        if meta.get("published"):
+            tags.add(TDRC(encoding=1, text=[meta["published"]]))
+        if meta.get("source"):
+            tags.add(WOAS(url=meta["source"]))
+        if meta.get("category"):
+            tags.add(TXXX(encoding=1, desc="Rubrik", text=[meta["category"]]))
+        if meta.get("study"):
+            tags.add(TXXX(encoding=1, desc="Studie", text=[meta["study"]]))
 
     if lines:
         tags.add(SYLT(encoding=1, lang="deu", format=2, type=1, desc="",
