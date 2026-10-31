@@ -98,7 +98,7 @@ adb = `C:\Users\ilinc\AppData\Local\Android\Sdk\platform-tools\adb.exe`. In Git 
 All tracks live under the **SD-card folder `MTL`**: `/storage/3838-6430/MTL/` (the Hörplayer watches this folder and
 rescans it every time its library opens — new files appear, changed files are re-read automatically). Layout:
 vocabulary in `MTL/Wortschatz/<Thema>/<topic>.mp3` (e.g. `Wortschatz/Schmerz/schmerz.mp3`), stories in
-`MTL/Geschichten/<topic>_geschichte.mp3`, articles in `MTL/Artikel/<topic>.mp3`.
+`MTL/Geschichten/<topic>_geschichte.mp3`, articles in `MTL/Artikel/<topic>.mp3`. (StudyAudio tracks: `MTL/Leitfaden/` guides, `MTL/Enzyklopädie/` encyclopedias.)
 
 ```
 adb push out/<topic>.mp3 /storage/3838-6430/MTL/Wortschatz/<Thema>/<topic>.mp3
